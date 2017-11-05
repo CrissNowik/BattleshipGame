@@ -9,6 +9,8 @@ Final project for CodersLab Front-end Course (Poznań).
 
 ### Demo:
 
+TBD
+
 ### Copyright:
 CrissNowik
 
