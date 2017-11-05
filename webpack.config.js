@@ -3,7 +3,7 @@
 //
 const path = require("path");
 module.exports = {
-    entry: "./js/zadanie00.jsx",
+    entry: "./js/app.jsx",
     output: {
       path: path.resolve("dist"),
       filename: "./out.js"
