@@ -1,3 +1,21 @@
+@import 'modules/all';
+@import 'modules/colors';
+@import 'modules/reset';
+@import 'partials/game';
+@import 'partials/modal';
+@import 'partials/start';
+
 body{
-  background-color: #000;
+  background-color: $color_dark;
+  text-align: center;
+}
+
+header {
+  h1 {
+    font-size: 70px;
+  }
+}
+
+footer {
+  text-align: center;
 }

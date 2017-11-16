@@ -1,0 +1,22 @@
+@import 'modules/colors';
+
+.col-md-7 {
+  height: 80vh;
+  background-image: url("https://78.media.tumblr.com/c0f7ad6f5915154be41d8550e0d52a44/tumblr_mrsi0hJNnh1sfie3io1_1280.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.col-md-12 {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.show-grid {
+margin: 5vh auto 5vh auto;
+}
+
+h1, h2, p, label {
+  color: $color_font;
+}
