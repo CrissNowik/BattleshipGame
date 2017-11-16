@@ -1,4 +1,6 @@
 @import 'modules/colors';
+@import 'modules/mixins';
+
 
 .col-md-7 {
   height: 80vh;
@@ -6,17 +8,40 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 5px;
 }
 
 .col-md-12 {
 text-align: center;
-margin-bottom: 40px;
+margin-bottom: 2rem;
 }
 
 .show-grid {
-margin: 5vh auto 5vh auto;
+margin: 3vh auto 3vh auto;
 }
 
-h1, h2, p, label {
-  color: $color_font;
+h2 {
+  @include WelcomeFonts;
+  font-size: 4rem;
+}
+
+p {
+  @include WelcomeFonts;
+  font-size: 2rem;
+}
+
+.start-label {
+  @extend p;
+}
+
+.start-input {
+  border: 4px double $color_dark;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  text-align: center;
+  @include WelcomeFonts;
+}
+
+Button {
+  @include WelcomeFonts;
 }

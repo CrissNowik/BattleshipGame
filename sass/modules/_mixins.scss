@@ -1,0 +1,7 @@
+@import 'modules/fonts';
+
+@mixin WelcomeFonts {
+  color: $color_font;
+  font-family: 'armalite_rifleregular', $stock;
+  letter-spacing: 0.4rem;
+}

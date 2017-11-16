@@ -2,31 +2,55 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Button from 'react-bootstrap/lib/Button';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import FormControl from 'react-bootstrap/lib/FormControl';
+import FormControlFeedback from 'react-bootstrap/lib/FormControlFeedback';
 
 class PlayerData extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      playerName: ""
+      value: ""
     }
   };
-  handleNameChange = (event) => {
-    event.preventDefault();
+
+  getValidationState = () => {
+    const length = this.state.value.length;
+    if (length > 2) return 'success';
+    else if (length > 0) return 'error';
+    return null;
+  };
+
+  handleChange = (e) => {
     this.setState({
-      playerName: event.target.value
-    })
-    console.log(this.state.playerName);
+      value: e.target.value
+    });
+  };
+
+  hideWelcome = (e) => {
+    e.preventDefault();
+    this // dokończyć ukrywanie ekranu powitalnego 
   }
 
   render() {
     return (
-    <form>
-      <label>
-        Captain:
-        <input type="text" value={this.state.name} onChange={this.handleNameChange} />
-      </label>
-      <Button bsStyle="primary" bsSize="large" block>To battle!</Button>
-    </form>
+      <form>
+        <FormGroup
+          controlId="formBasicText"
+          validationState={this.getValidationState()}
+        >
+          <ControlLabel className="start-label">Captain:</ControlLabel>
+          <FormControl className="start-input" bsSize="lg"
+            type="text"
+            value={this.state.value}
+            placeholder=""
+            onChange={this.handleChange}
+          />
+          <FormControl.Feedback />
+          <Button bsStyle="primary" bsSize="large" block onClick={this.hideWelcome}>To battle!</Button>
+        </FormGroup>
+      </form>
     );
   }
 };

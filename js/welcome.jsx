@@ -26,10 +26,12 @@ class Welcome extends React.Component {
          <Col xs={6} md={5}>
            <Row className="show-grid">
              <Col xs={18} md={12}>
-               <h1>Gentlemens! Attention!</h1>
+               <h2>Gentlemens! Attention!</h2>
                <h2>Captain on the bridge!</h2>
-               <p>Welcome Comander, we rapidly prepare to battle! <br/>
-                 Just please, write your name below.</p>
+               <br/>
+               <p>Welcome Comander!  <br/>
+                  We rapidly prepare to battle! <br/>
+                  Just please, write your name below.</p>
              </Col>
              <Col xs={18} md={12}>
                <PlayerData/>
