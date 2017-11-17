@@ -17,8 +17,8 @@ class PlayerData extends React.Component {
 
   getValidationState = () => {
     const length = this.state.value.length;
-    if (length > 2) return 'success';
-    else if (length > 0) return 'error';
+    if (length > 2 && length < 20) return 'success';
+    else if (length > 0 ) return 'error';
     return null;
   };
 
@@ -30,7 +30,7 @@ class PlayerData extends React.Component {
 
   hideWelcome = (e) => {
     e.preventDefault();
-    this // dokończyć ukrywanie ekranu powitalnego 
+    this // dokończyć ukrywanie ekranu powitalnego
   }
 
   render() {
@@ -41,14 +41,14 @@ class PlayerData extends React.Component {
           validationState={this.getValidationState()}
         >
           <ControlLabel className="start-label">Captain:</ControlLabel>
-          <FormControl className="start-input" bsSize="lg"
+          <FormControl className="start-input" bsSize="large"
             type="text"
             value={this.state.value}
             placeholder=""
             onChange={this.handleChange}
           />
           <FormControl.Feedback />
-          <Button bsStyle="primary" bsSize="large" block onClick={this.hideWelcome}>To battle!</Button>
+          <Button bsStyle="primary" bsSize="large" onClick={this.hideWelcome}>To battle!</Button>
         </FormGroup>
       </form>
     );

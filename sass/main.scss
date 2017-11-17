@@ -20,6 +20,9 @@ header {
     color: $color_font;
   }
 }
+.container {
+  min-width: 90vw;
+}
 
 footer {
   background-color: #000;

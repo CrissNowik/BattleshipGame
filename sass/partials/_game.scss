@@ -1,0 +1,34 @@
+@import 'modules/all';
+@import 'modules/colors';
+@import 'modules/reset';
+@import 'modules/fonts';
+
+.radar-circle {
+  border: 3px solid #000;
+  border-radius: 100%;
+  height: 600px;
+  margin: 2rem;
+  position: relative;
+  width: 600px;
+}
+
+.battlefield {
+  display: flex;
+  border: 3px solid #000;
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.b-row {
+
+}
+
+.cell {
+
+}

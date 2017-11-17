@@ -11,14 +11,15 @@ document.addEventListener('DOMContentLoaded', function(){
     constructor(props) {
       super(props);
       this.state = {
-
+        display: "block"
       }
     };
 
     render() {
       return (
         <div>
-          <Welcome/>
+          <Welcome />
+          <Game />
         </div>
       );
     }

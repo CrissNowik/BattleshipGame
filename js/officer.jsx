@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Shoots extends React.Component {
+class Officer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,9 +11,9 @@ class Shoots extends React.Component {
 
   render() {
     return (
-<p>"PlayerFleet"</p>
+      <p>"PlayerFleet"</p>
     );
   }
 };
 
-export {Shoots};
+export {Officer};

@@ -1,6 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const unitsDmg = "test unitsDmg";
+class UnitsDmg extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-export {unitsDmg};
+    }
+  };
+
+  render() {
+    return (
+<p>"PlayerFleet"</p>
+    );
+  }
+};
+
+export {UnitsDmg};
