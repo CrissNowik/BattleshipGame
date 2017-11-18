@@ -24,7 +24,24 @@ header {
   min-width: 90vw;
 }
 
+.show-grid {
+  margin: auto;
+}
+
 footer {
   background-color: #000;
+  font-family: 'armalite_rifleregular', $stock;
   text-align: center;
+  color: $color_font;
+}
+
+.creator-info{
+  display: block;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  a {
+    font-size: 0.8rem;
+  }
 }

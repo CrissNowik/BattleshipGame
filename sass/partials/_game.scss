@@ -3,32 +3,72 @@
 @import 'modules/reset';
 @import 'modules/fonts';
 
+.game-board {
+  background-color:$color_board;
+  color: $color_hud;
+  font-family: 'courier_prime_coderegular', $stock;
+  width:100%;
+    h2 {
+      font-weight: bolder;
+    }
+}
+
 .radar-circle {
-  border: 3px solid #000;
+  border: 1px solid $color_hud;
   border-radius: 100%;
-  height: 600px;
-  margin: 2rem;
+  height: 700px;
+  margin: 2rem auto 0 auto;
+  width: 700px;
   position: relative;
-  width: 600px;
+
 }
 
 .battlefield {
-  display: flex;
-  border: 3px solid #000;
-  height: 420px;
-  width: 420px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin: auto;
+  width: 510px;
+  height: 480px;
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
-.b-row {
-
+.cell-cord {
+  border: 1px dashed $color_hud;
+  padding: 0;
+  min-width: 4rem;
+  min-height: 4rem;
+  display: table;
+  p {
+    color: $color_hud;
+    font-weight: bolder;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .cell {
+  @extend .cell-cord;
+  &:hover {
+    background-color: $color_hud_hover;
+  }
+}
 
+.item-container {
+  display: flex;
+  justify-content: center;
+}
+
+.item-label {
+  font-size: 2rem;
+}
+
+.item {
+  padding: 0;
+}
+
+.salvo-raport {
+  text-decoration: underline;
 }

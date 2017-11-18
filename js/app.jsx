@@ -11,15 +11,34 @@ document.addEventListener('DOMContentLoaded', function(){
     constructor(props) {
       super(props);
       this.state = {
-        display: "block"
+        displayWelcome: "block",
+        displayGame: "none"
       }
     };
+
+    hideWelcome = (displayWelcome) => {
+      this.setState({
+        displayWelcome
+      })
+    }
+    showGame = (displayGame) => {
+      this.setState({
+        displayGame
+      })
+    }
 
     render() {
       return (
         <div>
-          <Welcome />
-          <Game />
+          <div style={{display: this.state.displayWelcome}}>
+            <Welcome
+              hideWelcome={this.hideWelcome}
+              showGame={this.showGame}
+            />
+          </div>
+          <div style={{display: this.state.displayGame}}>
+            <Game />
+          </div>
         </div>
       );
     }

@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 138);
+/******/ 	return __webpack_require__(__webpack_require__.s = 141);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -549,7 +549,7 @@ module.exports = __webpack_require__(32);
 var _prodInvariant = __webpack_require__(3);
 
 var DOMProperty = __webpack_require__(23);
-var ReactDOMComponentFlags = __webpack_require__(98);
+var ReactDOMComponentFlags = __webpack_require__(101);
 
 var invariant = __webpack_require__(1);
 
@@ -1215,7 +1215,7 @@ module.exports = emptyFunction;
 var debugTool = null;
 
 if (process.env.NODE_ENV !== 'production') {
-  var ReactDebugTool = __webpack_require__(163);
+  var ReactDebugTool = __webpack_require__(166);
   debugTool = ReactDebugTool;
 }
 
@@ -1231,7 +1231,7 @@ module.exports = { debugTool: debugTool };
 
 exports.__esModule = true;
 
-var _assign = __webpack_require__(253);
+var _assign = __webpack_require__(244);
 
 var _assign2 = _interopRequireDefault(_assign);
 
@@ -1296,7 +1296,7 @@ exports.default = function (instance, Constructor) {
 
 exports.__esModule = true;
 
-var _typeof2 = __webpack_require__(131);
+var _typeof2 = __webpack_require__(133);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -1319,15 +1319,15 @@ exports.default = function (self, call) {
 
 exports.__esModule = true;
 
-var _setPrototypeOf = __webpack_require__(279);
+var _setPrototypeOf = __webpack_require__(274);
 
 var _setPrototypeOf2 = _interopRequireDefault(_setPrototypeOf);
 
-var _create = __webpack_require__(283);
+var _create = __webpack_require__(278);
 
 var _create2 = _interopRequireDefault(_create);
 
-var _typeof2 = __webpack_require__(131);
+var _typeof2 = __webpack_require__(133);
 
 var _typeof3 = _interopRequireDefault(_typeof2);
 
@@ -1399,9 +1399,9 @@ module.exports = ReactCurrentOwner;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(102);
+var CallbackQueue = __webpack_require__(105);
 var PooledClass = __webpack_require__(27);
-var ReactFeatureFlags = __webpack_require__(103);
+var ReactFeatureFlags = __webpack_require__(106);
 var ReactReconciler = __webpack_require__(34);
 var Transaction = __webpack_require__(53);
 
@@ -1717,11 +1717,11 @@ if (process.env.NODE_ENV !== 'production') {
   // By explicitly using `prop-types` you are opting into new development behavior.
   // http://fb.me/prop-types-in-prod
   var throwOnDirectAccess = true;
-  module.exports = __webpack_require__(97)(isValidElement, throwOnDirectAccess);
+  module.exports = __webpack_require__(100)(isValidElement, throwOnDirectAccess);
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(286)();
+  module.exports = __webpack_require__(281)();
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1736,7 +1736,7 @@ if (process.env.NODE_ENV !== 'production') {
 exports.__esModule = true;
 exports._curry = exports.bsSizes = exports.bsStyles = exports.bsClass = undefined;
 
-var _entries = __webpack_require__(288);
+var _entries = __webpack_require__(283);
 
 var _entries2 = _interopRequireDefault(_entries);
 
@@ -1750,7 +1750,7 @@ exports.splitBsProps = splitBsProps;
 exports.splitBsPropsAndOmit = splitBsPropsAndOmit;
 exports.addStyle = addStyle;
 
-var _invariant = __webpack_require__(291);
+var _invariant = __webpack_require__(286);
 
 var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -1951,6 +1951,16 @@ var _curry = exports._curry = curry;
 
 /***/ }),
 /* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = __webpack_require__(156);
+
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2225,16 +2235,6 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = __webpack_require__(153);
-
-
-/***/ }),
 /* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2490,7 +2490,7 @@ var warning = __webpack_require__(2);
 var canDefineProperty = __webpack_require__(50);
 var hasOwnProperty = Object.prototype.hasOwnProperty;
 
-var REACT_ELEMENT_TYPE = __webpack_require__(93);
+var REACT_ELEMENT_TYPE = __webpack_require__(96);
 
 var RESERVED_PROPS = {
   key: true,
@@ -2934,7 +2934,7 @@ module.exports = PooledClass;
 
 var global = __webpack_require__(24);
 var core = __webpack_require__(25);
-var ctx = __webpack_require__(123);
+var ctx = __webpack_require__(126);
 var hide = __webpack_require__(36);
 var PROTOTYPE = 'prototype';
 
@@ -3010,8 +3010,8 @@ module.exports = function (it, key) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // to indexed object, toObject with fallback for non-array-like ES3 strings
-var IObject = __webpack_require__(128);
-var defined = __webpack_require__(79);
+var IObject = __webpack_require__(130);
+var defined = __webpack_require__(80);
 module.exports = function (it) {
   return IObject(defined(it));
 };
@@ -3034,7 +3034,7 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _createChainableTypeChecker = __webpack_require__(287);
+var _createChainableTypeChecker = __webpack_require__(282);
 
 var _createChainableTypeChecker2 = _interopRequireDefault(_createChainableTypeChecker);
 
@@ -3075,15 +3075,15 @@ module.exports = exports['default'];
 
 var _assign = __webpack_require__(4);
 
-var ReactBaseClasses = __webpack_require__(91);
-var ReactChildren = __webpack_require__(139);
-var ReactDOMFactories = __webpack_require__(143);
+var ReactBaseClasses = __webpack_require__(94);
+var ReactChildren = __webpack_require__(142);
+var ReactDOMFactories = __webpack_require__(146);
 var ReactElement = __webpack_require__(26);
-var ReactPropTypes = __webpack_require__(147);
-var ReactVersion = __webpack_require__(149);
+var ReactPropTypes = __webpack_require__(150);
+var ReactVersion = __webpack_require__(152);
 
-var createReactClass = __webpack_require__(150);
-var onlyChild = __webpack_require__(152);
+var createReactClass = __webpack_require__(153);
+var onlyChild = __webpack_require__(155);
 
 var createElement = ReactElement.createElement;
 var createFactory = ReactElement.createFactory;
@@ -3092,7 +3092,7 @@ var cloneElement = ReactElement.cloneElement;
 if (process.env.NODE_ENV !== 'production') {
   var lowPriorityWarning = __webpack_require__(60);
   var canDefineProperty = __webpack_require__(50);
-  var ReactElementValidator = __webpack_require__(95);
+  var ReactElementValidator = __webpack_require__(98);
   var didWarnPropTypesDeprecated = false;
   createElement = ReactElementValidator.createElement;
   createFactory = ReactElementValidator.createFactory;
@@ -3251,7 +3251,7 @@ module.exports = reactProdInvariant;
 
 
 
-var ReactRef = __webpack_require__(161);
+var ReactRef = __webpack_require__(164);
 var ReactInstrumentation = __webpack_require__(10);
 
 var warning = __webpack_require__(2);
@@ -3425,7 +3425,7 @@ var DOMNamespaces = __webpack_require__(68);
 var setInnerHTML = __webpack_require__(55);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(69);
-var setTextContent = __webpack_require__(107);
+var setTextContent = __webpack_require__(110);
 
 var ELEMENT_NODE_TYPE = 1;
 var DOCUMENT_FRAGMENT_NODE_TYPE = 11;
@@ -3546,8 +3546,8 @@ module.exports = __webpack_require__(38) ? function (object, key, value) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var anObject = __webpack_require__(44);
-var IE8_DOM_DEFINE = __webpack_require__(124);
-var toPrimitive = __webpack_require__(78);
+var IE8_DOM_DEFINE = __webpack_require__(127);
+var toPrimitive = __webpack_require__(79);
 var dP = Object.defineProperty;
 
 exports.f = __webpack_require__(38) ? Object.defineProperty : function defineProperty(O, P, Attributes) {
@@ -3577,7 +3577,7 @@ module.exports = !__webpack_require__(46)(function () {
 /* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var store = __webpack_require__(82)('wks');
+var store = __webpack_require__(83)('wks');
 var uid = __webpack_require__(59);
 var Symbol = __webpack_require__(24).Symbol;
 var USE_SYMBOL = typeof Symbol == 'function';
@@ -3608,8 +3608,8 @@ $exports.store = store;
 var EventPluginHub = __webpack_require__(41);
 var EventPluginUtils = __webpack_require__(62);
 
-var accumulateInto = __webpack_require__(99);
-var forEachAccumulated = __webpack_require__(100);
+var accumulateInto = __webpack_require__(102);
+var forEachAccumulated = __webpack_require__(103);
 var warning = __webpack_require__(2);
 
 var getListener = EventPluginHub.getListener;
@@ -3749,8 +3749,8 @@ var EventPluginRegistry = __webpack_require__(52);
 var EventPluginUtils = __webpack_require__(62);
 var ReactErrorUtils = __webpack_require__(63);
 
-var accumulateInto = __webpack_require__(99);
-var forEachAccumulated = __webpack_require__(100);
+var accumulateInto = __webpack_require__(102);
+var forEachAccumulated = __webpack_require__(103);
 var invariant = __webpack_require__(1);
 
 /**
@@ -4021,7 +4021,7 @@ module.exports = EventPluginHub;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 var getEventTarget = __webpack_require__(64);
 
@@ -4155,8 +4155,8 @@ module.exports = function (exec) {
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.14 / 15.2.3.14 Object.keys(O)
-var $keys = __webpack_require__(127);
-var enumBugKeys = __webpack_require__(83);
+var $keys = __webpack_require__(129);
+var enumBugKeys = __webpack_require__(84);
 
 module.exports = Object.keys || function keys(O) {
   return $keys(O, enumBugKeys);
@@ -4770,7 +4770,7 @@ module.exports = TransactionImpl;
 
 
 var SyntheticUIEvent = __webpack_require__(42);
-var ViewportMetrics = __webpack_require__(106);
+var ViewportMetrics = __webpack_require__(109);
 
 var getEventModifierState = __webpack_require__(66);
 
@@ -5073,10 +5073,10 @@ module.exports = escapeTextContentForBrowser;
 var _assign = __webpack_require__(4);
 
 var EventPluginRegistry = __webpack_require__(52);
-var ReactEventEmitterMixin = __webpack_require__(187);
-var ViewportMetrics = __webpack_require__(106);
+var ReactEventEmitterMixin = __webpack_require__(190);
+var ViewportMetrics = __webpack_require__(109);
 
-var getVendorPrefixedEventName = __webpack_require__(188);
+var getVendorPrefixedEventName = __webpack_require__(191);
 var isEventSupported = __webpack_require__(65);
 
 /**
@@ -5970,13 +5970,13 @@ module.exports = getEventModifierState;
 
 
 var DOMLazyTree = __webpack_require__(35);
-var Danger = __webpack_require__(172);
+var Danger = __webpack_require__(175);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(10);
 
 var createMicrosoftUnsafeLocalFunction = __webpack_require__(69);
 var setInnerHTML = __webpack_require__(55);
-var setTextContent = __webpack_require__(107);
+var setTextContent = __webpack_require__(110);
 
 function getNodeAfter(parentNode, node) {
   // Special case for text components, which return [open, close] comments
@@ -6259,8 +6259,8 @@ module.exports = createMicrosoftUnsafeLocalFunction;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypesSecret = __webpack_require__(111);
-var propTypesFactory = __webpack_require__(96);
+var ReactPropTypesSecret = __webpack_require__(114);
+var propTypesFactory = __webpack_require__(99);
 
 var React = __webpack_require__(32);
 var PropTypes = propTypesFactory(React.isValidElement);
@@ -7280,6 +7280,108 @@ module.exports = getEventCharCode;
 /* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends2 = __webpack_require__(11);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _objectWithoutProperties2 = __webpack_require__(12);
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _classCallCheck2 = __webpack_require__(13);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = __webpack_require__(14);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(15);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(19);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _elementType = __webpack_require__(31);
+
+var _elementType2 = _interopRequireDefault(_elementType);
+
+var _bootstrapUtils = __webpack_require__(20);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  /**
+   * Turn any fixed-width grid layout into a full-width layout by this property.
+   *
+   * Adds `container-fluid` class.
+   */
+  fluid: _propTypes2.default.bool,
+  /**
+   * You can use a custom element for this component
+   */
+  componentClass: _elementType2.default
+};
+
+var defaultProps = {
+  componentClass: 'div',
+  fluid: false
+};
+
+var Grid = function (_React$Component) {
+  (0, _inherits3.default)(Grid, _React$Component);
+
+  function Grid() {
+    (0, _classCallCheck3.default)(this, Grid);
+    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+  }
+
+  Grid.prototype.render = function render() {
+    var _props = this.props,
+        fluid = _props.fluid,
+        Component = _props.componentClass,
+        className = _props.className,
+        props = (0, _objectWithoutProperties3.default)(_props, ['fluid', 'componentClass', 'className']);
+
+    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
+        bsProps = _splitBsProps[0],
+        elementProps = _splitBsProps[1];
+
+    var classes = (0, _bootstrapUtils.prefix)(bsProps, fluid && 'fluid');
+
+    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
+      className: (0, _classnames2.default)(className, classes)
+    }));
+  };
+
+  return Grid;
+}(_react2.default.Component);
+
+Grid.propTypes = propTypes;
+Grid.defaultProps = defaultProps;
+
+exports.default = (0, _bootstrapUtils.bsClass)('container', Grid);
+module.exports = exports['default'];
+
+/***/ }),
+/* 79 */
+/***/ (function(module, exports, __webpack_require__) {
+
 // 7.1.1 ToPrimitive(input [, PreferredType])
 var isObject = __webpack_require__(45);
 // instead of the ES6 spec version, we didn't implement @@toPrimitive case
@@ -7295,7 +7397,7 @@ module.exports = function (it, S) {
 
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports) {
 
 // 7.2.1 RequireObjectCoercible(argument)
@@ -7306,7 +7408,7 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports) {
 
 // 7.1.4 ToInteger
@@ -7318,10 +7420,10 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var shared = __webpack_require__(82)('keys');
+var shared = __webpack_require__(83)('keys');
 var uid = __webpack_require__(59);
 module.exports = function (key) {
   return shared[key] || (shared[key] = uid(key));
@@ -7329,7 +7431,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(24);
@@ -7341,7 +7443,7 @@ module.exports = function (key) {
 
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports) {
 
 // IE 8- don't enum bug keys
@@ -7351,48 +7453,48 @@ module.exports = (
 
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports) {
 
 exports.f = Object.getOwnPropertySymbols;
 
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports) {
 
 module.exports = true;
 
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports) {
 
 module.exports = {};
 
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
 var anObject = __webpack_require__(44);
-var dPs = __webpack_require__(262);
-var enumBugKeys = __webpack_require__(83);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var dPs = __webpack_require__(257);
+var enumBugKeys = __webpack_require__(84);
+var IE_PROTO = __webpack_require__(82)('IE_PROTO');
 var Empty = function () { /* empty */ };
 var PROTOTYPE = 'prototype';
 
 // Create object with fake `null` prototype: use iframe Object with cleared prototype
 var createDict = function () {
   // Thrash, waste and sodomy: IE GC bug
-  var iframe = __webpack_require__(125)('iframe');
+  var iframe = __webpack_require__(128)('iframe');
   var i = enumBugKeys.length;
   var lt = '<';
   var gt = '>';
   var iframeDocument;
   iframe.style.display = 'none';
-  __webpack_require__(263).appendChild(iframe);
+  __webpack_require__(258).appendChild(iframe);
   iframe.src = 'javascript:'; // eslint-disable-line no-script-url
   // createDict = iframe.contentWindow.Object;
   // html.removeChild(iframe);
@@ -7419,7 +7521,7 @@ module.exports = Object.create || function create(O, Properties) {
 
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var def = __webpack_require__(37).f;
@@ -7432,20 +7534,20 @@ module.exports = function (it, tag, stat) {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports.f = __webpack_require__(39);
 
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var global = __webpack_require__(24);
 var core = __webpack_require__(25);
-var LIBRARY = __webpack_require__(85);
-var wksExt = __webpack_require__(89);
+var LIBRARY = __webpack_require__(86);
+var wksExt = __webpack_require__(90);
 var defineProperty = __webpack_require__(37).f;
 module.exports = function (name) {
   var $Symbol = core.Symbol || (core.Symbol = LIBRARY ? {} : global.Symbol || {});
@@ -7454,7 +7556,372 @@ module.exports = function (name) {
 
 
 /***/ }),
-/* 91 */
+/* 92 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends2 = __webpack_require__(11);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _objectWithoutProperties2 = __webpack_require__(12);
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _classCallCheck2 = __webpack_require__(13);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = __webpack_require__(14);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(15);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _elementType = __webpack_require__(31);
+
+var _elementType2 = _interopRequireDefault(_elementType);
+
+var _bootstrapUtils = __webpack_require__(20);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  componentClass: _elementType2.default
+};
+
+var defaultProps = {
+  componentClass: 'div'
+};
+
+var Row = function (_React$Component) {
+  (0, _inherits3.default)(Row, _React$Component);
+
+  function Row() {
+    (0, _classCallCheck3.default)(this, Row);
+    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+  }
+
+  Row.prototype.render = function render() {
+    var _props = this.props,
+        Component = _props.componentClass,
+        className = _props.className,
+        props = (0, _objectWithoutProperties3.default)(_props, ['componentClass', 'className']);
+
+    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
+        bsProps = _splitBsProps[0],
+        elementProps = _splitBsProps[1];
+
+    var classes = (0, _bootstrapUtils.getClassSet)(bsProps);
+
+    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
+      className: (0, _classnames2.default)(className, classes)
+    }));
+  };
+
+  return Row;
+}(_react2.default.Component);
+
+Row.propTypes = propTypes;
+Row.defaultProps = defaultProps;
+
+exports.default = (0, _bootstrapUtils.bsClass)('row', Row);
+module.exports = exports['default'];
+
+/***/ }),
+/* 93 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _extends2 = __webpack_require__(11);
+
+var _extends3 = _interopRequireDefault(_extends2);
+
+var _objectWithoutProperties2 = __webpack_require__(12);
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _classCallCheck2 = __webpack_require__(13);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = __webpack_require__(14);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(15);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(19);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _elementType = __webpack_require__(31);
+
+var _elementType2 = _interopRequireDefault(_elementType);
+
+var _bootstrapUtils = __webpack_require__(20);
+
+var _StyleConfig = __webpack_require__(49);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  componentClass: _elementType2.default,
+
+  /**
+   * The number of columns you wish to span
+   *
+   * for Extra small devices Phones (<768px)
+   *
+   * class-prefix `col-xs-`
+   */
+  xs: _propTypes2.default.number,
+  /**
+   * The number of columns you wish to span
+   *
+   * for Small devices Tablets (≥768px)
+   *
+   * class-prefix `col-sm-`
+   */
+  sm: _propTypes2.default.number,
+  /**
+   * The number of columns you wish to span
+   *
+   * for Medium devices Desktops (≥992px)
+   *
+   * class-prefix `col-md-`
+   */
+  md: _propTypes2.default.number,
+  /**
+   * The number of columns you wish to span
+   *
+   * for Large devices Desktops (≥1200px)
+   *
+   * class-prefix `col-lg-`
+   */
+  lg: _propTypes2.default.number,
+  /**
+   * Hide column
+   *
+   * on Extra small devices Phones
+   *
+   * adds class `hidden-xs`
+   */
+  xsHidden: _propTypes2.default.bool,
+  /**
+   * Hide column
+   *
+   * on Small devices Tablets
+   *
+   * adds class `hidden-sm`
+   */
+  smHidden: _propTypes2.default.bool,
+  /**
+   * Hide column
+   *
+   * on Medium devices Desktops
+   *
+   * adds class `hidden-md`
+   */
+  mdHidden: _propTypes2.default.bool,
+  /**
+   * Hide column
+   *
+   * on Large devices Desktops
+   *
+   * adds class `hidden-lg`
+   */
+  lgHidden: _propTypes2.default.bool,
+  /**
+   * Move columns to the right
+   *
+   * for Extra small devices Phones
+   *
+   * class-prefix `col-xs-offset-`
+   */
+  xsOffset: _propTypes2.default.number,
+  /**
+   * Move columns to the right
+   *
+   * for Small devices Tablets
+   *
+   * class-prefix `col-sm-offset-`
+   */
+  smOffset: _propTypes2.default.number,
+  /**
+   * Move columns to the right
+   *
+   * for Medium devices Desktops
+   *
+   * class-prefix `col-md-offset-`
+   */
+  mdOffset: _propTypes2.default.number,
+  /**
+   * Move columns to the right
+   *
+   * for Large devices Desktops
+   *
+   * class-prefix `col-lg-offset-`
+   */
+  lgOffset: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the right
+   *
+   * for Extra small devices Phones
+   *
+   * class-prefix `col-xs-push-`
+   */
+  xsPush: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the right
+   *
+   * for Small devices Tablets
+   *
+   * class-prefix `col-sm-push-`
+   */
+  smPush: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the right
+   *
+   * for Medium devices Desktops
+   *
+   * class-prefix `col-md-push-`
+   */
+  mdPush: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the right
+   *
+   * for Large devices Desktops
+   *
+   * class-prefix `col-lg-push-`
+   */
+  lgPush: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the left
+   *
+   * for Extra small devices Phones
+   *
+   * class-prefix `col-xs-pull-`
+   */
+  xsPull: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the left
+   *
+   * for Small devices Tablets
+   *
+   * class-prefix `col-sm-pull-`
+   */
+  smPull: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the left
+   *
+   * for Medium devices Desktops
+   *
+   * class-prefix `col-md-pull-`
+   */
+  mdPull: _propTypes2.default.number,
+  /**
+   * Change the order of grid columns to the left
+   *
+   * for Large devices Desktops
+   *
+   * class-prefix `col-lg-pull-`
+   */
+  lgPull: _propTypes2.default.number
+};
+
+var defaultProps = {
+  componentClass: 'div'
+};
+
+var Col = function (_React$Component) {
+  (0, _inherits3.default)(Col, _React$Component);
+
+  function Col() {
+    (0, _classCallCheck3.default)(this, Col);
+    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+  }
+
+  Col.prototype.render = function render() {
+    var _props = this.props,
+        Component = _props.componentClass,
+        className = _props.className,
+        props = (0, _objectWithoutProperties3.default)(_props, ['componentClass', 'className']);
+
+    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
+        bsProps = _splitBsProps[0],
+        elementProps = _splitBsProps[1];
+
+    var classes = [];
+
+    _StyleConfig.DEVICE_SIZES.forEach(function (size) {
+      function popProp(propSuffix, modifier) {
+        var propName = '' + size + propSuffix;
+        var propValue = elementProps[propName];
+
+        if (propValue != null) {
+          classes.push((0, _bootstrapUtils.prefix)(bsProps, '' + size + modifier + '-' + propValue));
+        }
+
+        delete elementProps[propName];
+      }
+
+      popProp('', '');
+      popProp('Offset', '-offset');
+      popProp('Push', '-push');
+      popProp('Pull', '-pull');
+
+      var hiddenPropName = size + 'Hidden';
+      if (elementProps[hiddenPropName]) {
+        classes.push('hidden-' + size);
+      }
+      delete elementProps[hiddenPropName];
+    });
+
+    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
+      className: (0, _classnames2.default)(className, classes)
+    }));
+  };
+
+  return Col;
+}(_react2.default.Component);
+
+Col.propTypes = propTypes;
+Col.defaultProps = defaultProps;
+
+exports.default = (0, _bootstrapUtils.bsClass)('col', Col);
+module.exports = exports['default'];
+
+/***/ }),
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7471,7 +7938,7 @@ module.exports = function (name) {
 var _prodInvariant = __webpack_require__(33),
     _assign = __webpack_require__(4);
 
-var ReactNoopUpdateQueue = __webpack_require__(92);
+var ReactNoopUpdateQueue = __webpack_require__(95);
 
 var canDefineProperty = __webpack_require__(50);
 var emptyObject = __webpack_require__(51);
@@ -7601,7 +8068,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 92 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7700,7 +8167,7 @@ module.exports = ReactNoopUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 93 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7723,7 +8190,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 94 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7767,7 +8234,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 95 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7792,10 +8259,10 @@ var ReactCurrentOwner = __webpack_require__(16);
 var ReactComponentTreeHook = __webpack_require__(8);
 var ReactElement = __webpack_require__(26);
 
-var checkReactTypeSpec = __webpack_require__(144);
+var checkReactTypeSpec = __webpack_require__(147);
 
 var canDefineProperty = __webpack_require__(50);
-var getIteratorFn = __webpack_require__(94);
+var getIteratorFn = __webpack_require__(97);
 var warning = __webpack_require__(2);
 var lowPriorityWarning = __webpack_require__(60);
 
@@ -8026,7 +8493,7 @@ module.exports = ReactElementValidator;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 96 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8043,7 +8510,7 @@ module.exports = ReactElementValidator;
 // Therefore we re-export development-only version with all the PropTypes checks here.
 // However if one is migrating to the `prop-types` npm library, they will go through the
 // `index.js` entry point, and it will branch depending on the environment.
-var factory = __webpack_require__(97);
+var factory = __webpack_require__(100);
 module.exports = function(isValidElement) {
   // It is still allowed in 15.5.
   var throwOnDirectAccess = false;
@@ -8052,7 +8519,7 @@ module.exports = function(isValidElement) {
 
 
 /***/ }),
-/* 97 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8071,7 +8538,7 @@ var warning = __webpack_require__(2);
 var assign = __webpack_require__(4);
 
 var ReactPropTypesSecret = __webpack_require__(61);
-var checkPropTypes = __webpack_require__(148);
+var checkPropTypes = __webpack_require__(151);
 
 module.exports = function(isValidElement, throwOnDirectAccess) {
   /* global Symbol */
@@ -8602,7 +9069,7 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 98 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8623,7 +9090,7 @@ var ReactDOMComponentFlags = {
 module.exports = ReactDOMComponentFlags;
 
 /***/ }),
-/* 99 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8685,7 +9152,7 @@ module.exports = accumulateInto;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 100 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8719,7 +9186,7 @@ function forEachAccumulated(arr, cb, scope) {
 module.exports = forEachAccumulated;
 
 /***/ }),
-/* 101 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8755,7 +9222,7 @@ function getTextContentAccessor() {
 module.exports = getTextContentAccessor;
 
 /***/ }),
-/* 102 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8878,7 +9345,7 @@ module.exports = PooledClass.addPoolingTo(CallbackQueue);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 103 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8903,7 +9370,7 @@ var ReactFeatureFlags = {
 module.exports = ReactFeatureFlags;
 
 /***/ }),
-/* 104 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9029,7 +9496,7 @@ var inputValueTracking = {
 module.exports = inputValueTracking;
 
 /***/ }),
-/* 105 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9083,7 +9550,7 @@ function isTextInputElement(elem) {
 module.exports = isTextInputElement;
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9111,7 +9578,7 @@ var ViewportMetrics = {
 module.exports = ViewportMetrics;
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9166,7 +9633,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = setTextContent;
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9196,7 +9663,7 @@ function focusNode(node) {
 module.exports = focusNode;
 
 /***/ }),
-/* 109 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9354,7 +9821,7 @@ var CSSProperty = {
 module.exports = CSSProperty;
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9372,7 +9839,7 @@ var DOMProperty = __webpack_require__(23);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInstrumentation = __webpack_require__(10);
 
-var quoteAttributeValueForBrowser = __webpack_require__(186);
+var quoteAttributeValueForBrowser = __webpack_require__(189);
 var warning = __webpack_require__(2);
 
 var VALID_ATTRIBUTE_NAME_REGEX = new RegExp('^[' + DOMProperty.ATTRIBUTE_NAME_START_CHAR + '][' + DOMProperty.ATTRIBUTE_NAME_CHAR + ']*$');
@@ -9593,7 +10060,7 @@ module.exports = DOMPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 114 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9613,7 +10080,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 112 */
+/* 115 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9817,7 +10284,7 @@ module.exports = ReactDOMSelect;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 113 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9834,11 +10301,11 @@ module.exports = ReactDOMSelect;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var ReactCompositeComponent = __webpack_require__(194);
-var ReactEmptyComponent = __webpack_require__(115);
-var ReactHostComponent = __webpack_require__(116);
+var ReactCompositeComponent = __webpack_require__(197);
+var ReactEmptyComponent = __webpack_require__(118);
+var ReactHostComponent = __webpack_require__(119);
 
-var getNextDebugID = __webpack_require__(197);
+var getNextDebugID = __webpack_require__(200);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -9950,7 +10417,7 @@ module.exports = instantiateReactComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 114 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9994,7 +10461,7 @@ module.exports = ReactNodeTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 115 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10027,7 +10494,7 @@ ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 module.exports = ReactEmptyComponent;
 
 /***/ }),
-/* 116 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10099,7 +10566,7 @@ module.exports = ReactHostComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 117 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10116,9 +10583,9 @@ module.exports = ReactHostComponent;
 var _prodInvariant = __webpack_require__(3);
 
 var ReactCurrentOwner = __webpack_require__(16);
-var REACT_ELEMENT_TYPE = __webpack_require__(198);
+var REACT_ELEMENT_TYPE = __webpack_require__(201);
 
-var getIteratorFn = __webpack_require__(199);
+var getIteratorFn = __webpack_require__(202);
 var invariant = __webpack_require__(1);
 var KeyEscapeUtils = __webpack_require__(74);
 var warning = __webpack_require__(2);
@@ -10279,7 +10746,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 118 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10360,7 +10827,7 @@ module.exports = EventListener;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 119 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10374,11 +10841,11 @@ module.exports = EventListener;
 
 
 
-var ReactDOMSelection = __webpack_require__(211);
+var ReactDOMSelection = __webpack_require__(214);
 
-var containsNode = __webpack_require__(213);
-var focusNode = __webpack_require__(108);
-var getActiveElement = __webpack_require__(120);
+var containsNode = __webpack_require__(216);
+var focusNode = __webpack_require__(111);
+var getActiveElement = __webpack_require__(123);
 
 function isInDocument(node) {
   return containsNode(document.documentElement, node);
@@ -10486,7 +10953,7 @@ var ReactInputSelection = {
 module.exports = ReactInputSelection;
 
 /***/ }),
-/* 120 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10528,7 +10995,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 121 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10550,18 +11017,18 @@ var React = __webpack_require__(32);
 var ReactBrowserEventEmitter = __webpack_require__(57);
 var ReactCurrentOwner = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMContainerInfo = __webpack_require__(228);
-var ReactDOMFeatureFlags = __webpack_require__(229);
-var ReactFeatureFlags = __webpack_require__(103);
+var ReactDOMContainerInfo = __webpack_require__(231);
+var ReactDOMFeatureFlags = __webpack_require__(232);
+var ReactFeatureFlags = __webpack_require__(106);
 var ReactInstanceMap = __webpack_require__(43);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactMarkupChecksum = __webpack_require__(230);
+var ReactMarkupChecksum = __webpack_require__(233);
 var ReactReconciler = __webpack_require__(34);
 var ReactUpdateQueue = __webpack_require__(75);
 var ReactUpdates = __webpack_require__(17);
 
 var emptyObject = __webpack_require__(51);
-var instantiateReactComponent = __webpack_require__(113);
+var instantiateReactComponent = __webpack_require__(116);
 var invariant = __webpack_require__(1);
 var setInnerHTML = __webpack_require__(55);
 var shouldUpdateReactComponent = __webpack_require__(73);
@@ -11070,7 +11537,7 @@ module.exports = ReactMount;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 122 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11084,7 +11551,7 @@ module.exports = ReactMount;
 
 
 
-var ReactNodeTypes = __webpack_require__(114);
+var ReactNodeTypes = __webpack_require__(117);
 
 function getHostComponentFromComposite(inst) {
   var type;
@@ -11103,11 +11570,11 @@ function getHostComponentFromComposite(inst) {
 module.exports = getHostComponentFromComposite;
 
 /***/ }),
-/* 123 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // optional / simple context binding
-var aFunction = __webpack_require__(249);
+var aFunction = __webpack_require__(247);
 module.exports = function (fn, that, length) {
   aFunction(fn);
   if (that === undefined) return fn;
@@ -11129,16 +11596,16 @@ module.exports = function (fn, that, length) {
 
 
 /***/ }),
-/* 124 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = !__webpack_require__(38) && !__webpack_require__(46)(function () {
-  return Object.defineProperty(__webpack_require__(125)('div'), 'a', { get: function () { return 7; } }).a != 7;
+  return Object.defineProperty(__webpack_require__(128)('div'), 'a', { get: function () { return 7; } }).a != 7;
 });
 
 
 /***/ }),
-/* 125 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(45);
@@ -11151,35 +11618,13 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 126 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var getKeys = __webpack_require__(47);
-var toIObject = __webpack_require__(30);
-var isEnum = __webpack_require__(48).f;
-module.exports = function (isEntries) {
-  return function (it) {
-    var O = toIObject(it);
-    var keys = getKeys(O);
-    var length = keys.length;
-    var i = 0;
-    var result = [];
-    var key;
-    while (length > i) if (isEnum.call(O, key = keys[i++])) {
-      result.push(isEntries ? [key, O[key]] : O[key]);
-    } return result;
-  };
-};
-
-
-/***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var has = __webpack_require__(29);
 var toIObject = __webpack_require__(30);
-var arrayIndexOf = __webpack_require__(250)(false);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var arrayIndexOf = __webpack_require__(249)(false);
+var IE_PROTO = __webpack_require__(82)('IE_PROTO');
 
 module.exports = function (object, names) {
   var O = toIObject(object);
@@ -11196,11 +11641,11 @@ module.exports = function (object, names) {
 
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for non-array-like ES3 and non-enumerable old V8 strings
-var cof = __webpack_require__(129);
+var cof = __webpack_require__(131);
 // eslint-disable-next-line no-prototype-builtins
 module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
   return cof(it) == 'String' ? it.split('') : Object(it);
@@ -11208,7 +11653,7 @@ module.exports = Object('z').propertyIsEnumerable(0) ? Object : function (it) {
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports) {
 
 var toString = {}.toString;
@@ -11219,18 +11664,18 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.1.13 ToObject(argument)
-var defined = __webpack_require__(79);
+var defined = __webpack_require__(80);
 module.exports = function (it) {
   return Object(defined(it));
 };
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11238,11 +11683,11 @@ module.exports = function (it) {
 
 exports.__esModule = true;
 
-var _iterator = __webpack_require__(257);
+var _iterator = __webpack_require__(252);
 
 var _iterator2 = _interopRequireDefault(_iterator);
 
-var _symbol = __webpack_require__(269);
+var _symbol = __webpack_require__(264);
 
 var _symbol2 = _interopRequireDefault(_symbol);
 
@@ -11257,20 +11702,20 @@ exports.default = typeof _symbol2.default === "function" && _typeof(_iterator2.d
 };
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var LIBRARY = __webpack_require__(85);
+var LIBRARY = __webpack_require__(86);
 var $export = __webpack_require__(28);
-var redefine = __webpack_require__(133);
+var redefine = __webpack_require__(135);
 var hide = __webpack_require__(36);
 var has = __webpack_require__(29);
-var Iterators = __webpack_require__(86);
-var $iterCreate = __webpack_require__(261);
-var setToStringTag = __webpack_require__(88);
-var getPrototypeOf = __webpack_require__(264);
+var Iterators = __webpack_require__(87);
+var $iterCreate = __webpack_require__(256);
+var setToStringTag = __webpack_require__(89);
+var getPrototypeOf = __webpack_require__(259);
 var ITERATOR = __webpack_require__(39)('iterator');
 var BUGGY = !([].keys && 'next' in [].keys()); // Safari has buggy iterators w/o `next`
 var FF_ITERATOR = '@@iterator';
@@ -11334,19 +11779,19 @@ module.exports = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORCE
 
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(36);
 
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.7 / 15.2.3.4 Object.getOwnPropertyNames(O)
-var $keys = __webpack_require__(127);
-var hiddenKeys = __webpack_require__(83).concat('length', 'prototype');
+var $keys = __webpack_require__(129);
+var hiddenKeys = __webpack_require__(84).concat('length', 'prototype');
 
 exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
   return $keys(O, hiddenKeys);
@@ -11354,15 +11799,15 @@ exports.f = Object.getOwnPropertyNames || function getOwnPropertyNames(O) {
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var pIE = __webpack_require__(48);
 var createDesc = __webpack_require__(58);
 var toIObject = __webpack_require__(30);
-var toPrimitive = __webpack_require__(78);
+var toPrimitive = __webpack_require__(79);
 var has = __webpack_require__(29);
-var IE8_DOM_DEFINE = __webpack_require__(124);
+var IE8_DOM_DEFINE = __webpack_require__(127);
 var gOPD = Object.getOwnPropertyDescriptor;
 
 exports.f = __webpack_require__(38) ? gOPD : function getOwnPropertyDescriptor(O, P) {
@@ -11376,7 +11821,29 @@ exports.f = __webpack_require__(38) ? gOPD : function getOwnPropertyDescriptor(O
 
 
 /***/ }),
-/* 136 */
+/* 138 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var getKeys = __webpack_require__(47);
+var toIObject = __webpack_require__(30);
+var isEnum = __webpack_require__(48).f;
+module.exports = function (isEntries) {
+  return function (it) {
+    var O = toIObject(it);
+    var keys = getKeys(O);
+    var length = keys.length;
+    var i = 0;
+    var result = [];
+    var key;
+    while (length > i) if (isEnum.call(O, key = keys[i++])) {
+      result.push(isEntries ? [key, O[key]] : O[key]);
+    } return result;
+  };
+};
+
+
+/***/ }),
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11444,7 +11911,7 @@ module.exports = warning;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 137 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11484,7 +11951,7 @@ var _propTypes = __webpack_require__(19);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Glyphicon = __webpack_require__(298);
+var _Glyphicon = __webpack_require__(302);
 
 var _Glyphicon2 = _interopRequireDefault(_Glyphicon);
 
@@ -11565,7 +12032,7 @@ exports.default = (0, _bootstrapUtils.bsClass)('form-control-feedback', FormCont
 module.exports = exports['default'];
 
 /***/ }),
-/* 138 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11577,13 +12044,13 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(22);
+var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _game = __webpack_require__(238);
+var _game = __webpack_require__(241);
 
-var _welcome = __webpack_require__(243);
+var _welcome = __webpack_require__(290);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -11604,8 +12071,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
       var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
+      _this.hideWelcome = function (displayWelcome) {
+        _this.setState({
+          displayWelcome: displayWelcome
+        });
+      };
+
+      _this.showGame = function (displayGame) {
+        _this.setState({
+          displayGame: displayGame
+        });
+      };
+
       _this.state = {
-        display: "block"
+        displayWelcome: "block",
+        displayGame: "none"
       };
       return _this;
     }
@@ -11616,8 +12096,19 @@ document.addEventListener('DOMContentLoaded', function () {
         return _react2.default.createElement(
           'div',
           null,
-          _react2.default.createElement(_welcome.Welcome, null),
-          _react2.default.createElement(_game.Game, null)
+          _react2.default.createElement(
+            'div',
+            { style: { display: this.state.displayWelcome } },
+            _react2.default.createElement(_welcome.Welcome, {
+              hideWelcome: this.hideWelcome,
+              showGame: this.showGame
+            })
+          ),
+          _react2.default.createElement(
+            'div',
+            { style: { display: this.state.displayGame } },
+            _react2.default.createElement(_game.Game, null)
+          )
         );
       }
     }]);
@@ -11631,7 +12122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /***/ }),
-/* 139 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11645,11 +12136,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-var PooledClass = __webpack_require__(140);
+var PooledClass = __webpack_require__(143);
 var ReactElement = __webpack_require__(26);
 
 var emptyFunction = __webpack_require__(9);
-var traverseAllChildren = __webpack_require__(141);
+var traverseAllChildren = __webpack_require__(144);
 
 var twoArgumentPooler = PooledClass.twoArgumentPooler;
 var fourArgumentPooler = PooledClass.fourArgumentPooler;
@@ -11825,7 +12316,7 @@ var ReactChildren = {
 module.exports = ReactChildren;
 
 /***/ }),
-/* 140 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11941,7 +12432,7 @@ module.exports = PooledClass;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 141 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11958,11 +12449,11 @@ module.exports = PooledClass;
 var _prodInvariant = __webpack_require__(33);
 
 var ReactCurrentOwner = __webpack_require__(16);
-var REACT_ELEMENT_TYPE = __webpack_require__(93);
+var REACT_ELEMENT_TYPE = __webpack_require__(96);
 
-var getIteratorFn = __webpack_require__(94);
+var getIteratorFn = __webpack_require__(97);
 var invariant = __webpack_require__(1);
-var KeyEscapeUtils = __webpack_require__(142);
+var KeyEscapeUtils = __webpack_require__(145);
 var warning = __webpack_require__(2);
 
 var SEPARATOR = '.';
@@ -12121,7 +12612,7 @@ module.exports = traverseAllChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 142 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12183,7 +12674,7 @@ var KeyEscapeUtils = {
 module.exports = KeyEscapeUtils;
 
 /***/ }),
-/* 143 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12206,7 +12697,7 @@ var ReactElement = __webpack_require__(26);
  */
 var createDOMFactory = ReactElement.createFactory;
 if (process.env.NODE_ENV !== 'production') {
-  var ReactElementValidator = __webpack_require__(95);
+  var ReactElementValidator = __webpack_require__(98);
   createDOMFactory = ReactElementValidator.createFactory;
 }
 
@@ -12356,7 +12847,7 @@ module.exports = ReactDOMFactories;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 144 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12372,8 +12863,8 @@ module.exports = ReactDOMFactories;
 
 var _prodInvariant = __webpack_require__(33);
 
-var ReactPropTypeLocationNames = __webpack_require__(145);
-var ReactPropTypesSecret = __webpack_require__(146);
+var ReactPropTypeLocationNames = __webpack_require__(148);
+var ReactPropTypesSecret = __webpack_require__(149);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -12447,7 +12938,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 145 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12476,7 +12967,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 146 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12496,7 +12987,7 @@ var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 module.exports = ReactPropTypesSecret;
 
 /***/ }),
-/* 147 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12513,12 +13004,12 @@ module.exports = ReactPropTypesSecret;
 var _require = __webpack_require__(26),
     isValidElement = _require.isValidElement;
 
-var factory = __webpack_require__(96);
+var factory = __webpack_require__(99);
 
 module.exports = factory(isValidElement);
 
 /***/ }),
-/* 148 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12585,7 +13076,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 149 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12602,7 +13093,7 @@ module.exports = checkPropTypes;
 module.exports = '15.6.2';
 
 /***/ }),
-/* 150 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12616,19 +13107,19 @@ module.exports = '15.6.2';
 
 
 
-var _require = __webpack_require__(91),
+var _require = __webpack_require__(94),
     Component = _require.Component;
 
 var _require2 = __webpack_require__(26),
     isValidElement = _require2.isValidElement;
 
-var ReactNoopUpdateQueue = __webpack_require__(92);
-var factory = __webpack_require__(151);
+var ReactNoopUpdateQueue = __webpack_require__(95);
+var factory = __webpack_require__(154);
 
 module.exports = factory(Component, isValidElement, ReactNoopUpdateQueue);
 
 /***/ }),
-/* 151 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13506,7 +13997,7 @@ module.exports = factory;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 152 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13548,7 +14039,7 @@ module.exports = onlyChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 153 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13565,15 +14056,15 @@ module.exports = onlyChild;
 
 
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDefaultInjection = __webpack_require__(154);
-var ReactMount = __webpack_require__(121);
+var ReactDefaultInjection = __webpack_require__(157);
+var ReactMount = __webpack_require__(124);
 var ReactReconciler = __webpack_require__(34);
 var ReactUpdates = __webpack_require__(17);
-var ReactVersion = __webpack_require__(232);
+var ReactVersion = __webpack_require__(235);
 
-var findDOMNode = __webpack_require__(233);
-var getHostComponentFromComposite = __webpack_require__(122);
-var renderSubtreeIntoContainer = __webpack_require__(234);
+var findDOMNode = __webpack_require__(236);
+var getHostComponentFromComposite = __webpack_require__(125);
+var renderSubtreeIntoContainer = __webpack_require__(237);
 var warning = __webpack_require__(2);
 
 ReactDefaultInjection.inject();
@@ -13650,9 +14141,9 @@ if (process.env.NODE_ENV !== 'production') {
 
 if (process.env.NODE_ENV !== 'production') {
   var ReactInstrumentation = __webpack_require__(10);
-  var ReactDOMUnknownPropertyHook = __webpack_require__(235);
-  var ReactDOMNullInputValuePropHook = __webpack_require__(236);
-  var ReactDOMInvalidARIAHook = __webpack_require__(237);
+  var ReactDOMUnknownPropertyHook = __webpack_require__(238);
+  var ReactDOMNullInputValuePropHook = __webpack_require__(239);
+  var ReactDOMInvalidARIAHook = __webpack_require__(240);
 
   ReactInstrumentation.debugTool.addHook(ReactDOMUnknownPropertyHook);
   ReactInstrumentation.debugTool.addHook(ReactDOMNullInputValuePropHook);
@@ -13663,7 +14154,7 @@ module.exports = ReactDOM;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 154 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13677,25 +14168,25 @@ module.exports = ReactDOM;
 
 
 
-var ARIADOMPropertyConfig = __webpack_require__(155);
-var BeforeInputEventPlugin = __webpack_require__(156);
-var ChangeEventPlugin = __webpack_require__(160);
-var DefaultEventPluginOrder = __webpack_require__(168);
-var EnterLeaveEventPlugin = __webpack_require__(169);
-var HTMLDOMPropertyConfig = __webpack_require__(170);
-var ReactComponentBrowserEnvironment = __webpack_require__(171);
-var ReactDOMComponent = __webpack_require__(177);
+var ARIADOMPropertyConfig = __webpack_require__(158);
+var BeforeInputEventPlugin = __webpack_require__(159);
+var ChangeEventPlugin = __webpack_require__(163);
+var DefaultEventPluginOrder = __webpack_require__(171);
+var EnterLeaveEventPlugin = __webpack_require__(172);
+var HTMLDOMPropertyConfig = __webpack_require__(173);
+var ReactComponentBrowserEnvironment = __webpack_require__(174);
+var ReactDOMComponent = __webpack_require__(180);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMEmptyComponent = __webpack_require__(203);
-var ReactDOMTreeTraversal = __webpack_require__(204);
-var ReactDOMTextComponent = __webpack_require__(205);
-var ReactDefaultBatchingStrategy = __webpack_require__(206);
-var ReactEventListener = __webpack_require__(207);
-var ReactInjection = __webpack_require__(209);
-var ReactReconcileTransaction = __webpack_require__(210);
-var SVGDOMPropertyConfig = __webpack_require__(216);
-var SelectEventPlugin = __webpack_require__(217);
-var SimpleEventPlugin = __webpack_require__(218);
+var ReactDOMEmptyComponent = __webpack_require__(206);
+var ReactDOMTreeTraversal = __webpack_require__(207);
+var ReactDOMTextComponent = __webpack_require__(208);
+var ReactDefaultBatchingStrategy = __webpack_require__(209);
+var ReactEventListener = __webpack_require__(210);
+var ReactInjection = __webpack_require__(212);
+var ReactReconcileTransaction = __webpack_require__(213);
+var SVGDOMPropertyConfig = __webpack_require__(219);
+var SelectEventPlugin = __webpack_require__(220);
+var SimpleEventPlugin = __webpack_require__(221);
 
 var alreadyInjected = false;
 
@@ -13752,7 +14243,7 @@ module.exports = {
 };
 
 /***/ }),
-/* 155 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13829,7 +14320,7 @@ var ARIADOMPropertyConfig = {
 module.exports = ARIADOMPropertyConfig;
 
 /***/ }),
-/* 156 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13845,9 +14336,9 @@ module.exports = ARIADOMPropertyConfig;
 
 var EventPropagators = __webpack_require__(40);
 var ExecutionEnvironment = __webpack_require__(7);
-var FallbackCompositionState = __webpack_require__(157);
-var SyntheticCompositionEvent = __webpack_require__(158);
-var SyntheticInputEvent = __webpack_require__(159);
+var FallbackCompositionState = __webpack_require__(160);
+var SyntheticCompositionEvent = __webpack_require__(161);
+var SyntheticInputEvent = __webpack_require__(162);
 
 var END_KEYCODES = [9, 13, 27, 32]; // Tab, Return, Esc, Space
 var START_KEYCODE = 229;
@@ -14216,7 +14707,7 @@ var BeforeInputEventPlugin = {
 module.exports = BeforeInputEventPlugin;
 
 /***/ }),
-/* 157 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14234,7 +14725,7 @@ var _assign = __webpack_require__(4);
 
 var PooledClass = __webpack_require__(27);
 
-var getTextContentAccessor = __webpack_require__(101);
+var getTextContentAccessor = __webpack_require__(104);
 
 /**
  * This helper class stores information about text content of a target node,
@@ -14314,7 +14805,7 @@ PooledClass.addPoolingTo(FallbackCompositionState);
 module.exports = FallbackCompositionState;
 
 /***/ }),
-/* 158 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14328,7 +14819,7 @@ module.exports = FallbackCompositionState;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 /**
  * @interface Event
@@ -14353,7 +14844,7 @@ SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface
 module.exports = SyntheticCompositionEvent;
 
 /***/ }),
-/* 159 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14367,7 +14858,7 @@ module.exports = SyntheticCompositionEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 /**
  * @interface Event
@@ -14393,7 +14884,7 @@ SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 module.exports = SyntheticInputEvent;
 
 /***/ }),
-/* 160 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14412,12 +14903,12 @@ var EventPropagators = __webpack_require__(40);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(17);
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
-var inputValueTracking = __webpack_require__(104);
+var inputValueTracking = __webpack_require__(107);
 var getEventTarget = __webpack_require__(64);
 var isEventSupported = __webpack_require__(65);
-var isTextInputElement = __webpack_require__(105);
+var isTextInputElement = __webpack_require__(108);
 
 var eventTypes = {
   change: {
@@ -14708,7 +15199,7 @@ var ChangeEventPlugin = {
 module.exports = ChangeEventPlugin;
 
 /***/ }),
-/* 161 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14723,7 +15214,7 @@ module.exports = ChangeEventPlugin;
 
 
 
-var ReactOwner = __webpack_require__(162);
+var ReactOwner = __webpack_require__(165);
 
 var ReactRef = {};
 
@@ -14800,7 +15291,7 @@ ReactRef.detachRefs = function (instance, element) {
 module.exports = ReactRef;
 
 /***/ }),
-/* 162 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14897,7 +15388,7 @@ module.exports = ReactOwner;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 163 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14912,12 +15403,12 @@ module.exports = ReactOwner;
 
 
 
-var ReactInvalidSetStateWarningHook = __webpack_require__(164);
-var ReactHostOperationHistoryHook = __webpack_require__(165);
+var ReactInvalidSetStateWarningHook = __webpack_require__(167);
+var ReactHostOperationHistoryHook = __webpack_require__(168);
 var ReactComponentTreeHook = __webpack_require__(8);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var performanceNow = __webpack_require__(166);
+var performanceNow = __webpack_require__(169);
 var warning = __webpack_require__(2);
 
 var hooks = [];
@@ -15262,7 +15753,7 @@ module.exports = ReactDebugTool;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 164 */
+/* 167 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15303,7 +15794,7 @@ module.exports = ReactInvalidSetStateWarningHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 165 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15340,7 +15831,7 @@ var ReactHostOperationHistoryHook = {
 module.exports = ReactHostOperationHistoryHook;
 
 /***/ }),
-/* 166 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15355,7 +15846,7 @@ module.exports = ReactHostOperationHistoryHook;
  * @typechecks
  */
 
-var performance = __webpack_require__(167);
+var performance = __webpack_require__(170);
 
 var performanceNow;
 
@@ -15377,7 +15868,7 @@ if (performance.now) {
 module.exports = performanceNow;
 
 /***/ }),
-/* 167 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15403,7 +15894,7 @@ if (ExecutionEnvironment.canUseDOM) {
 module.exports = performance || {};
 
 /***/ }),
-/* 168 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15432,7 +15923,7 @@ var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'Tap
 module.exports = DefaultEventPluginOrder;
 
 /***/ }),
-/* 169 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15533,7 +16024,7 @@ var EnterLeaveEventPlugin = {
 module.exports = EnterLeaveEventPlugin;
 
 /***/ }),
-/* 170 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15773,7 +16264,7 @@ var HTMLDOMPropertyConfig = {
 module.exports = HTMLDOMPropertyConfig;
 
 /***/ }),
-/* 171 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15788,7 +16279,7 @@ module.exports = HTMLDOMPropertyConfig;
 
 
 var DOMChildrenOperations = __webpack_require__(67);
-var ReactDOMIDOperations = __webpack_require__(176);
+var ReactDOMIDOperations = __webpack_require__(179);
 
 /**
  * Abstracts away all functionality of the reconciler that requires knowledge of
@@ -15804,7 +16295,7 @@ var ReactComponentBrowserEnvironment = {
 module.exports = ReactComponentBrowserEnvironment;
 
 /***/ }),
-/* 172 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15823,7 +16314,7 @@ var _prodInvariant = __webpack_require__(3);
 var DOMLazyTree = __webpack_require__(35);
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createNodesFromMarkup = __webpack_require__(173);
+var createNodesFromMarkup = __webpack_require__(176);
 var emptyFunction = __webpack_require__(9);
 var invariant = __webpack_require__(1);
 
@@ -15854,7 +16345,7 @@ module.exports = Danger;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 173 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -15873,8 +16364,8 @@ module.exports = Danger;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var createArrayFromMixed = __webpack_require__(174);
-var getMarkupWrap = __webpack_require__(175);
+var createArrayFromMixed = __webpack_require__(177);
+var getMarkupWrap = __webpack_require__(178);
 var invariant = __webpack_require__(1);
 
 /**
@@ -15942,7 +16433,7 @@ module.exports = createNodesFromMarkup;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 174 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16073,7 +16564,7 @@ module.exports = createArrayFromMixed;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 175 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16172,7 +16663,7 @@ module.exports = getMarkupWrap;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 176 */
+/* 179 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16208,7 +16699,7 @@ var ReactDOMIDOperations = {
 module.exports = ReactDOMIDOperations;
 
 /***/ }),
-/* 177 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16227,31 +16718,31 @@ module.exports = ReactDOMIDOperations;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var AutoFocusUtils = __webpack_require__(178);
-var CSSPropertyOperations = __webpack_require__(179);
+var AutoFocusUtils = __webpack_require__(181);
+var CSSPropertyOperations = __webpack_require__(182);
 var DOMLazyTree = __webpack_require__(35);
 var DOMNamespaces = __webpack_require__(68);
 var DOMProperty = __webpack_require__(23);
-var DOMPropertyOperations = __webpack_require__(110);
+var DOMPropertyOperations = __webpack_require__(113);
 var EventPluginHub = __webpack_require__(41);
 var EventPluginRegistry = __webpack_require__(52);
 var ReactBrowserEventEmitter = __webpack_require__(57);
-var ReactDOMComponentFlags = __webpack_require__(98);
+var ReactDOMComponentFlags = __webpack_require__(101);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMInput = __webpack_require__(189);
-var ReactDOMOption = __webpack_require__(190);
-var ReactDOMSelect = __webpack_require__(112);
-var ReactDOMTextarea = __webpack_require__(191);
+var ReactDOMInput = __webpack_require__(192);
+var ReactDOMOption = __webpack_require__(193);
+var ReactDOMSelect = __webpack_require__(115);
+var ReactDOMTextarea = __webpack_require__(194);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactMultiChild = __webpack_require__(192);
-var ReactServerRenderingTransaction = __webpack_require__(201);
+var ReactMultiChild = __webpack_require__(195);
+var ReactServerRenderingTransaction = __webpack_require__(204);
 
 var emptyFunction = __webpack_require__(9);
 var escapeTextContentForBrowser = __webpack_require__(56);
 var invariant = __webpack_require__(1);
 var isEventSupported = __webpack_require__(65);
 var shallowEqual = __webpack_require__(72);
-var inputValueTracking = __webpack_require__(104);
+var inputValueTracking = __webpack_require__(107);
 var validateDOMNesting = __webpack_require__(76);
 var warning = __webpack_require__(2);
 
@@ -17226,7 +17717,7 @@ module.exports = ReactDOMComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 178 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17242,7 +17733,7 @@ module.exports = ReactDOMComponent;
 
 var ReactDOMComponentTree = __webpack_require__(6);
 
-var focusNode = __webpack_require__(108);
+var focusNode = __webpack_require__(111);
 
 var AutoFocusUtils = {
   focusDOMComponent: function () {
@@ -17253,7 +17744,7 @@ var AutoFocusUtils = {
 module.exports = AutoFocusUtils;
 
 /***/ }),
-/* 179 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17267,14 +17758,14 @@ module.exports = AutoFocusUtils;
 
 
 
-var CSSProperty = __webpack_require__(109);
+var CSSProperty = __webpack_require__(112);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactInstrumentation = __webpack_require__(10);
 
-var camelizeStyleName = __webpack_require__(180);
-var dangerousStyleValue = __webpack_require__(182);
-var hyphenateStyleName = __webpack_require__(183);
-var memoizeStringOnly = __webpack_require__(185);
+var camelizeStyleName = __webpack_require__(183);
+var dangerousStyleValue = __webpack_require__(185);
+var hyphenateStyleName = __webpack_require__(186);
+var memoizeStringOnly = __webpack_require__(188);
 var warning = __webpack_require__(2);
 
 var processStyleName = memoizeStringOnly(function (styleName) {
@@ -17472,7 +17963,7 @@ module.exports = CSSPropertyOperations;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 180 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17487,7 +17978,7 @@ module.exports = CSSPropertyOperations;
 
 
 
-var camelize = __webpack_require__(181);
+var camelize = __webpack_require__(184);
 
 var msPattern = /^-ms-/;
 
@@ -17515,7 +18006,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 181 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17550,7 +18041,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 182 */
+/* 185 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17564,7 +18055,7 @@ module.exports = camelize;
 
 
 
-var CSSProperty = __webpack_require__(109);
+var CSSProperty = __webpack_require__(112);
 var warning = __webpack_require__(2);
 
 var isUnitlessNumber = CSSProperty.isUnitlessNumber;
@@ -17633,7 +18124,7 @@ module.exports = dangerousStyleValue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 183 */
+/* 186 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17648,7 +18139,7 @@ module.exports = dangerousStyleValue;
 
 
 
-var hyphenate = __webpack_require__(184);
+var hyphenate = __webpack_require__(187);
 
 var msPattern = /^ms-/;
 
@@ -17675,7 +18166,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 184 */
+/* 187 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17711,7 +18202,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 185 */
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17744,7 +18235,7 @@ function memoizeStringOnly(callback) {
 module.exports = memoizeStringOnly;
 
 /***/ }),
-/* 186 */
+/* 189 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17773,7 +18264,7 @@ function quoteAttributeValueForBrowser(value) {
 module.exports = quoteAttributeValueForBrowser;
 
 /***/ }),
-/* 187 */
+/* 190 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17808,7 +18299,7 @@ var ReactEventEmitterMixin = {
 module.exports = ReactEventEmitterMixin;
 
 /***/ }),
-/* 188 */
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17912,7 +18403,7 @@ function getVendorPrefixedEventName(eventName) {
 module.exports = getVendorPrefixedEventName;
 
 /***/ }),
-/* 189 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -17929,7 +18420,7 @@ module.exports = getVendorPrefixedEventName;
 var _prodInvariant = __webpack_require__(3),
     _assign = __webpack_require__(4);
 
-var DOMPropertyOperations = __webpack_require__(110);
+var DOMPropertyOperations = __webpack_require__(113);
 var LinkedValueUtils = __webpack_require__(70);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(17);
@@ -18203,7 +18694,7 @@ module.exports = ReactDOMInput;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 190 */
+/* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18221,7 +18712,7 @@ var _assign = __webpack_require__(4);
 
 var React = __webpack_require__(32);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactDOMSelect = __webpack_require__(112);
+var ReactDOMSelect = __webpack_require__(115);
 
 var warning = __webpack_require__(2);
 var didWarnInvalidOptionChildren = false;
@@ -18329,7 +18820,7 @@ module.exports = ReactDOMOption;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 191 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18493,7 +18984,7 @@ module.exports = ReactDOMTextarea;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 192 */
+/* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18515,10 +19006,10 @@ var ReactInstrumentation = __webpack_require__(10);
 
 var ReactCurrentOwner = __webpack_require__(16);
 var ReactReconciler = __webpack_require__(34);
-var ReactChildReconciler = __webpack_require__(193);
+var ReactChildReconciler = __webpack_require__(196);
 
 var emptyFunction = __webpack_require__(9);
-var flattenChildren = __webpack_require__(200);
+var flattenChildren = __webpack_require__(203);
 var invariant = __webpack_require__(1);
 
 /**
@@ -18943,7 +19434,7 @@ module.exports = ReactMultiChild;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 193 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18959,10 +19450,10 @@ module.exports = ReactMultiChild;
 
 var ReactReconciler = __webpack_require__(34);
 
-var instantiateReactComponent = __webpack_require__(113);
+var instantiateReactComponent = __webpack_require__(116);
 var KeyEscapeUtils = __webpack_require__(74);
 var shouldUpdateReactComponent = __webpack_require__(73);
-var traverseAllChildren = __webpack_require__(117);
+var traverseAllChildren = __webpack_require__(120);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -19100,7 +19591,7 @@ module.exports = ReactChildReconciler;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 194 */
+/* 197 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19123,11 +19614,11 @@ var ReactCurrentOwner = __webpack_require__(16);
 var ReactErrorUtils = __webpack_require__(63);
 var ReactInstanceMap = __webpack_require__(43);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactNodeTypes = __webpack_require__(114);
+var ReactNodeTypes = __webpack_require__(117);
 var ReactReconciler = __webpack_require__(34);
 
 if (process.env.NODE_ENV !== 'production') {
-  var checkReactTypeSpec = __webpack_require__(195);
+  var checkReactTypeSpec = __webpack_require__(198);
 }
 
 var emptyObject = __webpack_require__(51);
@@ -20004,7 +20495,7 @@ module.exports = ReactCompositeComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 195 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20020,8 +20511,8 @@ module.exports = ReactCompositeComponent;
 
 var _prodInvariant = __webpack_require__(3);
 
-var ReactPropTypeLocationNames = __webpack_require__(196);
-var ReactPropTypesSecret = __webpack_require__(111);
+var ReactPropTypeLocationNames = __webpack_require__(199);
+var ReactPropTypesSecret = __webpack_require__(114);
 
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
@@ -20095,7 +20586,7 @@ module.exports = checkReactTypeSpec;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 196 */
+/* 199 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20124,7 +20615,7 @@ module.exports = ReactPropTypeLocationNames;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 197 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20148,7 +20639,7 @@ function getNextDebugID() {
 module.exports = getNextDebugID;
 
 /***/ }),
-/* 198 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20171,7 +20662,7 @@ var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol
 module.exports = REACT_ELEMENT_TYPE;
 
 /***/ }),
-/* 199 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20215,7 +20706,7 @@ function getIteratorFn(maybeIterable) {
 module.exports = getIteratorFn;
 
 /***/ }),
-/* 200 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20231,7 +20722,7 @@ module.exports = getIteratorFn;
 
 
 var KeyEscapeUtils = __webpack_require__(74);
-var traverseAllChildren = __webpack_require__(117);
+var traverseAllChildren = __webpack_require__(120);
 var warning = __webpack_require__(2);
 
 var ReactComponentTreeHook;
@@ -20295,7 +20786,7 @@ module.exports = flattenChildren;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 201 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20314,7 +20805,7 @@ var _assign = __webpack_require__(4);
 var PooledClass = __webpack_require__(27);
 var Transaction = __webpack_require__(53);
 var ReactInstrumentation = __webpack_require__(10);
-var ReactServerUpdateQueue = __webpack_require__(202);
+var ReactServerUpdateQueue = __webpack_require__(205);
 
 /**
  * Executed within the scope of the `Transaction` instance. Consider these as
@@ -20389,7 +20880,7 @@ module.exports = ReactServerRenderingTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 202 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20532,7 +21023,7 @@ module.exports = ReactServerUpdateQueue;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 203 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20595,7 +21086,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 module.exports = ReactDOMEmptyComponent;
 
 /***/ }),
-/* 204 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20735,7 +21226,7 @@ module.exports = {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 205 */
+/* 208 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20901,7 +21392,7 @@ module.exports = ReactDOMTextComponent;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 206 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20972,7 +21463,7 @@ var ReactDefaultBatchingStrategy = {
 module.exports = ReactDefaultBatchingStrategy;
 
 /***/ }),
-/* 207 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -20988,14 +21479,14 @@ module.exports = ReactDefaultBatchingStrategy;
 
 var _assign = __webpack_require__(4);
 
-var EventListener = __webpack_require__(118);
+var EventListener = __webpack_require__(121);
 var ExecutionEnvironment = __webpack_require__(7);
 var PooledClass = __webpack_require__(27);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactUpdates = __webpack_require__(17);
 
 var getEventTarget = __webpack_require__(64);
-var getUnboundedScrollPosition = __webpack_require__(208);
+var getUnboundedScrollPosition = __webpack_require__(211);
 
 /**
  * Find the deepest React component completely containing the root of the
@@ -21130,7 +21621,7 @@ var ReactEventListener = {
 module.exports = ReactEventListener;
 
 /***/ }),
-/* 208 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21172,7 +21663,7 @@ function getUnboundedScrollPosition(scrollable) {
 module.exports = getUnboundedScrollPosition;
 
 /***/ }),
-/* 209 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21190,9 +21681,9 @@ var DOMProperty = __webpack_require__(23);
 var EventPluginHub = __webpack_require__(41);
 var EventPluginUtils = __webpack_require__(62);
 var ReactComponentEnvironment = __webpack_require__(71);
-var ReactEmptyComponent = __webpack_require__(115);
+var ReactEmptyComponent = __webpack_require__(118);
 var ReactBrowserEventEmitter = __webpack_require__(57);
-var ReactHostComponent = __webpack_require__(116);
+var ReactHostComponent = __webpack_require__(119);
 var ReactUpdates = __webpack_require__(17);
 
 var ReactInjection = {
@@ -21209,7 +21700,7 @@ var ReactInjection = {
 module.exports = ReactInjection;
 
 /***/ }),
-/* 210 */
+/* 213 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21225,10 +21716,10 @@ module.exports = ReactInjection;
 
 var _assign = __webpack_require__(4);
 
-var CallbackQueue = __webpack_require__(102);
+var CallbackQueue = __webpack_require__(105);
 var PooledClass = __webpack_require__(27);
 var ReactBrowserEventEmitter = __webpack_require__(57);
-var ReactInputSelection = __webpack_require__(119);
+var ReactInputSelection = __webpack_require__(122);
 var ReactInstrumentation = __webpack_require__(10);
 var Transaction = __webpack_require__(53);
 var ReactUpdateQueue = __webpack_require__(75);
@@ -21391,7 +21882,7 @@ module.exports = ReactReconcileTransaction;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 211 */
+/* 214 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21407,8 +21898,8 @@ module.exports = ReactReconcileTransaction;
 
 var ExecutionEnvironment = __webpack_require__(7);
 
-var getNodeForCharacterOffset = __webpack_require__(212);
-var getTextContentAccessor = __webpack_require__(101);
+var getNodeForCharacterOffset = __webpack_require__(215);
+var getTextContentAccessor = __webpack_require__(104);
 
 /**
  * While `isCollapsed` is available on the Selection object and `collapsed`
@@ -21606,7 +22097,7 @@ var ReactDOMSelection = {
 module.exports = ReactDOMSelection;
 
 /***/ }),
-/* 212 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21683,7 +22174,7 @@ function getNodeForCharacterOffset(root, offset) {
 module.exports = getNodeForCharacterOffset;
 
 /***/ }),
-/* 213 */
+/* 216 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21698,7 +22189,7 @@ module.exports = getNodeForCharacterOffset;
  * 
  */
 
-var isTextNode = __webpack_require__(214);
+var isTextNode = __webpack_require__(217);
 
 /*eslint-disable no-bitwise */
 
@@ -21726,7 +22217,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 214 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21741,7 +22232,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(215);
+var isNode = __webpack_require__(218);
 
 /**
  * @param {*} object The object to check.
@@ -21754,7 +22245,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 215 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -21782,7 +22273,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 216 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22087,7 +22578,7 @@ Object.keys(ATTRS).forEach(function (key) {
 module.exports = SVGDOMPropertyConfig;
 
 /***/ }),
-/* 217 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22104,11 +22595,11 @@ module.exports = SVGDOMPropertyConfig;
 var EventPropagators = __webpack_require__(40);
 var ExecutionEnvironment = __webpack_require__(7);
 var ReactDOMComponentTree = __webpack_require__(6);
-var ReactInputSelection = __webpack_require__(119);
-var SyntheticEvent = __webpack_require__(21);
+var ReactInputSelection = __webpack_require__(122);
+var SyntheticEvent = __webpack_require__(22);
 
-var getActiveElement = __webpack_require__(120);
-var isTextInputElement = __webpack_require__(105);
+var getActiveElement = __webpack_require__(123);
+var isTextInputElement = __webpack_require__(108);
 var shallowEqual = __webpack_require__(72);
 
 var skipSelectionChangeEvent = ExecutionEnvironment.canUseDOM && 'documentMode' in document && document.documentMode <= 11;
@@ -22278,7 +22769,7 @@ var SelectEventPlugin = {
 module.exports = SelectEventPlugin;
 
 /***/ }),
-/* 218 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22295,20 +22786,20 @@ module.exports = SelectEventPlugin;
 
 var _prodInvariant = __webpack_require__(3);
 
-var EventListener = __webpack_require__(118);
+var EventListener = __webpack_require__(121);
 var EventPropagators = __webpack_require__(40);
 var ReactDOMComponentTree = __webpack_require__(6);
-var SyntheticAnimationEvent = __webpack_require__(219);
-var SyntheticClipboardEvent = __webpack_require__(220);
-var SyntheticEvent = __webpack_require__(21);
-var SyntheticFocusEvent = __webpack_require__(221);
-var SyntheticKeyboardEvent = __webpack_require__(222);
+var SyntheticAnimationEvent = __webpack_require__(222);
+var SyntheticClipboardEvent = __webpack_require__(223);
+var SyntheticEvent = __webpack_require__(22);
+var SyntheticFocusEvent = __webpack_require__(224);
+var SyntheticKeyboardEvent = __webpack_require__(225);
 var SyntheticMouseEvent = __webpack_require__(54);
-var SyntheticDragEvent = __webpack_require__(224);
-var SyntheticTouchEvent = __webpack_require__(225);
-var SyntheticTransitionEvent = __webpack_require__(226);
+var SyntheticDragEvent = __webpack_require__(227);
+var SyntheticTouchEvent = __webpack_require__(228);
+var SyntheticTransitionEvent = __webpack_require__(229);
 var SyntheticUIEvent = __webpack_require__(42);
-var SyntheticWheelEvent = __webpack_require__(227);
+var SyntheticWheelEvent = __webpack_require__(230);
 
 var emptyFunction = __webpack_require__(9);
 var getEventCharCode = __webpack_require__(77);
@@ -22508,7 +22999,7 @@ module.exports = SimpleEventPlugin;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 219 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22522,7 +23013,7 @@ module.exports = SimpleEventPlugin;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 /**
  * @interface Event
@@ -22550,7 +23041,7 @@ SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 module.exports = SyntheticAnimationEvent;
 
 /***/ }),
-/* 220 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22564,7 +23055,7 @@ module.exports = SyntheticAnimationEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 /**
  * @interface Event
@@ -22591,7 +23082,7 @@ SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 module.exports = SyntheticClipboardEvent;
 
 /***/ }),
-/* 221 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22630,7 +23121,7 @@ SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 module.exports = SyntheticFocusEvent;
 
 /***/ }),
-/* 222 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22647,7 +23138,7 @@ module.exports = SyntheticFocusEvent;
 var SyntheticUIEvent = __webpack_require__(42);
 
 var getEventCharCode = __webpack_require__(77);
-var getEventKey = __webpack_require__(223);
+var getEventKey = __webpack_require__(226);
 var getEventModifierState = __webpack_require__(66);
 
 /**
@@ -22717,7 +23208,7 @@ SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 module.exports = SyntheticKeyboardEvent;
 
 /***/ }),
-/* 223 */
+/* 226 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22832,7 +23323,7 @@ function getEventKey(nativeEvent) {
 module.exports = getEventKey;
 
 /***/ }),
-/* 224 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22871,7 +23362,7 @@ SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 module.exports = SyntheticDragEvent;
 
 /***/ }),
-/* 225 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22919,7 +23410,7 @@ SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 module.exports = SyntheticTouchEvent;
 
 /***/ }),
-/* 226 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -22933,7 +23424,7 @@ module.exports = SyntheticTouchEvent;
 
 
 
-var SyntheticEvent = __webpack_require__(21);
+var SyntheticEvent = __webpack_require__(22);
 
 /**
  * @interface Event
@@ -22961,7 +23452,7 @@ SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 module.exports = SyntheticTransitionEvent;
 
 /***/ }),
-/* 227 */
+/* 230 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23015,7 +23506,7 @@ SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 module.exports = SyntheticWheelEvent;
 
 /***/ }),
-/* 228 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23052,7 +23543,7 @@ module.exports = ReactDOMContainerInfo;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 229 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23074,7 +23565,7 @@ var ReactDOMFeatureFlags = {
 module.exports = ReactDOMFeatureFlags;
 
 /***/ }),
-/* 230 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23088,7 +23579,7 @@ module.exports = ReactDOMFeatureFlags;
 
 
 
-var adler32 = __webpack_require__(231);
+var adler32 = __webpack_require__(234);
 
 var TAG_END = /\/?>/;
 var COMMENT_START = /^<\!\-\-/;
@@ -23127,7 +23618,7 @@ var ReactMarkupChecksum = {
 module.exports = ReactMarkupChecksum;
 
 /***/ }),
-/* 231 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23174,7 +23665,7 @@ function adler32(data) {
 module.exports = adler32;
 
 /***/ }),
-/* 232 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23191,7 +23682,7 @@ module.exports = adler32;
 module.exports = '15.6.2';
 
 /***/ }),
-/* 233 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23211,7 +23702,7 @@ var ReactCurrentOwner = __webpack_require__(16);
 var ReactDOMComponentTree = __webpack_require__(6);
 var ReactInstanceMap = __webpack_require__(43);
 
-var getHostComponentFromComposite = __webpack_require__(122);
+var getHostComponentFromComposite = __webpack_require__(125);
 var invariant = __webpack_require__(1);
 var warning = __webpack_require__(2);
 
@@ -23255,7 +23746,7 @@ module.exports = findDOMNode;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 234 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23269,12 +23760,12 @@ module.exports = findDOMNode;
 
 
 
-var ReactMount = __webpack_require__(121);
+var ReactMount = __webpack_require__(124);
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
 
 /***/ }),
-/* 235 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23390,7 +23881,7 @@ module.exports = ReactDOMUnknownPropertyHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 236 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23437,7 +23928,7 @@ module.exports = ReactDOMNullInputValuePropHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 237 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23534,7 +24025,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 238 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23551,29 +24042,29 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(22);
+var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _playerFleet = __webpack_require__(239);
+var _playerFleet = __webpack_require__(242);
 
-var _enemyFleet = __webpack_require__(240);
+var _enemyFleet = __webpack_require__(243);
 
-var _shoots = __webpack_require__(241);
+var _shoots = __webpack_require__(287);
 
-var _unitsDmg = __webpack_require__(242);
+var _unitsDmg = __webpack_require__(288);
 
-var _officer = __webpack_require__(303);
+var _officer = __webpack_require__(289);
 
-var _Grid = __webpack_require__(300);
+var _Grid = __webpack_require__(78);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
-var _Row = __webpack_require__(301);
+var _Row = __webpack_require__(92);
 
 var _Row2 = _interopRequireDefault(_Row);
 
-var _Col = __webpack_require__(302);
+var _Col = __webpack_require__(93);
 
 var _Col2 = _interopRequireDefault(_Col);
 
@@ -23593,6 +24084,13 @@ var Game = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).call(this, props));
 
+    _this.showGame = function (e) {
+      e.preventDefault();
+      if (typeof _this.props.showGame === 'function') {
+        _this.props.showGame("block");
+      }
+    };
+
     _this.state = {};
     return _this;
   }
@@ -23602,7 +24100,7 @@ var Game = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         _Grid2.default,
-        null,
+        { className: 'game-board' },
         _react2.default.createElement(
           _Row2.default,
           { className: 'show-grid' },
@@ -23622,27 +24120,13 @@ var Game = function (_React$Component) {
           { className: 'show-grid' },
           _react2.default.createElement(
             _Col2.default,
-            { xs: 3, md: 2 },
-            _react2.default.createElement(_officer.Officer, null)
-          ),
-          _react2.default.createElement(
-            _Col2.default,
-            { xs: 3, md: 2 },
+            { xs: 9, md: 6 },
             _react2.default.createElement(_unitsDmg.UnitsDmg, null)
           ),
           _react2.default.createElement(
             _Col2.default,
-            { xs: 3, md: 2 },
-            _react2.default.createElement(_shoots.Shoots, null)
-          ),
-          _react2.default.createElement(
-            _Col2.default,
             { xs: 9, md: 6 },
-            _react2.default.createElement(
-              'p',
-              null,
-              'pusto'
-            )
+            _react2.default.createElement(_shoots.Shoots, null)
           )
         )
       );
@@ -23657,7 +24141,7 @@ var Game = function (_React$Component) {
 exports.Game = Game;
 
 /***/ }),
-/* 239 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23674,9 +24158,21 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(22);
+var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Grid = __webpack_require__(78);
+
+var _Grid2 = _interopRequireDefault(_Grid);
+
+var _Row = __webpack_require__(92);
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = __webpack_require__(93);
+
+var _Col2 = _interopRequireDefault(_Col);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23694,6 +24190,10 @@ var PlayerFleet = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (PlayerFleet.__proto__ || Object.getPrototypeOf(PlayerFleet)).call(this, props));
 
+    _this.clickHandler = function () {
+      console.log("Kliknięte");
+    };
+
     _this.state = {};
     return _this;
   }
@@ -23702,245 +24202,559 @@ var PlayerFleet = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        _Row2.default,
         { className: 'radar-circle' },
         _react2.default.createElement(
-          'div',
-          { className: 'battlefield' },
+          'h2',
+          null,
+          'Fleet status:'
+        ),
+        _react2.default.createElement(
+          _Col2.default,
+          { xs: 18, md: 12, className: 'battlefield' },
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
-            _react2.default.createElement('div', { className: 'letters cell' }),
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'A'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'B'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'A'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'C'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'B'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'D'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'C'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'E'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'D'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'F'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'E'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'G'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'F'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'H'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'G'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'I'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'H'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'J'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'J'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '1'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '1'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '1'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '2'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '2'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '2'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '3'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '3'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '3'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '4'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '4'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '4'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '5'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '5'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '5'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '6'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '6'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '6'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '7'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '7'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '7'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '8'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '8'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '8'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '9'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '9'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '9'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '10'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '10'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '10'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _Row2.default,
+            null,
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'A'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'B'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'C'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'D'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'E'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'F'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'G'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'H'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'J'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
+            )
           )
         )
       );
@@ -23955,7 +24769,7 @@ var PlayerFleet = function (_React$Component) {
 exports.PlayerFleet = PlayerFleet;
 
 /***/ }),
-/* 240 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -23972,19 +24786,19 @@ var _react = __webpack_require__(5);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(22);
+var _reactDom = __webpack_require__(21);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _Grid = __webpack_require__(300);
+var _Grid = __webpack_require__(78);
 
 var _Grid2 = _interopRequireDefault(_Grid);
 
-var _Row = __webpack_require__(301);
+var _Row = __webpack_require__(92);
 
 var _Row2 = _interopRequireDefault(_Row);
 
-var _Col = __webpack_require__(302);
+var _Col = __webpack_require__(93);
 
 var _Col2 = _interopRequireDefault(_Col);
 
@@ -24004,6 +24818,10 @@ var EnemyFleet = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (EnemyFleet.__proto__ || Object.getPrototypeOf(EnemyFleet)).call(this, props));
 
+    _this.clickHandler = function () {
+      console.log("Kliknięte");
+    };
+
     _this.state = {};
     return _this;
   }
@@ -24012,245 +24830,579 @@ var EnemyFleet = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'div',
+        _Row2.default,
         { className: 'radar-circle' },
         _react2.default.createElement(
-          'div',
-          { className: 'battlefield' },
+          'h2',
+          null,
+          'Enemy ',
+          _react2.default.createElement('br', null),
+          ' fleet status:'
+        ),
+        _react2.default.createElement(
+          _Col2.default,
+          { xs: 18, md: 12, className: 'battlefield' },
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
-            _react2.default.createElement('div', { className: 'letters cell' }),
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'A'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'B'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'A'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'C'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'B'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'D'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'C'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'E'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'D'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'F'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'E'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'G'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'F'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'H'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'G'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'I'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'H'
+              )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'letters cell' },
-              'J'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'J'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
             )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '1'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '1'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '1'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '2'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '2'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '2'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '3'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '3'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '3'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '4'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '4'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '4'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '5'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '5'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '5'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '6'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '6'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '6'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '7'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '7'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '7'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '8'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '8'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '8'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '9'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '9'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '9'
+              )
+            )
           ),
           _react2.default.createElement(
-            'div',
-            { className: 'b-row' },
+            _Row2.default,
+            null,
             _react2.default.createElement(
-              'div',
-              { className: 'cell' },
-              '10'
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '10'
+              )
             ),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' }),
-            _react2.default.createElement('div', { className: 'cell' })
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(_Col2.default, { className: 'cell', onClick: this.clickHandler, xs: 2, md: 1 }),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                '10'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _Row2.default,
+            null,
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'A'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'B'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'C'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'D'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'E'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'F'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'G'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'H'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'I'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'J'
+              )
+            ),
+            _react2.default.createElement(
+              _Col2.default,
+              { className: 'cell-cord', xs: 2, md: 1 },
+              _react2.default.createElement(
+                'p',
+                null,
+                'X'
+              )
+            )
+          ),
+          _react2.default.createElement(
+            _Row2.default,
+            null,
+            _react2.default.createElement(
+              'h4',
+              { className: 'salvo-raport' },
+              'Captain! Salvo raport: '
+            ),
+            _react2.default.createElement(
+              'p',
+              null,
+              'first: hit ',
+              _react2.default.createElement('br', null),
+              'second: miss ',
+              _react2.default.createElement('br', null),
+              'third: miss'
+            )
           )
         )
       );
@@ -24265,532 +25417,31 @@ var EnemyFleet = function (_React$Component) {
 exports.EnemyFleet = EnemyFleet;
 
 /***/ }),
-/* 241 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Shoots = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(22);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Shoots = function (_React$Component) {
-  _inherits(Shoots, _React$Component);
-
-  function Shoots(props) {
-    _classCallCheck(this, Shoots);
-
-    var _this = _possibleConstructorReturn(this, (Shoots.__proto__ || Object.getPrototypeOf(Shoots)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Shoots, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'p',
-        null,
-        '"PlayerFleet"'
-      );
-    }
-  }]);
-
-  return Shoots;
-}(_react2.default.Component);
-
-;
-
-exports.Shoots = Shoots;
-
-/***/ }),
-/* 242 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.UnitsDmg = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(22);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var UnitsDmg = function (_React$Component) {
-  _inherits(UnitsDmg, _React$Component);
-
-  function UnitsDmg(props) {
-    _classCallCheck(this, UnitsDmg);
-
-    var _this = _possibleConstructorReturn(this, (UnitsDmg.__proto__ || Object.getPrototypeOf(UnitsDmg)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(UnitsDmg, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'p',
-        null,
-        '"PlayerFleet"'
-      );
-    }
-  }]);
-
-  return UnitsDmg;
-}(_react2.default.Component);
-
-;
-
-exports.UnitsDmg = UnitsDmg;
-
-/***/ }),
-/* 243 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Welcome = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(22);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _playerData = __webpack_require__(244);
-
-var _Grid = __webpack_require__(300);
-
-var _Grid2 = _interopRequireDefault(_Grid);
-
-var _Row = __webpack_require__(301);
-
-var _Row2 = _interopRequireDefault(_Row);
-
-var _Col = __webpack_require__(302);
-
-var _Col2 = _interopRequireDefault(_Col);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Welcome = function (_React$Component) {
-  _inherits(Welcome, _React$Component);
-
-  function Welcome(props) {
-    _classCallCheck(this, Welcome);
-
-    var _this = _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Welcome, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        _Grid2.default,
-        { id: 'grid' },
-        _react2.default.createElement(
-          _Row2.default,
-          { className: 'show-grid' },
-          _react2.default.createElement(_Col2.default, { xs: 12, md: 7 }),
-          _react2.default.createElement(
-            _Col2.default,
-            { xs: 6, md: 5 },
-            _react2.default.createElement(
-              _Row2.default,
-              { className: 'show-grid' },
-              _react2.default.createElement(
-                _Col2.default,
-                { xs: 18, md: 12 },
-                _react2.default.createElement(
-                  'h2',
-                  null,
-                  'Gentlemens! Attention!'
-                ),
-                _react2.default.createElement(
-                  'h2',
-                  null,
-                  'Captain on the bridge!'
-                ),
-                _react2.default.createElement('br', null),
-                _react2.default.createElement(
-                  'p',
-                  null,
-                  'Welcome Comander!  ',
-                  _react2.default.createElement('br', null),
-                  'We rapidly prepare to battle! ',
-                  _react2.default.createElement('br', null),
-                  'Just please, write your name below.'
-                )
-              ),
-              _react2.default.createElement(
-                _Col2.default,
-                { xs: 18, md: 12 },
-                _react2.default.createElement(_playerData.PlayerData, null)
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Welcome;
-}(_react2.default.Component);
-
-;
-
-exports.Welcome = Welcome;
-
-/***/ }),
 /* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.PlayerData = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(22);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _Button = __webpack_require__(245);
-
-var _Button2 = _interopRequireDefault(_Button);
-
-var _FormGroup = __webpack_require__(294);
-
-var _FormGroup2 = _interopRequireDefault(_FormGroup);
-
-var _ControlLabel = __webpack_require__(296);
-
-var _ControlLabel2 = _interopRequireDefault(_ControlLabel);
-
-var _FormControl = __webpack_require__(297);
-
-var _FormControl2 = _interopRequireDefault(_FormControl);
-
-var _FormControlFeedback = __webpack_require__(137);
-
-var _FormControlFeedback2 = _interopRequireDefault(_FormControlFeedback);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var PlayerData = function (_React$Component) {
-  _inherits(PlayerData, _React$Component);
-
-  function PlayerData(props) {
-    _classCallCheck(this, PlayerData);
-
-    var _this = _possibleConstructorReturn(this, (PlayerData.__proto__ || Object.getPrototypeOf(PlayerData)).call(this, props));
-
-    _this.getValidationState = function () {
-      var length = _this.state.value.length;
-      if (length > 2 && length < 20) return 'success';else if (length > 0) return 'error';
-      return null;
-    };
-
-    _this.handleChange = function (e) {
-      _this.setState({
-        value: e.target.value
-      });
-    };
-
-    _this.hideWelcome = function (e) {
-      e.preventDefault();
-      _this; // dokończyć ukrywanie ekranu powitalnego
-    };
-
-    _this.state = {
-      value: ""
-    };
-    return _this;
-  }
-
-  _createClass(PlayerData, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'form',
-        null,
-        _react2.default.createElement(
-          _FormGroup2.default,
-          {
-            controlId: 'formBasicText',
-            validationState: this.getValidationState()
-          },
-          _react2.default.createElement(
-            _ControlLabel2.default,
-            { className: 'start-label' },
-            'Captain:'
-          ),
-          _react2.default.createElement(_FormControl2.default, { className: 'start-input', bsSize: 'large',
-            type: 'text',
-            value: this.state.value,
-            placeholder: '',
-            onChange: this.handleChange
-          }),
-          _react2.default.createElement(_FormControl2.default.Feedback, null),
-          _react2.default.createElement(
-            _Button2.default,
-            { bsStyle: 'primary', bsSize: 'large', onClick: this.hideWelcome },
-            'To battle!'
-          )
-        )
-      );
-    }
-  }]);
-
-  return PlayerData;
-}(_react2.default.Component);
-
-;
-
-exports.PlayerData = PlayerData;
+module.exports = { "default": __webpack_require__(245), __esModule: true };
 
 /***/ }),
 /* 245 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+__webpack_require__(246);
+module.exports = __webpack_require__(25).Object.assign;
 
-
-exports.__esModule = true;
-
-var _values = __webpack_require__(246);
-
-var _values2 = _interopRequireDefault(_values);
-
-var _objectWithoutProperties2 = __webpack_require__(12);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _extends3 = __webpack_require__(11);
-
-var _extends4 = _interopRequireDefault(_extends3);
-
-var _classCallCheck2 = __webpack_require__(13);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _possibleConstructorReturn2 = __webpack_require__(14);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(15);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(19);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _elementType = __webpack_require__(31);
-
-var _elementType2 = _interopRequireDefault(_elementType);
-
-var _bootstrapUtils = __webpack_require__(20);
-
-var _StyleConfig = __webpack_require__(49);
-
-var _SafeAnchor = __webpack_require__(292);
-
-var _SafeAnchor2 = _interopRequireDefault(_SafeAnchor);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var propTypes = {
-  active: _propTypes2.default.bool,
-  disabled: _propTypes2.default.bool,
-  block: _propTypes2.default.bool,
-  onClick: _propTypes2.default.func,
-  componentClass: _elementType2.default,
-  href: _propTypes2.default.string,
-  /**
-   * Defines HTML button type attribute
-   * @defaultValue 'button'
-   */
-  type: _propTypes2.default.oneOf(['button', 'reset', 'submit'])
-};
-
-var defaultProps = {
-  active: false,
-  block: false,
-  disabled: false
-};
-
-var Button = function (_React$Component) {
-  (0, _inherits3.default)(Button, _React$Component);
-
-  function Button() {
-    (0, _classCallCheck3.default)(this, Button);
-    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-  }
-
-  Button.prototype.renderAnchor = function renderAnchor(elementProps, className) {
-    return _react2.default.createElement(_SafeAnchor2.default, (0, _extends4.default)({}, elementProps, {
-      className: (0, _classnames2.default)(className, elementProps.disabled && 'disabled')
-    }));
-  };
-
-  Button.prototype.renderButton = function renderButton(_ref, className) {
-    var componentClass = _ref.componentClass,
-        elementProps = (0, _objectWithoutProperties3.default)(_ref, ['componentClass']);
-
-    var Component = componentClass || 'button';
-
-    return _react2.default.createElement(Component, (0, _extends4.default)({}, elementProps, {
-      type: elementProps.type || 'button',
-      className: className
-    }));
-  };
-
-  Button.prototype.render = function render() {
-    var _extends2;
-
-    var _props = this.props,
-        active = _props.active,
-        block = _props.block,
-        className = _props.className,
-        props = (0, _objectWithoutProperties3.default)(_props, ['active', 'block', 'className']);
-
-    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
-        bsProps = _splitBsProps[0],
-        elementProps = _splitBsProps[1];
-
-    var classes = (0, _extends4.default)({}, (0, _bootstrapUtils.getClassSet)(bsProps), (_extends2 = {
-      active: active
-    }, _extends2[(0, _bootstrapUtils.prefix)(bsProps, 'block')] = block, _extends2));
-    var fullClassName = (0, _classnames2.default)(className, classes);
-
-    if (elementProps.href) {
-      return this.renderAnchor(elementProps, fullClassName);
-    }
-
-    return this.renderButton(elementProps, fullClassName);
-  };
-
-  return Button;
-}(_react2.default.Component);
-
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
-
-exports.default = (0, _bootstrapUtils.bsClass)('btn', (0, _bootstrapUtils.bsSizes)([_StyleConfig.Size.LARGE, _StyleConfig.Size.SMALL, _StyleConfig.Size.XSMALL], (0, _bootstrapUtils.bsStyles)([].concat((0, _values2.default)(_StyleConfig.State), [_StyleConfig.Style.DEFAULT, _StyleConfig.Style.PRIMARY, _StyleConfig.Style.LINK]), _StyleConfig.Style.DEFAULT, Button)));
-module.exports = exports['default'];
 
 /***/ }),
 /* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(247), __esModule: true };
+// 19.1.3.1 Object.assign(target, source)
+var $export = __webpack_require__(28);
+
+$export($export.S + $export.F, 'Object', { assign: __webpack_require__(248) });
+
 
 /***/ }),
 /* 247 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(248);
-module.exports = __webpack_require__(25).Object.values;
-
-
-/***/ }),
-/* 248 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// https://github.com/tc39/proposal-object-values-entries
-var $export = __webpack_require__(28);
-var $values = __webpack_require__(126)(false);
-
-$export($export.S, 'Object', {
-  values: function values(it) {
-    return $values(it);
-  }
-});
-
-
-/***/ }),
-/* 249 */
 /***/ (function(module, exports) {
 
 module.exports = function (it) {
@@ -24800,95 +25451,17 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 250 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// false -> Array#indexOf
-// true  -> Array#includes
-var toIObject = __webpack_require__(30);
-var toLength = __webpack_require__(251);
-var toAbsoluteIndex = __webpack_require__(252);
-module.exports = function (IS_INCLUDES) {
-  return function ($this, el, fromIndex) {
-    var O = toIObject($this);
-    var length = toLength(O.length);
-    var index = toAbsoluteIndex(fromIndex, length);
-    var value;
-    // Array#includes uses SameValueZero equality algorithm
-    // eslint-disable-next-line no-self-compare
-    if (IS_INCLUDES && el != el) while (length > index) {
-      value = O[index++];
-      // eslint-disable-next-line no-self-compare
-      if (value != value) return true;
-    // Array#indexOf ignores holes, Array#includes - not
-    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
-      if (O[index] === el) return IS_INCLUDES || index || 0;
-    } return !IS_INCLUDES && -1;
-  };
-};
-
-
-/***/ }),
-/* 251 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 7.1.15 ToLength
-var toInteger = __webpack_require__(80);
-var min = Math.min;
-module.exports = function (it) {
-  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
-};
-
-
-/***/ }),
-/* 252 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var toInteger = __webpack_require__(80);
-var max = Math.max;
-var min = Math.min;
-module.exports = function (index, length) {
-  index = toInteger(index);
-  return index < 0 ? max(index + length, 0) : min(index, length);
-};
-
-
-/***/ }),
-/* 253 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = { "default": __webpack_require__(254), __esModule: true };
-
-/***/ }),
-/* 254 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(255);
-module.exports = __webpack_require__(25).Object.assign;
-
-
-/***/ }),
-/* 255 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// 19.1.3.1 Object.assign(target, source)
-var $export = __webpack_require__(28);
-
-$export($export.S + $export.F, 'Object', { assign: __webpack_require__(256) });
-
-
-/***/ }),
-/* 256 */
+/* 248 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 // 19.1.2.1 Object.assign(target, source, ...)
 var getKeys = __webpack_require__(47);
-var gOPS = __webpack_require__(84);
+var gOPS = __webpack_require__(85);
 var pIE = __webpack_require__(48);
-var toObject = __webpack_require__(130);
-var IObject = __webpack_require__(128);
+var toObject = __webpack_require__(132);
+var IObject = __webpack_require__(130);
 var $assign = Object.assign;
 
 // should work with symbols and should have deterministic property order (V8 bug)
@@ -24919,30 +25492,84 @@ module.exports = !$assign || __webpack_require__(46)(function () {
 
 
 /***/ }),
-/* 257 */
+/* 249 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(258), __esModule: true };
+// false -> Array#indexOf
+// true  -> Array#includes
+var toIObject = __webpack_require__(30);
+var toLength = __webpack_require__(250);
+var toAbsoluteIndex = __webpack_require__(251);
+module.exports = function (IS_INCLUDES) {
+  return function ($this, el, fromIndex) {
+    var O = toIObject($this);
+    var length = toLength(O.length);
+    var index = toAbsoluteIndex(fromIndex, length);
+    var value;
+    // Array#includes uses SameValueZero equality algorithm
+    // eslint-disable-next-line no-self-compare
+    if (IS_INCLUDES && el != el) while (length > index) {
+      value = O[index++];
+      // eslint-disable-next-line no-self-compare
+      if (value != value) return true;
+    // Array#indexOf ignores holes, Array#includes - not
+    } else for (;length > index; index++) if (IS_INCLUDES || index in O) {
+      if (O[index] === el) return IS_INCLUDES || index || 0;
+    } return !IS_INCLUDES && -1;
+  };
+};
+
 
 /***/ }),
-/* 258 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(259);
-__webpack_require__(265);
-module.exports = __webpack_require__(89).f('iterator');
+// 7.1.15 ToLength
+var toInteger = __webpack_require__(81);
+var min = Math.min;
+module.exports = function (it) {
+  return it > 0 ? min(toInteger(it), 0x1fffffffffffff) : 0; // pow(2, 53) - 1 == 9007199254740991
+};
 
 
 /***/ }),
-/* 259 */
+/* 251 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var toInteger = __webpack_require__(81);
+var max = Math.max;
+var min = Math.min;
+module.exports = function (index, length) {
+  index = toInteger(index);
+  return index < 0 ? max(index + length, 0) : min(index, length);
+};
+
+
+/***/ }),
+/* 252 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(253), __esModule: true };
+
+/***/ }),
+/* 253 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(254);
+__webpack_require__(260);
+module.exports = __webpack_require__(90).f('iterator');
+
+
+/***/ }),
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var $at = __webpack_require__(260)(true);
+var $at = __webpack_require__(255)(true);
 
 // 21.1.3.27 String.prototype[@@iterator]()
-__webpack_require__(132)(String, 'String', function (iterated) {
+__webpack_require__(134)(String, 'String', function (iterated) {
   this._t = String(iterated); // target
   this._i = 0;                // next index
 // 21.1.5.2.1 %StringIteratorPrototype%.next()
@@ -24958,11 +25585,11 @@ __webpack_require__(132)(String, 'String', function (iterated) {
 
 
 /***/ }),
-/* 260 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toInteger = __webpack_require__(80);
-var defined = __webpack_require__(79);
+var toInteger = __webpack_require__(81);
+var defined = __webpack_require__(80);
 // true  -> String#at
 // false -> String#codePointAt
 module.exports = function (TO_STRING) {
@@ -24981,14 +25608,14 @@ module.exports = function (TO_STRING) {
 
 
 /***/ }),
-/* 261 */
+/* 256 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var create = __webpack_require__(87);
+var create = __webpack_require__(88);
 var descriptor = __webpack_require__(58);
-var setToStringTag = __webpack_require__(88);
+var setToStringTag = __webpack_require__(89);
 var IteratorPrototype = {};
 
 // 25.1.2.1.1 %IteratorPrototype%[@@iterator]()
@@ -25001,7 +25628,7 @@ module.exports = function (Constructor, NAME, next) {
 
 
 /***/ }),
-/* 262 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var dP = __webpack_require__(37);
@@ -25020,7 +25647,7 @@ module.exports = __webpack_require__(38) ? Object.defineProperties : function de
 
 
 /***/ }),
-/* 263 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var document = __webpack_require__(24).document;
@@ -25028,13 +25655,13 @@ module.exports = document && document.documentElement;
 
 
 /***/ }),
-/* 264 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.2.9 / 15.2.3.2 Object.getPrototypeOf(O)
 var has = __webpack_require__(29);
-var toObject = __webpack_require__(130);
-var IE_PROTO = __webpack_require__(81)('IE_PROTO');
+var toObject = __webpack_require__(132);
+var IE_PROTO = __webpack_require__(82)('IE_PROTO');
 var ObjectProto = Object.prototype;
 
 module.exports = Object.getPrototypeOf || function (O) {
@@ -25047,13 +25674,13 @@ module.exports = Object.getPrototypeOf || function (O) {
 
 
 /***/ }),
-/* 265 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(266);
+__webpack_require__(261);
 var global = __webpack_require__(24);
 var hide = __webpack_require__(36);
-var Iterators = __webpack_require__(86);
+var Iterators = __webpack_require__(87);
 var TO_STRING_TAG = __webpack_require__(39)('toStringTag');
 
 var DOMIterables = ('CSSRuleList,CSSStyleDeclaration,CSSValueList,ClientRectList,DOMRectList,DOMStringList,' +
@@ -25072,21 +25699,21 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 
 /***/ }),
-/* 266 */
+/* 261 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
-var addToUnscopables = __webpack_require__(267);
-var step = __webpack_require__(268);
-var Iterators = __webpack_require__(86);
+var addToUnscopables = __webpack_require__(262);
+var step = __webpack_require__(263);
+var Iterators = __webpack_require__(87);
 var toIObject = __webpack_require__(30);
 
 // 22.1.3.4 Array.prototype.entries()
 // 22.1.3.13 Array.prototype.keys()
 // 22.1.3.29 Array.prototype.values()
 // 22.1.3.30 Array.prototype[@@iterator]()
-module.exports = __webpack_require__(132)(Array, 'Array', function (iterated, kind) {
+module.exports = __webpack_require__(134)(Array, 'Array', function (iterated, kind) {
   this._t = toIObject(iterated); // target
   this._i = 0;                   // next index
   this._k = kind;                // kind
@@ -25113,14 +25740,14 @@ addToUnscopables('entries');
 
 
 /***/ }),
-/* 267 */
+/* 262 */
 /***/ (function(module, exports) {
 
 module.exports = function () { /* empty */ };
 
 
 /***/ }),
-/* 268 */
+/* 263 */
 /***/ (function(module, exports) {
 
 module.exports = function (done, value) {
@@ -25129,24 +25756,24 @@ module.exports = function (done, value) {
 
 
 /***/ }),
-/* 269 */
+/* 264 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(270), __esModule: true };
+module.exports = { "default": __webpack_require__(265), __esModule: true };
 
 /***/ }),
-/* 270 */
+/* 265 */
 /***/ (function(module, exports, __webpack_require__) {
 
+__webpack_require__(266);
 __webpack_require__(271);
-__webpack_require__(276);
-__webpack_require__(277);
-__webpack_require__(278);
+__webpack_require__(272);
+__webpack_require__(273);
 module.exports = __webpack_require__(25).Symbol;
 
 
 /***/ }),
-/* 271 */
+/* 266 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25156,24 +25783,24 @@ var global = __webpack_require__(24);
 var has = __webpack_require__(29);
 var DESCRIPTORS = __webpack_require__(38);
 var $export = __webpack_require__(28);
-var redefine = __webpack_require__(133);
-var META = __webpack_require__(272).KEY;
+var redefine = __webpack_require__(135);
+var META = __webpack_require__(267).KEY;
 var $fails = __webpack_require__(46);
-var shared = __webpack_require__(82);
-var setToStringTag = __webpack_require__(88);
+var shared = __webpack_require__(83);
+var setToStringTag = __webpack_require__(89);
 var uid = __webpack_require__(59);
 var wks = __webpack_require__(39);
-var wksExt = __webpack_require__(89);
-var wksDefine = __webpack_require__(90);
-var enumKeys = __webpack_require__(273);
-var isArray = __webpack_require__(274);
+var wksExt = __webpack_require__(90);
+var wksDefine = __webpack_require__(91);
+var enumKeys = __webpack_require__(268);
+var isArray = __webpack_require__(269);
 var anObject = __webpack_require__(44);
 var toIObject = __webpack_require__(30);
-var toPrimitive = __webpack_require__(78);
+var toPrimitive = __webpack_require__(79);
 var createDesc = __webpack_require__(58);
-var _create = __webpack_require__(87);
-var gOPNExt = __webpack_require__(275);
-var $GOPD = __webpack_require__(135);
+var _create = __webpack_require__(88);
+var gOPNExt = __webpack_require__(270);
+var $GOPD = __webpack_require__(137);
 var $DP = __webpack_require__(37);
 var $keys = __webpack_require__(47);
 var gOPD = $GOPD.f;
@@ -25298,11 +25925,11 @@ if (!USE_NATIVE) {
 
   $GOPD.f = $getOwnPropertyDescriptor;
   $DP.f = $defineProperty;
-  __webpack_require__(134).f = gOPNExt.f = $getOwnPropertyNames;
+  __webpack_require__(136).f = gOPNExt.f = $getOwnPropertyNames;
   __webpack_require__(48).f = $propertyIsEnumerable;
-  __webpack_require__(84).f = $getOwnPropertySymbols;
+  __webpack_require__(85).f = $getOwnPropertySymbols;
 
-  if (DESCRIPTORS && !__webpack_require__(85)) {
+  if (DESCRIPTORS && !__webpack_require__(86)) {
     redefine(ObjectProto, 'propertyIsEnumerable', $propertyIsEnumerable, true);
   }
 
@@ -25387,7 +26014,7 @@ setToStringTag(global.JSON, 'JSON', true);
 
 
 /***/ }),
-/* 272 */
+/* 267 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var META = __webpack_require__(59)('meta');
@@ -25446,12 +26073,12 @@ var meta = module.exports = {
 
 
 /***/ }),
-/* 273 */
+/* 268 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // all enumerable object keys, includes symbols
 var getKeys = __webpack_require__(47);
-var gOPS = __webpack_require__(84);
+var gOPS = __webpack_require__(85);
 var pIE = __webpack_require__(48);
 module.exports = function (it) {
   var result = getKeys(it);
@@ -25467,23 +26094,23 @@ module.exports = function (it) {
 
 
 /***/ }),
-/* 274 */
+/* 269 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 7.2.2 IsArray(argument)
-var cof = __webpack_require__(129);
+var cof = __webpack_require__(131);
 module.exports = Array.isArray || function isArray(arg) {
   return cof(arg) == 'Array';
 };
 
 
 /***/ }),
-/* 275 */
+/* 270 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // fallback for IE11 buggy Object.getOwnPropertyNames with iframe and window
 var toIObject = __webpack_require__(30);
-var gOPN = __webpack_require__(134).f;
+var gOPN = __webpack_require__(136).f;
 var toString = {}.toString;
 
 var windowNames = typeof window == 'object' && window && Object.getOwnPropertyNames
@@ -25503,50 +26130,50 @@ module.exports.f = function getOwnPropertyNames(it) {
 
 
 /***/ }),
-/* 276 */
+/* 271 */
 /***/ (function(module, exports) {
 
 
 
 /***/ }),
-/* 277 */
+/* 272 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(90)('asyncIterator');
+__webpack_require__(91)('asyncIterator');
 
 
 /***/ }),
-/* 278 */
+/* 273 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(90)('observable');
+__webpack_require__(91)('observable');
 
 
 /***/ }),
-/* 279 */
+/* 274 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(280), __esModule: true };
+module.exports = { "default": __webpack_require__(275), __esModule: true };
 
 /***/ }),
-/* 280 */
+/* 275 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(281);
+__webpack_require__(276);
 module.exports = __webpack_require__(25).Object.setPrototypeOf;
 
 
 /***/ }),
-/* 281 */
+/* 276 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // 19.1.3.19 Object.setPrototypeOf(O, proto)
 var $export = __webpack_require__(28);
-$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(282).set });
+$export($export.S, 'Object', { setPrototypeOf: __webpack_require__(277).set });
 
 
 /***/ }),
-/* 282 */
+/* 277 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // Works with __proto__ only. Old v8 can't work with null proto objects.
@@ -25561,7 +26188,7 @@ module.exports = {
   set: Object.setPrototypeOf || ('__proto__' in {} ? // eslint-disable-line
     function (test, buggy, set) {
       try {
-        set = __webpack_require__(123)(Function.call, __webpack_require__(135).f(Object.prototype, '__proto__').set, 2);
+        set = __webpack_require__(126)(Function.call, __webpack_require__(137).f(Object.prototype, '__proto__').set, 2);
         set(test, []);
         buggy = !(test instanceof Array);
       } catch (e) { buggy = true; }
@@ -25577,16 +26204,16 @@ module.exports = {
 
 
 /***/ }),
-/* 283 */
+/* 278 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(284), __esModule: true };
+module.exports = { "default": __webpack_require__(279), __esModule: true };
 
 /***/ }),
-/* 284 */
+/* 279 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(285);
+__webpack_require__(280);
 var $Object = __webpack_require__(25).Object;
 module.exports = function create(P, D) {
   return $Object.create(P, D);
@@ -25594,16 +26221,16 @@ module.exports = function create(P, D) {
 
 
 /***/ }),
-/* 285 */
+/* 280 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var $export = __webpack_require__(28);
 // 19.1.2.2 / 15.2.3.5 Object.create(O [, Properties])
-$export($export.S, 'Object', { create: __webpack_require__(87) });
+$export($export.S, 'Object', { create: __webpack_require__(88) });
 
 
 /***/ }),
-/* 286 */
+/* 281 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25668,7 +26295,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 287 */
+/* 282 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25717,26 +26344,26 @@ function createChainableTypeChecker(validate) {
 module.exports = exports['default'];
 
 /***/ }),
-/* 288 */
+/* 283 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = { "default": __webpack_require__(289), __esModule: true };
+module.exports = { "default": __webpack_require__(284), __esModule: true };
 
 /***/ }),
-/* 289 */
+/* 284 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(290);
+__webpack_require__(285);
 module.exports = __webpack_require__(25).Object.entries;
 
 
 /***/ }),
-/* 290 */
+/* 285 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // https://github.com/tc39/proposal-object-values-entries
 var $export = __webpack_require__(28);
-var $entries = __webpack_require__(126)(true);
+var $entries = __webpack_require__(138)(true);
 
 $export($export.S, 'Object', {
   entries: function entries(it) {
@@ -25746,7 +26373,7 @@ $export($export.S, 'Object', {
 
 
 /***/ }),
-/* 291 */
+/* 286 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25805,7 +26432,707 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
+/* 287 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Shoots = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Row = __webpack_require__(92);
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = __webpack_require__(93);
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Shoots = function (_React$Component) {
+  _inherits(Shoots, _React$Component);
+
+  function Shoots(props) {
+    _classCallCheck(this, Shoots);
+
+    var _this = _possibleConstructorReturn(this, (Shoots.__proto__ || Object.getPrototypeOf(Shoots)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Shoots, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          { className: 'item-label' },
+          'Ammo expense: '
+        ),
+        _react2.default.createElement(
+          _Row2.default,
+          { className: 'item-container' },
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/bulletgreen.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/bulletgreen.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/bulletgreen.png' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return Shoots;
+}(_react2.default.Component);
+
+;
+
+exports.Shoots = Shoots;
+
+/***/ }),
+/* 288 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.UnitsDmg = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Row = __webpack_require__(92);
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = __webpack_require__(93);
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var UnitsDmg = function (_React$Component) {
+  _inherits(UnitsDmg, _React$Component);
+
+  function UnitsDmg(props) {
+    _classCallCheck(this, UnitsDmg);
+
+    var _this = _possibleConstructorReturn(this, (UnitsDmg.__proto__ || Object.getPrototypeOf(UnitsDmg)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(UnitsDmg, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'p',
+          { className: 'item-label' },
+          'Units damage raport: '
+        ),
+        _react2.default.createElement(
+          _Row2.default,
+          { className: 'item-container' },
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green4c.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green3.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green3.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green2.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green2.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green2.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green.png' })
+          ),
+          _react2.default.createElement(
+            _Col2.default,
+            { className: 'item', xs: 3, md: 2 },
+            _react2.default.createElement('img', { src: './pics/cruise-liner-green.png' })
+          )
+        )
+      );
+    }
+  }]);
+
+  return UnitsDmg;
+}(_react2.default.Component);
+
+;
+
+exports.UnitsDmg = UnitsDmg;
+
+/***/ }),
+/* 289 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Officer = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Officer = function (_React$Component) {
+  _inherits(Officer, _React$Component);
+
+  function Officer(props) {
+    _classCallCheck(this, Officer);
+
+    var _this = _possibleConstructorReturn(this, (Officer.__proto__ || Object.getPrototypeOf(Officer)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Officer, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'p',
+        null,
+        '"PlayerFleet"'
+      );
+    }
+  }]);
+
+  return Officer;
+}(_react2.default.Component);
+
+;
+
+exports.Officer = Officer;
+
+/***/ }),
+/* 290 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Welcome = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _playerData = __webpack_require__(291);
+
+var _Grid = __webpack_require__(78);
+
+var _Grid2 = _interopRequireDefault(_Grid);
+
+var _Row = __webpack_require__(92);
+
+var _Row2 = _interopRequireDefault(_Row);
+
+var _Col = __webpack_require__(93);
+
+var _Col2 = _interopRequireDefault(_Col);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Welcome = function (_React$Component) {
+  _inherits(Welcome, _React$Component);
+
+  function Welcome(props) {
+    _classCallCheck(this, Welcome);
+
+    var _this = _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).call(this, props));
+
+    _this.state = {};
+    return _this;
+  }
+
+  _createClass(Welcome, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        _Grid2.default,
+        { id: 'grid' },
+        _react2.default.createElement(
+          _Row2.default,
+          { className: 'show-grid' },
+          _react2.default.createElement(_Col2.default, { xs: 12, md: 7, className: 'start-photo' }),
+          _react2.default.createElement(
+            _Col2.default,
+            { xs: 6, md: 5 },
+            _react2.default.createElement(
+              _Row2.default,
+              { className: 'show-grid' },
+              _react2.default.createElement(
+                _Col2.default,
+                { xs: 18, md: 12, className: 'start-info' },
+                _react2.default.createElement(
+                  'h2',
+                  { className: 'welcome-headers' },
+                  'Gentlemens! Attention!'
+                ),
+                _react2.default.createElement(
+                  'h2',
+                  { className: 'welcome-headers' },
+                  'Captain on the bridge!'
+                ),
+                _react2.default.createElement('br', null),
+                _react2.default.createElement(
+                  'p',
+                  { className: 'welcome-text' },
+                  'Welcome Comander!  ',
+                  _react2.default.createElement('br', null),
+                  'We rapidly prepare to battle! ',
+                  _react2.default.createElement('br', null),
+                  'Just please, write your name below.'
+                )
+              ),
+              _react2.default.createElement(
+                _Col2.default,
+                { xs: 18, md: 12 },
+                _react2.default.createElement(_playerData.PlayerData, {
+                  hideWelcome: this.props.hideWelcome,
+                  showGame: this.props.showGame
+                })
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Welcome;
+}(_react2.default.Component);
+
+;
+
+exports.Welcome = Welcome;
+
+/***/ }),
+/* 291 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.PlayerData = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(21);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _Button = __webpack_require__(292);
+
+var _Button2 = _interopRequireDefault(_Button);
+
+var _FormGroup = __webpack_require__(298);
+
+var _FormGroup2 = _interopRequireDefault(_FormGroup);
+
+var _ControlLabel = __webpack_require__(300);
+
+var _ControlLabel2 = _interopRequireDefault(_ControlLabel);
+
+var _FormControl = __webpack_require__(301);
+
+var _FormControl2 = _interopRequireDefault(_FormControl);
+
+var _FormControlFeedback = __webpack_require__(140);
+
+var _FormControlFeedback2 = _interopRequireDefault(_FormControlFeedback);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var PlayerData = function (_React$Component) {
+  _inherits(PlayerData, _React$Component);
+
+  function PlayerData(props) {
+    _classCallCheck(this, PlayerData);
+
+    var _this = _possibleConstructorReturn(this, (PlayerData.__proto__ || Object.getPrototypeOf(PlayerData)).call(this, props));
+
+    _this.getValidationState = function () {
+      var length = _this.state.value.length;
+      if (length > 2 && length < 20) return 'success';else if (length > 0) return 'error';
+      return null;
+    };
+
+    _this.handleChange = function (e) {
+      _this.setState({
+        value: e.target.value
+      });
+    };
+
+    _this.handleClick = function (e) {
+      e.preventDefault();
+      _this.hideWelcome(e);
+      _this.showGame(e);
+    };
+
+    _this.hideWelcome = function (e) {
+      e.preventDefault();
+      if (typeof _this.props.hideWelcome === 'function') {
+        _this.props.hideWelcome("none");
+      }
+    };
+
+    _this.showGame = function (e) {
+      e.preventDefault();
+      if (typeof _this.props.showGame === 'function') {
+        _this.props.showGame("block");
+      }
+    };
+
+    _this.state = {
+      value: ""
+    };
+    return _this;
+  }
+
+  _createClass(PlayerData, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'form',
+        null,
+        _react2.default.createElement(
+          _FormGroup2.default,
+          {
+            controlId: 'formBasicText',
+            validationState: this.getValidationState()
+          },
+          _react2.default.createElement(
+            _ControlLabel2.default,
+            { className: 'start-label' },
+            'Captain:'
+          ),
+          _react2.default.createElement(_FormControl2.default, { className: 'start-input', bsSize: 'large',
+            type: 'text',
+            value: this.state.value,
+            placeholder: '',
+            onChange: this.handleChange
+          }),
+          _react2.default.createElement(_FormControl2.default.Feedback, null),
+          _react2.default.createElement(
+            _Button2.default,
+            { bsStyle: 'primary', bsSize: 'large', onClick: this.handleClick },
+            'To battle!'
+          )
+        )
+      );
+    }
+  }]);
+
+  return PlayerData;
+}(_react2.default.Component);
+
+;
+
+exports.PlayerData = PlayerData;
+
+/***/ }),
 /* 292 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+exports.__esModule = true;
+
+var _values = __webpack_require__(293);
+
+var _values2 = _interopRequireDefault(_values);
+
+var _objectWithoutProperties2 = __webpack_require__(12);
+
+var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
+
+var _extends3 = __webpack_require__(11);
+
+var _extends4 = _interopRequireDefault(_extends3);
+
+var _classCallCheck2 = __webpack_require__(13);
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _possibleConstructorReturn2 = __webpack_require__(14);
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = __webpack_require__(15);
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
+var _classnames = __webpack_require__(18);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+var _react = __webpack_require__(5);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(19);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+var _elementType = __webpack_require__(31);
+
+var _elementType2 = _interopRequireDefault(_elementType);
+
+var _bootstrapUtils = __webpack_require__(20);
+
+var _StyleConfig = __webpack_require__(49);
+
+var _SafeAnchor = __webpack_require__(296);
+
+var _SafeAnchor2 = _interopRequireDefault(_SafeAnchor);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var propTypes = {
+  active: _propTypes2.default.bool,
+  disabled: _propTypes2.default.bool,
+  block: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func,
+  componentClass: _elementType2.default,
+  href: _propTypes2.default.string,
+  /**
+   * Defines HTML button type attribute
+   * @defaultValue 'button'
+   */
+  type: _propTypes2.default.oneOf(['button', 'reset', 'submit'])
+};
+
+var defaultProps = {
+  active: false,
+  block: false,
+  disabled: false
+};
+
+var Button = function (_React$Component) {
+  (0, _inherits3.default)(Button, _React$Component);
+
+  function Button() {
+    (0, _classCallCheck3.default)(this, Button);
+    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
+  }
+
+  Button.prototype.renderAnchor = function renderAnchor(elementProps, className) {
+    return _react2.default.createElement(_SafeAnchor2.default, (0, _extends4.default)({}, elementProps, {
+      className: (0, _classnames2.default)(className, elementProps.disabled && 'disabled')
+    }));
+  };
+
+  Button.prototype.renderButton = function renderButton(_ref, className) {
+    var componentClass = _ref.componentClass,
+        elementProps = (0, _objectWithoutProperties3.default)(_ref, ['componentClass']);
+
+    var Component = componentClass || 'button';
+
+    return _react2.default.createElement(Component, (0, _extends4.default)({}, elementProps, {
+      type: elementProps.type || 'button',
+      className: className
+    }));
+  };
+
+  Button.prototype.render = function render() {
+    var _extends2;
+
+    var _props = this.props,
+        active = _props.active,
+        block = _props.block,
+        className = _props.className,
+        props = (0, _objectWithoutProperties3.default)(_props, ['active', 'block', 'className']);
+
+    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
+        bsProps = _splitBsProps[0],
+        elementProps = _splitBsProps[1];
+
+    var classes = (0, _extends4.default)({}, (0, _bootstrapUtils.getClassSet)(bsProps), (_extends2 = {
+      active: active
+    }, _extends2[(0, _bootstrapUtils.prefix)(bsProps, 'block')] = block, _extends2));
+    var fullClassName = (0, _classnames2.default)(className, classes);
+
+    if (elementProps.href) {
+      return this.renderAnchor(elementProps, fullClassName);
+    }
+
+    return this.renderButton(elementProps, fullClassName);
+  };
+
+  return Button;
+}(_react2.default.Component);
+
+Button.propTypes = propTypes;
+Button.defaultProps = defaultProps;
+
+exports.default = (0, _bootstrapUtils.bsClass)('btn', (0, _bootstrapUtils.bsSizes)([_StyleConfig.Size.LARGE, _StyleConfig.Size.SMALL, _StyleConfig.Size.XSMALL], (0, _bootstrapUtils.bsStyles)([].concat((0, _values2.default)(_StyleConfig.State), [_StyleConfig.Style.DEFAULT, _StyleConfig.Style.PRIMARY, _StyleConfig.Style.LINK]), _StyleConfig.Style.DEFAULT, Button)));
+module.exports = exports['default'];
+
+/***/ }),
+/* 293 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = { "default": __webpack_require__(294), __esModule: true };
+
+/***/ }),
+/* 294 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(295);
+module.exports = __webpack_require__(25).Object.values;
+
+
+/***/ }),
+/* 295 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// https://github.com/tc39/proposal-object-values-entries
+var $export = __webpack_require__(28);
+var $values = __webpack_require__(138)(false);
+
+$export($export.S, 'Object', {
+  values: function values(it) {
+    return $values(it);
+  }
+});
+
+
+/***/ }),
+/* 296 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -25845,7 +27172,7 @@ var _elementType = __webpack_require__(31);
 
 var _elementType2 = _interopRequireDefault(_elementType);
 
-var _createChainedFunction = __webpack_require__(293);
+var _createChainedFunction = __webpack_require__(297);
 
 var _createChainedFunction2 = _interopRequireDefault(_createChainedFunction);
 
@@ -25957,7 +27284,7 @@ exports.default = SafeAnchor;
 module.exports = exports['default'];
 
 /***/ }),
-/* 293 */
+/* 297 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26004,7 +27331,7 @@ exports.default = createChainedFunction;
 module.exports = exports['default'];
 
 /***/ }),
-/* 294 */
+/* 298 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26048,7 +27375,7 @@ var _bootstrapUtils = __webpack_require__(20);
 
 var _StyleConfig = __webpack_require__(49);
 
-var _ValidComponentChildren = __webpack_require__(295);
+var _ValidComponentChildren = __webpack_require__(299);
 
 var _ValidComponentChildren2 = _interopRequireDefault(_ValidComponentChildren);
 
@@ -26133,7 +27460,7 @@ exports.default = (0, _bootstrapUtils.bsClass)('form-group', (0, _bootstrapUtils
 module.exports = exports['default'];
 
 /***/ }),
-/* 295 */
+/* 299 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26331,7 +27658,7 @@ exports.default = {
 module.exports = exports['default'];
 
 /***/ }),
-/* 296 */
+/* 300 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26371,7 +27698,7 @@ var _propTypes = __webpack_require__(19);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _warning = __webpack_require__(136);
+var _warning = __webpack_require__(139);
 
 var _warning2 = _interopRequireDefault(_warning);
 
@@ -26442,7 +27769,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 297 */
+/* 301 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26486,15 +27813,15 @@ var _elementType = __webpack_require__(31);
 
 var _elementType2 = _interopRequireDefault(_elementType);
 
-var _warning = __webpack_require__(136);
+var _warning = __webpack_require__(139);
 
 var _warning2 = _interopRequireDefault(_warning);
 
-var _FormControlFeedback = __webpack_require__(137);
+var _FormControlFeedback = __webpack_require__(140);
 
 var _FormControlFeedback2 = _interopRequireDefault(_FormControlFeedback);
 
-var _FormControlStatic = __webpack_require__(299);
+var _FormControlStatic = __webpack_require__(303);
 
 var _FormControlStatic2 = _interopRequireDefault(_FormControlStatic);
 
@@ -26596,7 +27923,7 @@ module.exports = exports['default'];
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 298 */
+/* 302 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26683,7 +28010,7 @@ exports.default = (0, _bootstrapUtils.bsClass)('glyphicon', Glyphicon);
 module.exports = exports['default'];
 
 /***/ }),
-/* 299 */
+/* 303 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26768,533 +28095,6 @@ FormControlStatic.defaultProps = defaultProps;
 
 exports.default = (0, _bootstrapUtils.bsClass)('form-control-static', FormControlStatic);
 module.exports = exports['default'];
-
-/***/ }),
-/* 300 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _extends2 = __webpack_require__(11);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _objectWithoutProperties2 = __webpack_require__(12);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _classCallCheck2 = __webpack_require__(13);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _possibleConstructorReturn2 = __webpack_require__(14);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(15);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(19);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _elementType = __webpack_require__(31);
-
-var _elementType2 = _interopRequireDefault(_elementType);
-
-var _bootstrapUtils = __webpack_require__(20);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var propTypes = {
-  /**
-   * Turn any fixed-width grid layout into a full-width layout by this property.
-   *
-   * Adds `container-fluid` class.
-   */
-  fluid: _propTypes2.default.bool,
-  /**
-   * You can use a custom element for this component
-   */
-  componentClass: _elementType2.default
-};
-
-var defaultProps = {
-  componentClass: 'div',
-  fluid: false
-};
-
-var Grid = function (_React$Component) {
-  (0, _inherits3.default)(Grid, _React$Component);
-
-  function Grid() {
-    (0, _classCallCheck3.default)(this, Grid);
-    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-  }
-
-  Grid.prototype.render = function render() {
-    var _props = this.props,
-        fluid = _props.fluid,
-        Component = _props.componentClass,
-        className = _props.className,
-        props = (0, _objectWithoutProperties3.default)(_props, ['fluid', 'componentClass', 'className']);
-
-    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
-        bsProps = _splitBsProps[0],
-        elementProps = _splitBsProps[1];
-
-    var classes = (0, _bootstrapUtils.prefix)(bsProps, fluid && 'fluid');
-
-    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
-      className: (0, _classnames2.default)(className, classes)
-    }));
-  };
-
-  return Grid;
-}(_react2.default.Component);
-
-Grid.propTypes = propTypes;
-Grid.defaultProps = defaultProps;
-
-exports.default = (0, _bootstrapUtils.bsClass)('container', Grid);
-module.exports = exports['default'];
-
-/***/ }),
-/* 301 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _extends2 = __webpack_require__(11);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _objectWithoutProperties2 = __webpack_require__(12);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _classCallCheck2 = __webpack_require__(13);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _possibleConstructorReturn2 = __webpack_require__(14);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(15);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _elementType = __webpack_require__(31);
-
-var _elementType2 = _interopRequireDefault(_elementType);
-
-var _bootstrapUtils = __webpack_require__(20);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var propTypes = {
-  componentClass: _elementType2.default
-};
-
-var defaultProps = {
-  componentClass: 'div'
-};
-
-var Row = function (_React$Component) {
-  (0, _inherits3.default)(Row, _React$Component);
-
-  function Row() {
-    (0, _classCallCheck3.default)(this, Row);
-    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-  }
-
-  Row.prototype.render = function render() {
-    var _props = this.props,
-        Component = _props.componentClass,
-        className = _props.className,
-        props = (0, _objectWithoutProperties3.default)(_props, ['componentClass', 'className']);
-
-    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
-        bsProps = _splitBsProps[0],
-        elementProps = _splitBsProps[1];
-
-    var classes = (0, _bootstrapUtils.getClassSet)(bsProps);
-
-    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
-      className: (0, _classnames2.default)(className, classes)
-    }));
-  };
-
-  return Row;
-}(_react2.default.Component);
-
-Row.propTypes = propTypes;
-Row.defaultProps = defaultProps;
-
-exports.default = (0, _bootstrapUtils.bsClass)('row', Row);
-module.exports = exports['default'];
-
-/***/ }),
-/* 302 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-exports.__esModule = true;
-
-var _extends2 = __webpack_require__(11);
-
-var _extends3 = _interopRequireDefault(_extends2);
-
-var _objectWithoutProperties2 = __webpack_require__(12);
-
-var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
-
-var _classCallCheck2 = __webpack_require__(13);
-
-var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
-
-var _possibleConstructorReturn2 = __webpack_require__(14);
-
-var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
-
-var _inherits2 = __webpack_require__(15);
-
-var _inherits3 = _interopRequireDefault(_inherits2);
-
-var _classnames = __webpack_require__(18);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _propTypes = __webpack_require__(19);
-
-var _propTypes2 = _interopRequireDefault(_propTypes);
-
-var _elementType = __webpack_require__(31);
-
-var _elementType2 = _interopRequireDefault(_elementType);
-
-var _bootstrapUtils = __webpack_require__(20);
-
-var _StyleConfig = __webpack_require__(49);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var propTypes = {
-  componentClass: _elementType2.default,
-
-  /**
-   * The number of columns you wish to span
-   *
-   * for Extra small devices Phones (<768px)
-   *
-   * class-prefix `col-xs-`
-   */
-  xs: _propTypes2.default.number,
-  /**
-   * The number of columns you wish to span
-   *
-   * for Small devices Tablets (≥768px)
-   *
-   * class-prefix `col-sm-`
-   */
-  sm: _propTypes2.default.number,
-  /**
-   * The number of columns you wish to span
-   *
-   * for Medium devices Desktops (≥992px)
-   *
-   * class-prefix `col-md-`
-   */
-  md: _propTypes2.default.number,
-  /**
-   * The number of columns you wish to span
-   *
-   * for Large devices Desktops (≥1200px)
-   *
-   * class-prefix `col-lg-`
-   */
-  lg: _propTypes2.default.number,
-  /**
-   * Hide column
-   *
-   * on Extra small devices Phones
-   *
-   * adds class `hidden-xs`
-   */
-  xsHidden: _propTypes2.default.bool,
-  /**
-   * Hide column
-   *
-   * on Small devices Tablets
-   *
-   * adds class `hidden-sm`
-   */
-  smHidden: _propTypes2.default.bool,
-  /**
-   * Hide column
-   *
-   * on Medium devices Desktops
-   *
-   * adds class `hidden-md`
-   */
-  mdHidden: _propTypes2.default.bool,
-  /**
-   * Hide column
-   *
-   * on Large devices Desktops
-   *
-   * adds class `hidden-lg`
-   */
-  lgHidden: _propTypes2.default.bool,
-  /**
-   * Move columns to the right
-   *
-   * for Extra small devices Phones
-   *
-   * class-prefix `col-xs-offset-`
-   */
-  xsOffset: _propTypes2.default.number,
-  /**
-   * Move columns to the right
-   *
-   * for Small devices Tablets
-   *
-   * class-prefix `col-sm-offset-`
-   */
-  smOffset: _propTypes2.default.number,
-  /**
-   * Move columns to the right
-   *
-   * for Medium devices Desktops
-   *
-   * class-prefix `col-md-offset-`
-   */
-  mdOffset: _propTypes2.default.number,
-  /**
-   * Move columns to the right
-   *
-   * for Large devices Desktops
-   *
-   * class-prefix `col-lg-offset-`
-   */
-  lgOffset: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the right
-   *
-   * for Extra small devices Phones
-   *
-   * class-prefix `col-xs-push-`
-   */
-  xsPush: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the right
-   *
-   * for Small devices Tablets
-   *
-   * class-prefix `col-sm-push-`
-   */
-  smPush: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the right
-   *
-   * for Medium devices Desktops
-   *
-   * class-prefix `col-md-push-`
-   */
-  mdPush: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the right
-   *
-   * for Large devices Desktops
-   *
-   * class-prefix `col-lg-push-`
-   */
-  lgPush: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the left
-   *
-   * for Extra small devices Phones
-   *
-   * class-prefix `col-xs-pull-`
-   */
-  xsPull: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the left
-   *
-   * for Small devices Tablets
-   *
-   * class-prefix `col-sm-pull-`
-   */
-  smPull: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the left
-   *
-   * for Medium devices Desktops
-   *
-   * class-prefix `col-md-pull-`
-   */
-  mdPull: _propTypes2.default.number,
-  /**
-   * Change the order of grid columns to the left
-   *
-   * for Large devices Desktops
-   *
-   * class-prefix `col-lg-pull-`
-   */
-  lgPull: _propTypes2.default.number
-};
-
-var defaultProps = {
-  componentClass: 'div'
-};
-
-var Col = function (_React$Component) {
-  (0, _inherits3.default)(Col, _React$Component);
-
-  function Col() {
-    (0, _classCallCheck3.default)(this, Col);
-    return (0, _possibleConstructorReturn3.default)(this, _React$Component.apply(this, arguments));
-  }
-
-  Col.prototype.render = function render() {
-    var _props = this.props,
-        Component = _props.componentClass,
-        className = _props.className,
-        props = (0, _objectWithoutProperties3.default)(_props, ['componentClass', 'className']);
-
-    var _splitBsProps = (0, _bootstrapUtils.splitBsProps)(props),
-        bsProps = _splitBsProps[0],
-        elementProps = _splitBsProps[1];
-
-    var classes = [];
-
-    _StyleConfig.DEVICE_SIZES.forEach(function (size) {
-      function popProp(propSuffix, modifier) {
-        var propName = '' + size + propSuffix;
-        var propValue = elementProps[propName];
-
-        if (propValue != null) {
-          classes.push((0, _bootstrapUtils.prefix)(bsProps, '' + size + modifier + '-' + propValue));
-        }
-
-        delete elementProps[propName];
-      }
-
-      popProp('', '');
-      popProp('Offset', '-offset');
-      popProp('Push', '-push');
-      popProp('Pull', '-pull');
-
-      var hiddenPropName = size + 'Hidden';
-      if (elementProps[hiddenPropName]) {
-        classes.push('hidden-' + size);
-      }
-      delete elementProps[hiddenPropName];
-    });
-
-    return _react2.default.createElement(Component, (0, _extends3.default)({}, elementProps, {
-      className: (0, _classnames2.default)(className, classes)
-    }));
-  };
-
-  return Col;
-}(_react2.default.Component);
-
-Col.propTypes = propTypes;
-Col.defaultProps = defaultProps;
-
-exports.default = (0, _bootstrapUtils.bsClass)('col', Col);
-module.exports = exports['default'];
-
-/***/ }),
-/* 303 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.Officer = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(5);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(22);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Officer = function (_React$Component) {
-  _inherits(Officer, _React$Component);
-
-  function Officer(props) {
-    _classCallCheck(this, Officer);
-
-    var _this = _possibleConstructorReturn(this, (Officer.__proto__ || Object.getPrototypeOf(Officer)).call(this, props));
-
-    _this.state = {};
-    return _this;
-  }
-
-  _createClass(Officer, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'p',
-        null,
-        '"PlayerFleet"'
-      );
-    }
-  }]);
-
-  return Officer;
-}(_react2.default.Component);
-
-;
-
-exports.Officer = Officer;
 
 /***/ })
 /******/ ]);

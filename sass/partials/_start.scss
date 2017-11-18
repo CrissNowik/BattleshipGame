@@ -2,7 +2,7 @@
 @import 'modules/mixins';
 
 
-.col-md-7 {
+.start-photo {
   height: 80vh;
   background-image: url("https://78.media.tumblr.com/c0f7ad6f5915154be41d8550e0d52a44/tumblr_mrsi0hJNnh1sfie3io1_1280.jpg");
   background-position: center;
@@ -11,27 +11,23 @@
   border-radius: 5px;
 }
 
-.col-md-12 {
+.start-info {
 text-align: center;
 margin-bottom: 2rem;
 }
 
-.show-grid {
-margin: 3vh auto 3vh auto;
-}
-
-h2 {
+.welcome-headers {
   @include WelcomeFonts;
   font-size: 4rem;
 }
 
-p {
+.welcome-text{
   @include WelcomeFonts;
   font-size: 2rem;
 }
 
 .start-label {
-  @extend p;
+  @extend .welcome-text;
 }
 
 .start-input {

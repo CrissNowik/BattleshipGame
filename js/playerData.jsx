@@ -28,9 +28,24 @@ class PlayerData extends React.Component {
     });
   };
 
+  handleClick = (e) => {
+    e.preventDefault();
+    this.hideWelcome(e);
+    this.showGame(e);
+  }
+
   hideWelcome = (e) => {
     e.preventDefault();
-    this // dokończyć ukrywanie ekranu powitalnego
+    if ( typeof this.props.hideWelcome === 'function' ){
+        this.props.hideWelcome("none");
+    }
+  }
+
+  showGame = (e) => {
+    e.preventDefault();
+    if ( typeof this.props.showGame === 'function' ){
+        this.props.showGame("block");
+    }
   }
 
   render() {
@@ -48,7 +63,7 @@ class PlayerData extends React.Component {
             onChange={this.handleChange}
           />
           <FormControl.Feedback />
-          <Button bsStyle="primary" bsSize="large" onClick={this.hideWelcome}>To battle!</Button>
+          <Button bsStyle="primary" bsSize="large" onClick={this.handleClick}>To battle!</Button>
         </FormGroup>
       </form>
     );

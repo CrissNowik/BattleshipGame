@@ -19,9 +19,16 @@ class Game extends React.Component {
     }
   };
 
+  showGame = (e) => {
+    e.preventDefault();
+    if ( typeof this.props.showGame === 'function' ){
+        this.props.showGame("block");
+    }
+  }
+
   render() {
     return (
-      <Grid>
+      <Grid className="game-board">
         <Row className="show-grid">
           <Col xs={9} md={6}>
             <PlayerFleet />
@@ -30,19 +37,12 @@ class Game extends React.Component {
             <EnemyFleet />
           </Col>
         </Row>
-
         <Row className="show-grid">
-          <Col xs={3} md={2}>
-            <Officer />
-          </Col>
-          <Col xs={3} md={2}>
+          <Col xs={9} md={6}>
             <UnitsDmg />
           </Col>
-          <Col xs={3} md={2}>
-            <Shoots />
-          </Col>
           <Col xs={9} md={6}>
-            <p>pusto</p>
+            <Shoots />
           </Col>
         </Row>
       </Grid>
