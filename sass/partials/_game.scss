@@ -4,9 +4,10 @@
 @import 'modules/fonts';
 
 .game-board {
-  background-color:$color_board;
+  background-color: $color_dark;
   color: $color_hud;
   font-family: 'courier_prime_coderegular', $stock;
+  padding-bottom: 1vh;
   width:100%;
     h2 {
       font-weight: bolder;
@@ -14,6 +15,7 @@
 }
 
 .radar-circle {
+  background-color: $color_board;
   border: 1px solid $color_hud;
   border-radius: 100%;
   height: 700px;
@@ -39,12 +41,12 @@
   padding: 0;
   min-width: 4rem;
   min-height: 4rem;
-  display: table;
+  display: inline-block;
   p {
     color: $color_hud;
     font-weight: bolder;
     text-align: center;
-    display: table-cell;
+    display:table-cell;
     vertical-align: middle;
   }
 }

@@ -30,8 +30,16 @@ class PlayerData extends React.Component {
 
   handleClick = (e) => {
     e.preventDefault();
-    this.hideWelcome(e);
-    this.showGame(e);
+    const length = this.state.value.length;
+    if (length > 2 && length < 20 && this.state.value !== "Place name Sir!") {
+      this.hideWelcome(e);
+      this.showGame(e);
+    }
+    else {
+      this.setState({
+        value: "Place name Sir!"
+      })
+    }
   }
 
   hideWelcome = (e) => {

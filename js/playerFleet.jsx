@@ -9,12 +9,41 @@ class PlayerFleet extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      playerBattlefields: new Array(10)
 
     }
   };
 
-  clickHandler = () => {
-    console.log("Kliknięte");
+  componentDidMount() {
+    let a = 0;
+    for (let i = 0; i < 12; i++) {
+      this.state.playerBattlefields[i] = new Array(12);
+      for (let j = 0; j < 12; j++) {
+        this.state.playerBattlefields[i][j] = a++;
+      }
+    }
+    console.log(this.state.playerBattlefields);
+  }
+
+  drawBattlefield = (row) => {
+    let battlefield = this.state.playerBattlefields.map(
+      (xmap, b) => {/*console.log("test", xmap, b)*/;
+        return xmap.map((x, index) => {
+          // console.log(x);
+          return (
+            <div key={row++} className="cell" onClick={e => this.clickHandler(b, index)}>.</div>
+          )
+        })
+
+      }
+    )
+    return battlefield;
+  }
+
+  clickHandler = (x,y) => {
+    console.log("Kliknięte", x, y);
+    // this.state.playerBattlefields[x][y] = 1;
+    console.log("Test clickHandler", this.state.playerBattlefields[x][y]);
   };
 
   render() {
@@ -22,175 +51,7 @@ class PlayerFleet extends React.Component {
       <Row className="radar-circle">
         <h2>Fleet status:</h2>
         <Col xs={18} md={12} className="battlefield">
-          <Row >
-            <Col className="cell-cord" xs={2} md={1}><p>X</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>A</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>B</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>C</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>D</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>E</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>F</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>G</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>H</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>I</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>J</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>X</p></Col>
-          </Row>
-          <Row >
-            <Col className="cell-cord" xs={2} md={1}><p>1</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>1</p></Col>
-          </Row>
-          <Row >
-            <Col className="cell-cord" xs={2} md={1}><p>2</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>2</p></Col>
-          </Row>
-          <Row >
-            <Col className="cell-cord" xs={2} md={1}><p>3</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>3</p></Col>
-          </Row>
-          <Row >
-            <Col className="cell-cord" xs={2} md={1}><p>4</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>4</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>5</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>5</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>6</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>6</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>7</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>7</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>8</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>8</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>9</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>9</p></Col>
-          </Row>
-
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>10</p></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell" onClick={this.clickHandler} xs={2} md={1}></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>10</p></Col>
-          </Row>
-          <Row>
-            <Col className="cell-cord" xs={2} md={1}><p>X</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>A</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>B</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>C</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>D</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>E</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>F</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>G</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>H</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>I</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>J</p></Col>
-            <Col className="cell-cord" xs={2} md={1}><p>X</p></Col>
-          </Row>
+          {this.drawBattlefield(0)}
         </Col>
       </Row>
     );
@@ -198,3 +59,5 @@ class PlayerFleet extends React.Component {
 };
 
 export {PlayerFleet};
+
+ // rozwiązanie awaryjne <Col className="cell"  onClick={e => this.clickHandler(0,0)} xs={2} md={1}></Col>

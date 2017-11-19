@@ -10,6 +10,7 @@ import {Officer} from './officer.jsx';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
+import Button from 'react-bootstrap/lib/Button';
 
 class Game extends React.Component {
   constructor(props) {
@@ -26,9 +27,17 @@ class Game extends React.Component {
     }
   }
 
+  placeShips = (e) => {
+    e.preventDefault();
+    console.log("umieszczanie statków");
+  }
+
   render() {
     return (
       <Grid className="game-board">
+        <Row className="show-grid">
+          <Button bsStyle="primary" bsSize="large" onClick={this.placeShips}>Place ships by click</Button>
+        </Row>
         <Row className="show-grid">
           <Col xs={9} md={6}>
             <PlayerFleet />
