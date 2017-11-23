@@ -5,3 +5,112 @@
   font-family: 'armalite_rifleregular', $stock;
   letter-spacing: 0.4rem;
 }
+
+@mixin Radar-boarder {
+  border: 1px dashed $color_hud;
+}
+
+@mixin Dot {
+  border-radius: 100%;
+  display: table;
+	margin: 1.5px;
+	height: 15px;
+	left: 5px;
+  top: 5px;
+	overflow: hidden;
+	position: relative;
+  width: 15px;
+}
+
+@mixin Anime {
+  animation-name: expand;
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+ 	animation-timing-function: linear;
+ 	animation-fill-mode: none;
+}
+
+@mixin AnimeWebkit {
+  -webkit-animation-name: expand;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-iteration-count: 1;
+ 	-webkit-animation-timing-function: linear;
+ 	-webkit-animation-fill-mode: none;
+}
+
+@mixin AnimeMozilla {
+  -moz-animation-name: expand;
+  -moz-animation-duration: 0.5s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+  -moz-animation-fill-mode: none;
+}
+
+@mixin AnimeKeyframes {
+  @keyframes expand {
+  	0% {
+  		width: 0px;
+  		height: 0px;
+  		top: 12.5px;
+  		left: 12.5px;
+  	}
+  	50% {
+  		width: 25px;
+  		height: 25px;
+  		top: 0px;
+  		left: 0px;
+  	}
+  	100% {
+  		width: 15px;
+  		height: 15px;
+  		top: 5px;
+  		left: 5px;
+  	}
+  }
+}
+
+@mixin AnimeWebKitKeyframes {
+  @-webkit-keyframes expand {
+  	0% {
+  		width: 0px;
+  		height: 0px;
+  		top: 12.5px;
+  		left: 12.5px;
+  	}
+  	50% {
+  		width: 25px;
+  		height: 25px;
+  		top: 0px;
+  		left: 0px;
+  	}
+  	100% {
+  		width: 15px;
+  		height: 15px;
+  		top: 5px;
+  		left: 5px;
+  	}
+  }
+}
+
+@mixin AnimeMozillaKeyframes {
+  @-moz-keyframes expand {
+  	0% {
+  		width: 0px;
+  		height: 0px;
+  		top: 12.5px;
+  		left: 12.5px;
+  	}
+  	50% {
+  		width: 25px;
+  		height: 25px;
+  		top: 0px;
+  		left: 0px;
+  	}
+  	100% {
+  		width: 15px;
+  		height: 15px;
+  		top: 5px;
+  		left: 5px;
+  	}
+  }
+}

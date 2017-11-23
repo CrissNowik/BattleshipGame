@@ -2,6 +2,30 @@
 @import 'modules/colors';
 @import 'modules/reset';
 @import 'modules/fonts';
+@import 'modules/mixins';
+
+.enemy {
+	width: 330px;
+	height: 330px;
+	background: $color_board;
+	border: 1px solid $color_board;
+}
+
+.player {
+	width: 330px;
+	height: 330px;
+	background: $color_board;
+	border: 1px solid $color_board;
+}
+
+.grid {
+	position: absolute;
+	width: 320px;
+	height: 320px;
+	background: $color_board;
+	margin-left: 28px;
+	font-size: 0;
+}
 
 .game-board {
   background-color: $color_dark;
@@ -9,6 +33,8 @@
   font-family: 'courier_prime_coderegular', $stock;
   padding-bottom: 1vh;
   width:100%;
+  display: flex;
+  justify-content: space-between;
     h2 {
       font-weight: bolder;
     }
@@ -18,17 +44,16 @@
   background-color: $color_board;
   border: 1px solid $color_hud;
   border-radius: 100%;
-  height: 700px;
-  margin: 2rem auto 0 auto;
-  width: 700px;
+  height: 500px;
+  margin: 11px;
+  width: 500px;
   position: relative;
-
 }
 
 .battlefield {
   margin: auto;
-  width: 510px;
-  height: 480px;
+  width: 350px;
+  height: 350px;
   position: absolute;
     top: 0;
     left: 0;
@@ -36,41 +61,71 @@
     bottom: 0;
 }
 
-.cell-cord {
-  border: 1px dashed $color_hud;
-  padding: 0;
-  min-width: 4rem;
-  min-height: 4rem;
-  display: inline-block;
-  p {
-    color: $color_hud;
-    font-weight: bolder;
-    text-align: center;
-    display:table-cell;
-    vertical-align: middle;
-  }
+.aTops {
+	width: 32px;
+	height: 32px;
+	border: 1px dashed $color_hud;
+	display: table-cell;
+	vertical-align: middle;
+	font-weight: bold;
+	color: $color_hud;
+	text-align: center;
+  @include Radar-boarder;
 }
 
-.cell {
-  @extend .cell-cord;
-  &:hover {
-    background-color: $color_hud_hover;
-  }
+.aLeft {
+	position: relative;
+	width: 29px;
+	height: 32px;
+	display: block;
+	line-height: 32px;
+	font-weight: bold;
+	color: $color_hud;
+	text-align: center;
+  @include Radar-boarder;
 }
 
-.item-container {
-  display: flex;
-  justify-content: center;
+
+.points {
+	position: relative;
+	width: 32px;
+	height: 32px;
+	display: inline-block;
+  @include Radar-boarder;
 }
 
-.item-label {
-  font-size: 2rem;
+.hidezero {
+	color: $color_hud;
+  width: 29px;
+	height: 32px;
 }
 
-.item {
-  padding: 0;
+.hit {
+  background: $color_hit;
+	border: 1px solid  $color_hit;
+	@include Dot;
+	@include Anime;
+	@include AnimeWebkit;
+  @include AnimeMozilla;
 }
 
-.salvo-raport {
-  text-decoration: underline;
+.miss {
+  background: #fff;
+	border: 1px solid #fff;
+  @include Dot;
+  @include Anime;
+	@include AnimeWebkit;
+  @include AnimeMozilla;
 }
+
+.target {
+	background: $color_hud_hover;
+}
+
+.battleship, .cruiser, .frigate, .patrol-boat {
+	background: $color_hud_ship;
+}
+
+@include AnimeKeyframes;
+@include AnimeWebKitKeyframes;
+@include AnimeMozillaKeyframes;

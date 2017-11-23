@@ -192,7 +192,7 @@ class EnemyFleet extends React.Component {
               <Col className="cell-cord" xs={2} md={1}><p>X</p></Col>
             </Row>
             <Row>
-              <h4 className="salvo-raport">Captain! Salvo raport: </h4>
+              <h4 className="battle-raport">Captain! Battle raport: </h4>
               <p>
               first: hit <br/>
               second: miss <br/>
@@ -200,7 +200,6 @@ class EnemyFleet extends React.Component {
               </p>
             </Row>
           </Col>
-
         </Row>
     );
   }

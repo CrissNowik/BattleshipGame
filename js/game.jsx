@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {PlayerFleet} from './playerFleet.jsx';
-import {EnemyFleet} from './enemyFleet.jsx';
+// import {PlayerFleet} from './playerFleet.jsx';
+// import {EnemyFleet} from './enemyFleet.jsx';
 import {Shoots} from './shoots.jsx';
 import {UnitsDmg} from './unitsDmg.jsx';
-import {Officer} from './officer.jsx';
+import {Fleet} from './fleet.jsx';
 
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
@@ -40,10 +40,10 @@ class Game extends React.Component {
         </Row>
         <Row className="show-grid">
           <Col xs={9} md={6}>
-            <PlayerFleet />
+            <Fleet name="ImięFleet" />
           </Col>
           <Col xs={9} md={6}>
-            <EnemyFleet />
+            <Ship name="ImięShip" />
           </Col>
         </Row>
         <Row className="show-grid">

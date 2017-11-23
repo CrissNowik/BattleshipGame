@@ -4,21 +4,54 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="description" content="Popular paper game in new website version. Fully wrote in ReactJS library.">
-	<meta name="keywords" content="battleship, ship, salvo, game, webgame, reactjs, coders lab, programming course, frontend, games">
+	<meta name="keywords" content="battleship, ship, salvo, game, webgame, jquery, coders lab, programming course, frontend, games">
 	<meta name="viewport" content="initial-scale=1">
 	<title>Battle Ship Game</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body>
-	<header>
-		<h1>Salvo - battleship game</h1>
-	</header>
-	<main id="app"></main>
+	<body>
+		<header>
+			<h1>Battle Ship Game</h1>
+		</header>
+	  <main id="main">
+	    <div class="game-board container">
+	      <div class="show-grid row">
+					<div class="col-xl-6">
+						<div class="radar-circle">
+							<div class="battlefield player">
+			          <ul class="grid"></ul>
+			        </div>
+						</div>
+					</div>
+					<div class="col-xl-6">
+						<div class="radar-circle">
+							<div class="battlefield enemy">
+			          <ul class="grid"></ul>
+			        </div>
+						</div>
+					</div>
+	      </div>
+	    </div>
+	    <div class="panel container">
+	      <div class="panelOptions row">
+	        <div class="layout col-xl-6">
+							<div class="button one">
+								To battle!
+							</div>
+	        </div>
+					<div class="console col-xl-6">
+						<h2> Battle raport: </h2>
+		        <span class="text"></span>
+					</div>
+	      </div>
+	    </div>
+	  </main>
 	<footer>
-			<p class="creator-info">Created by
-				<a href="https://github.com/CrissNowik" target="_blank">CrissNowik</a> 2017
-			</p>
+		<p class="creator-info">Created by
+			<a href="https://github.com/CrissNowik" target="_blank">CrissNowik</a> 2017
+		</p>
 	<div>
 		<div>
 			<p class="copyright">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
@@ -32,5 +65,4 @@
 	</footer>
 	<script src="dist/out.js"></script>
 </body>
-
 </html>
