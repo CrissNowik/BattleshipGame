@@ -1,3 +1,5 @@
+import {bot} from './ai';
+
   let playerFleet, cpuFleet;
   let attemptedHits = [];
 
@@ -93,3 +95,79 @@
   	sunk: function(user) { return " " + user + " ship was sunk!" },
   	lost: function(name) { return " " + name + " has lost his fleet!!  Game Over." },
   };
+
+
+  let EnemyFleet = {
+  	allHits: [],
+
+  	highlight: function(square) {
+  		$(square).addClass("target").off("mouseleave").on("mouseleave", function() {
+  			$(this).removeClass("target");
+  		});
+
+  		$(square).off("click").on("click", function() {
+  			if(!($(this).hasClass("used"))) {
+  				$(this).removeClass("target").addClass("used");
+  				let numer = parseInt($(this).attr("class").slice(15));
+  				let boolean = cpuFleet.checkIfHit(numer);
+
+  				if (false == boolean) {
+  					$(".text").text(output.miss("Sir! We "));
+  					$(this).children().addClass("miss");
+  				} else {
+            $(this).children().addClass("hit");
+    				$(".enemy").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+          }
+  				// Check end game
+  				if (cpuFleet.ships.length == 0) {
+  					$(".enemy").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+  				} else setTimeout(bot.select, 800);
+  			} // end of big if
+  		});
+  	} // end of method EnemyFleet.highlight
+  }
+
+export let playerBoard = {
+      	currentHits: [],
+
+      	checkAttempt: function(hit) {
+      		if (playerFleet.checkIfHit(hit)) {
+      			playerBoard.currentHits.push(hit); // put hit into array
+
+      			if (this.currentHits.length > 1) bot.prev_hit = true;
+      			$(".player").find("." + hit).children().addClass("hit"); // display hit on grid
+
+      			if (playerBoard.hasShipBeenSunk()) {
+      				// clear flags
+      				bot.hunting = bot.prev_hit = false;
+      				if (bot.sizeOfShipSunk == playerBoard.currentHits.length) {
+      					bot.num_misses = bot.back_count = bot.nextMove.length = playerBoard.currentHits.length = bot.sizeOfShipSunk = bot.currrent = 0;
+      				} else {
+      					bot.special =  bot.case1 = true;
+      				}
+      				// check for special cases
+      				if (bot.specialHits.length > 0) bot.special = true;
+      				// check for end of game.
+      			}
+      			return true;
+      		} else {
+      			$(".player").find("." + hit).children().addClass("miss");
+      			bot.current = playerBoard.currentHits[0];
+      			bot.prev_hit = false;
+      			if (playerBoard.currentHits.length > 1) {
+      				bot.back = true;
+      				bot.num_misses++;
+      			}
+      			if (bot.case2) {
+      				bot.special = true;
+      				bot.case2 = false;
+      			}
+      			return false;
+      		}
+      	},
+        // check if ship was destroyed
+      	hasShipBeenSunk: function() {
+      		if (bot.sizeOfShipSunk > 0) return true;
+      		else return false;
+      	}
+      }

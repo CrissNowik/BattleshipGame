@@ -103,6 +103,7 @@ footer {
   position: relative;
 	text-align: center;
   width: 400px;
+	cursor:pointer;
   &:hover {
   	background: $color_hud_hover;
   }

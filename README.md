@@ -1,11 +1,11 @@
 # BattleshipGame
- 
+
 
 ### Description:
-Popular paper game in new website version. Created using ReactJS, React Bootstrap, SASS and HTML. 
+Popular paper game in new website version. Created using jQuery, Bootstrap, SASS and HTML.
 
 ### Inspiration:
-Final project for CodersLab Front-end Course (Poznań). 
+Final project for CodersLab Front-end Course (Poznań, Poland).
 
 ### Demo:
 
@@ -13,4 +13,3 @@ TBD
 
 ### Copyright:
 CrissNowik
-

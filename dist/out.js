@@ -60,16 +60,22 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 81);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 81:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.playerBoard = undefined;
+
+var _ai = __webpack_require__(1);
 
 var playerFleet = void 0,
     cpuFleet = void 0;
@@ -92,7 +98,7 @@ function Fleet(name) {
   this.removeShip = function (pos) {
     this.numOfShips--;
     $(".text").text(output.sunk(this.name, this.ships[pos].name));
-    if (this == playerFleet) bot.sizeOfShipSunk = this.ships[pos].length;
+    if (this == playerFleet) _ai.bot.sizeOfShipSunk = this.ships[pos].length;
     this.ships.splice(pos, 1);
     if (this.ships.length == 0) {
       $(".text").text(output.lost(this.name));
@@ -168,6 +174,408 @@ var output = {
   }
 };
 
-/***/ })
+var EnemyFleet = {
+  allHits: [],
 
-/******/ });
+  highlight: function highlight(square) {
+    $(square).addClass("target").off("mouseleave").on("mouseleave", function () {
+      $(this).removeClass("target");
+    });
+
+    $(square).off("click").on("click", function () {
+      if (!$(this).hasClass("used")) {
+        $(this).removeClass("target").addClass("used");
+        var numer = parseInt($(this).attr("class").slice(15));
+        var boolean = cpuFleet.checkIfHit(numer);
+
+        if (false == boolean) {
+          $(".text").text(output.miss("Sir! We "));
+          $(this).children().addClass("miss");
+        } else {
+          $(this).children().addClass("hit");
+          $(".enemy").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+        }
+        // Check end game
+        if (cpuFleet.ships.length == 0) {
+          $(".enemy").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
+        } else setTimeout(_ai.bot.select, 800);
+      } // end of big if
+    });
+  } // end of method EnemyFleet.highlight
+};
+
+var playerBoard = exports.playerBoard = {
+  currentHits: [],
+
+  checkAttempt: function checkAttempt(hit) {
+    if (playerFleet.checkIfHit(hit)) {
+      playerBoard.currentHits.push(hit); // put hit into array
+
+      if (this.currentHits.length > 1) _ai.bot.prev_hit = true;
+      $(".player").find("." + hit).children().addClass("hit"); // display hit on grid
+
+      if (playerBoard.hasShipBeenSunk()) {
+        // clear flags
+        _ai.bot.hunting = _ai.bot.prev_hit = false;
+        if (_ai.bot.sizeOfShipSunk == playerBoard.currentHits.length) {
+          _ai.bot.num_misses = _ai.bot.back_count = _ai.bot.nextMove.length = playerBoard.currentHits.length = _ai.bot.sizeOfShipSunk = _ai.bot.currrent = 0;
+        } else {
+          _ai.bot.special = _ai.bot.case1 = true;
+        }
+        // check for special cases
+        if (_ai.bot.specialHits.length > 0) _ai.bot.special = true;
+        // check for end of game.
+      }
+      return true;
+    } else {
+      $(".player").find("." + hit).children().addClass("miss");
+      _ai.bot.current = playerBoard.currentHits[0];
+      _ai.bot.prev_hit = false;
+      if (playerBoard.currentHits.length > 1) {
+        _ai.bot.back = true;
+        _ai.bot.num_misses++;
+      }
+      if (_ai.bot.case2) {
+        _ai.bot.special = true;
+        _ai.bot.case2 = false;
+      }
+      return false;
+    }
+  },
+  // check if ship was destroyed
+  hasShipBeenSunk: function hasShipBeenSunk() {
+    if (_ai.bot.sizeOfShipSunk > 0) return true;else return false;
+  }
+};
+
+/***/ }),
+/* 1 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "bot", function() { return bot; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_jsx__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__app_jsx___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__app_jsx__);
+
+
+
+let bot = {
+        back: false,
+        hunting: false,
+        prev_hit: false,
+        first_hit: false,
+        special: false,
+        case1: false,
+        case2: false,
+        num_misses: 0,
+        back_count: 0,
+        randPool: [],
+        nextMove: [],
+        attempted: [],
+        specialHits: [],
+        direction: "",
+        current: 0,
+        numAttemptsAfterHit: 0,
+        sizeOfShipSunk: 0,
+        randomGen: function(size) {
+          return Math.floor(Math.random() * size);
+        },
+        select: function() {
+          if (bot.hunting) {
+            bot.battleLogic();
+          } else if (bot.special) {
+            bot.specialCase();
+          } else {
+            // grab a random number from the pool and increase attempts
+            bot.current = bot.randPool[bot.randomGen(bot.randPool.length)];
+            bot.attempted.push(bot.current);
+            bot.first_hit = true;
+            // remove current guess from the random pool and check if hit
+            bot.removeGuess(bot.randPool.indexOf(bot.current));
+            bot.hunting = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].checkAttempt(bot.current);
+          }
+          setTimeout(Object(__WEBPACK_IMPORTED_MODULE_0__app_jsx__["highlightBoard"])(), 50);
+        },
+
+        removeGuess: function(index) {
+          bot.randPool.splice(index, 1);
+        },
+
+        battleLogic: function() {
+          if (bot.first_hit) {
+            bot.createMoves();
+            bot.first_hit = false;
+          }
+
+          if (bot.num_misses > 1) {
+            bot.specialCase();
+          } else if (bot.back) {
+            bot.back = false;
+            bot.backy();
+            bot.deployHit(bot.current);
+          } else if (bot.prev_hit) {
+            bot.continueHits();
+            bot.deployHit(bot.current);
+            console.log(bot.prev_hit);
+          } else {
+            bot.direction = bot.nextMove.pop();
+            console.log(bot.direction + " " + bot.current);
+            bot.getNumericalDirection(bot.direction);
+            bot.prev_hit = bot.deployHit(bot.current);
+            console.log(bot.prev_hit);
+          }
+        },
+
+        deployHit: function(hit) {
+          if (bot.special) {
+            bot.specialCase();
+          } else {
+            bot.attempted.push(hit);
+            bot.removeGuess(bot.randPool.indexOf(hit));
+            return __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].checkAttempt(hit);
+          }
+        },
+
+        createMoves: function() {
+          if(bot.current == 1) {
+            bot.getRandomMoves(["right", "down"]);
+          }
+          else if(bot.current == 10) {
+            bot.getRandomMoves(["left", "down"]);
+          }
+          else if(bot.current == 91) {
+            bot.getRandomMoves(["up", "right"]);
+          }
+          else if(bot.current == 100) {
+            bot.getRandomMoves(["left", "up"]);
+          }
+          else if(!(bot.current % 10)){
+            bot.getRandomMoves(["up", "down", "left"]);
+          }
+          else if(bot.current < 10) {
+            bot.getRandomMoves(["right", "down", "left"]);
+          }
+          else if(bot.current % 10 == 1) {
+            bot.getRandomMoves(["up", "right", "down"]);
+          }
+          else if(bot.current > 91) {
+            bot.getRandomMoves(["up", "right", "left"]);
+          }
+          else {
+            bot.getRandomMoves(["up", "right", "down", "left"]);
+          }
+        },
+
+        getRandomMoves: function(possibleMoves) {
+          while (possibleMoves.length != 0) {
+            // pick a random direction
+            let dir = bot.randomGen(possibleMoves.length);
+            // Go Up
+            if (possibleMoves[dir] == "up") {
+              if (bot.randPool.some(function(x) { return x == bot.current - 10; })) {
+                bot.nextMove.push("up");
+              }
+            }
+            // Go right
+            if (possibleMoves[dir] == "right") {
+              if (bot.randPool.some(function(x) { return x == bot.current + 1; })) {
+                bot.nextMove.push("right");
+              }
+            }
+            // Go down
+            if (possibleMoves[dir] == "down") {
+              if (bot.randPool.some(function(x) { return x == bot.current + 10; })) {
+                bot.nextMove.push("down");
+              }
+            }
+            // Go left
+            if (possibleMoves[dir] == "left") {
+              if (bot.randPool.some(function(x) { return x == bot.current - 1; })) {
+                bot.nextMove.push("left");
+              }
+            }
+            possibleMoves.splice(dir, 1);
+          }
+        },
+
+        getNumericalDirection: function(dir) {
+          if (dir == "up") bot.current -= 10;
+          if (dir == "right") bot.current += 1;
+          if (dir == "down") bot.current += 10;
+          if (dir == "left") bot.current -= 1;
+          console.log(bot.current + " attempted " + bot.attempted);
+          // check if already used
+          if (bot.attempted.some(function(x) { return x == bot.current; }) && bot.specialHits.length == 0) {
+            bot.current = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits[0];
+            if (bot.back_count > 1) bot.special = true;
+            else bot.backy();
+          }
+          return false;
+        },
+
+        continueHits: function() {
+          console.log("cont " + bot.direction);
+          if (bot.direction == "up") {
+            if (bot.checkLocation("up")) {
+              bot.direction = "down";
+              return bot.getNumericalDirection(bot.direction);
+            } else return bot.getNumericalDirection(bot.direction);
+          }
+          if (bot.direction == "right") {
+            if (bot.checkLocation("right")) {
+              bot.direction = "left";
+              return bot.getNumericalDirection(bot.direction);
+            } else return bot.getNumericalDirection(bot.direction);
+          }
+          if (bot.direction == "down") {
+            if (bot.checkLocation("down")) {
+              bot.direction = "up";
+              return bot.getNumericalDirection(bot.direction);
+            } else return bot.getNumericalDirection(bot.direction);
+          }
+          if (bot.direction == "left") {
+            if (bot.checkLocation("left")) {
+              bot.direction = "right";
+              return bot.getNumericalDirection(bot.direction);
+            } else return bot.getNumericalDirection(bot.direction);
+          }
+        },
+
+        backy: function() {
+          bot.back_count++;
+          if (bot.direction == "up") {
+            bot.direction = "down";
+            return bot.continueHits();
+          }
+          if (bot.direction == "right") {
+            bot.direction = "left";
+            return bot.continueHits();
+          }
+          if (bot.direction == "down") {
+            bot.direction = "up";
+            return bot.continueHits();
+          }
+          if (bot.direction == "left") {
+            bot.direction = "right";
+            return bot.continueHits();
+          }
+        },
+
+        checkLocation: function(dir) {
+          if (dir == "up") {
+            if (bot.current < 11) return true
+          }
+          if (dir == "right") {
+            if (bot.current % 10 == 0) return true
+          }
+          if (dir == "down") {
+            if (bot.current > 90) return true
+          }
+          if (dir == "left") {
+            if (bot.current % 10 == 1) return true
+          }
+          return false;
+        },
+
+        specialCase: function() {
+          bot.num_misses = bot.back_count = bot.nextMove.length = 0;
+          if (bot.case1) {
+            bot.prev_hit = true;
+            if (bot.getNewCurrent(bot.direction)) {
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(bot.current);
+              bot.first_hit = true;
+              bot.prev_hit = false;
+            }
+            bot.special = bot.case1 = bot.back = false;
+            bot.hunting = true;
+            bot.sizeOfShipSunk = 0;
+            bot.battleLogic();
+          } else {
+            if (bot.specialHits.length == 0) {
+              for(let i = 0; i < __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length; i++) {
+                bot.specialHits.push(__WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits[i]);
+              }
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+            }
+            bot.current = bot.specialHits.pop();
+            __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(bot.current);
+            bot.special = bot.back = bot.prev_hit = false;
+            bot.first_hit = bot.hunting = true;
+            bot.battleLogic();
+          }
+        },
+
+        getNewCurrent: function(direction) {
+          let difference = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - bot.sizeOfShipSunk;
+          if (bot.direction == "up") {
+            bot.direction = "down";
+            if (difference > 1) {
+              bot.current += 10 * (__WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - 1);
+              let temp = bot.current + (10 * (difference - 1));
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+              for (let i = 0; i < difference; i++) {
+                __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(temp);
+                temp += 10;
+              }
+              bot.case2 = true;
+              return false;
+            }
+            bot.current += 10 * bot.sizeOfShipSunk;
+            return true;
+          }
+          if (bot.direction == "right") {
+            bot.direction = "left";
+            if (difference > 1) {
+              bot.current -= __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - 1;
+              let temp = bot.current + (difference - 1);
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+              for (let i = 0; i < difference; i++) {
+                __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(temp);
+                temp -= 1;
+              }
+              bot.case2 = true;
+              return false;
+            }
+            bot.current -= bot.sizeOfShipSunk;
+            return true;
+          }
+          if (bot.direction == "down") {
+            bot.direction = "up";
+            if (difference > 1) {
+              bot.current -= 10 * (__WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - 1);
+              let temp = bot.current - (10 * (difference - 1));
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+              for (let i = 0; i < difference; i++) {
+                __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(temp);
+                temp -= 10;
+              }
+              bot.case2 = true;
+              return false;
+            }
+            bot.current -= 10 * bot.sizeOfShipSunk;
+            return true;
+          }
+          if (bot.direction == "left") {
+            bot.direction = "right";
+            if (difference > 1) {
+              bot.current += __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - 1;
+              let temp = bot.current - (difference - 1);
+              __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length = 0;
+              for (let i = 0; i < difference; i++) {
+                __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.push(temp);
+                temp += 1;
+              }
+              bot.case2 = true;
+              return false;
+            }
+            bot.current += bot.sizeOfShipSunk;
+            return true;
+          }
+        }
+      }
+
+
+/***/ })
+/******/ ]);
