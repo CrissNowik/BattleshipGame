@@ -77,6 +77,64 @@ exports.playerBoard = undefined;
 
 var _ai = __webpack_require__(1);
 
+//  Creating gameboard
+$(document).ready(function () {
+  for (var i = 1; i <= 100; i++) {
+    if (i < 11) {
+      // top coordinates
+      $(".enemy").prepend("<span class='aTops'>" + Math.abs(i - 11) + "</span>");
+      $(".player").prepend("<span class='aTops'>" + Math.abs(i - 11) + "</span>");
+      // first line of fields
+      $(".grid").append("<li class='points offset1 " + i + "'><span></span></li>");
+    } else {
+      // all other lines of fields
+      $(".grid").append("<li class='points offset2 " + i + "'><span></span></li>");
+    }
+    if (i == 11) {
+      // "zero" coordinate filed
+      $(".enemy").prepend("<span class='aTops hidezero'>" + Math.abs(i - 11) + "</span>");
+      $(".player").prepend("<span class='aTops hidezero'>" + Math.abs(i - 11) + "</span>");
+    }
+    if (i > 90) {
+      // left coordinates
+      $(".enemy").append("<span class='aLeft'>" + String.fromCharCode(97 + (i - 91)).toUpperCase() + "</span>");
+      $(".player").append("<span class='aLeft'>" + String.fromCharCode(97 + (i - 91)).toUpperCase() + "</span>");
+    }
+  }
+  $(".text").text(massages.bridge);
+});
+
+var massages = {
+  "bridge": " Captain! Welcome on the bridge. Ready to command our fleet?",
+  "command": " Commander! Place the ships of our fleet to battle!",
+  "self": " Captain! Use the mouse to place our ships on the left grid.",
+  "overlap": " Captain! You can not overlap ships. Please try again.",
+  "start": " Captain! Give us orders! Use the mouseclick to point out sector on the right radar screen which we should bombard.",
+  placed: function placed(name) {
+    return " Captain our " + name + " been placed.";
+  },
+  hit: function hit(name) {
+    return " " + name + " ship was hit.";
+  },
+  miss: function miss(name) {
+    return " " + name + " missed!";
+  },
+  sunk: function sunk(user) {
+    return " " + user + " ship was sunk!";
+  },
+  lost: function lost(name) {
+    return " " + name + " has lost his fleet!!  Game Over.";
+  }
+};
+
+// Start the game setup
+$(document).ready(function () {
+  $(".one").on("click", function () {
+    $(".text").text(massages.command);
+    gameSetup(this);
+  });
+});
+
 var playerFleet = void 0,
     cpuFleet = void 0;
 var attemptedHits = [];
@@ -97,17 +155,17 @@ function Fleet(name) {
 
   this.removeShip = function (pos) {
     this.numOfShips--;
-    $(".text").text(output.sunk(this.name, this.ships[pos].name));
+    $(".text").text(massages.sunk(this.name, this.ships[pos].name));
     if (this == playerFleet) _ai.bot.sizeOfShipSunk = this.ships[pos].length;
     this.ships.splice(pos, 1);
     if (this.ships.length == 0) {
-      $(".text").text(output.lost(this.name));
+      $(".text").text(massages.lost(this.name));
     }
     return true;
   };
 
   this.shipHit = function (ship_name) {
-    $(".text").text(output.hit(this.name));
+    $(".text").text(massages.hit(this.name));
     return true;
   };
 
@@ -151,29 +209,6 @@ function Ship(name) {
   };
 }
 
-var output = {
-  "welcome": " Captain! Welcome on board. Ready to command our fleet?",
-  "player1": " Commander! Place the ships of our fleet to battle!",
-  "self": " Captain! Use the mouse to place our ships on the left grid.",
-  "overlap": " Captain! You can not overlap ships. Please try again.",
-  "start": " Captain! Give us order where we should shoot! Use the mouse to show sector on the right radar screen where we should bombard.",
-  placed: function placed(name) {
-    return " Captain our " + name + " been placed.";
-  },
-  hit: function hit(name) {
-    return " " + name + " ship was hit.";
-  },
-  miss: function miss(name) {
-    return " " + name + " missed!";
-  },
-  sunk: function sunk(user) {
-    return " " + user + " ship was sunk!";
-  },
-  lost: function lost(name) {
-    return " " + name + " has lost his fleet!!  Game Over.";
-  }
-};
-
 var EnemyFleet = {
   allHits: [],
 
@@ -189,7 +224,7 @@ var EnemyFleet = {
         var boolean = cpuFleet.checkIfHit(numer);
 
         if (false == boolean) {
-          $(".text").text(output.miss("Sir! We "));
+          $(".text").text(massages.miss("Sir! We "));
           $(this).children().addClass("miss");
         } else {
           $(this).children().addClass("hit");
@@ -248,6 +283,75 @@ var playerBoard = exports.playerBoard = {
   }
 };
 
+function gameSetup(t) {
+  $(t).off() && $(".two").off();
+  $(".one").addClass("self").removeClass("one").text("Place fleet");
+
+  $(".self").off("click").on("click", function () {
+    $(".text").text(massages.self);
+    selfSetup(playerFleet);
+  });
+};
+
+function selfSetup() {
+  $(".self").addClass("horz").removeClass("self").text("Place ships");
+
+  // create new fleet
+  playerFleet = new Fleet("Our ");
+  playerFleet.initShips();
+  // light up ships when placing
+  placeShip(playerFleet.ships[playerFleet.currentShip], playerFleet);
+};
+
+function startGame() {
+  $(".layout").hide(1, function () {
+    $(".console").addClass("col-xl-12");
+  });
+  $(".text").text(massages.start);
+  // Generate all possible hits for Player 1
+  for (var i = 0; i < 100; i++) {
+    _ai.bot.randPool[i] = i + 1;
+  }highlightBoard();
+}
+
+function createCpuFleet() {
+  //random
+  cpuFleet = new Fleet("Enemy");
+  cpuFleet.initShips();
+  randomSetup(cpuFleet);
+}
+
+function placeShip(ship, fleet) {
+  $(".horz").off("click").on("click", function () {
+    console.log("ship placement start");
+  });
+  $(".player").find(".points").off("mouseenter").on("mouseenter", function () {
+    var num = $(this).attr('class').slice(15);
+    displayShipHorz(parseInt(num), ship, this, fleet);
+  });
+};
+
+function displayShipHorz(location, ship, point, fleet) {
+  var endPoint = location + ship.length - 2;
+  if (!(endPoint % 10 >= 0 && endPoint % 10 < ship.length - 1)) {
+    for (var i = location; i < location + ship.length; i++) {
+      $(".player ." + i).addClass("highlight");
+    }
+    $(point).off("click").on("click", function () {
+      setShip(location, ship, "horz", fleet, "self");
+    });
+  }
+  $(point).off("mouseleave").on("mouseleave", function () {
+    removeShipHorz(location, ship.length);
+  });
+};
+
+function removeShipHorz(location, length) {
+  for (var i = location; i < location + length; i++) {
+    $(".player ." + i).removeClass("highlight");
+  }
+};
+
 /***/ }),
 /* 1 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -278,9 +382,11 @@ let bot = {
         current: 0,
         numAttemptsAfterHit: 0,
         sizeOfShipSunk: 0,
+
         randomGen: function(size) {
           return Math.floor(Math.random() * size);
         },
+
         select: function() {
           if (bot.hunting) {
             bot.battleLogic();
@@ -574,7 +680,7 @@ let bot = {
             return true;
           }
         }
-      }
+      };
 
 
 /***/ })
