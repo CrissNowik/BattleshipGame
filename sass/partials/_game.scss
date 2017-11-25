@@ -34,7 +34,7 @@
   color: $color_hud;
   font-family: 'courier_prime_coderegular', $stock;
   padding-bottom: 1vh;
-  width:100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
     h2 {
@@ -42,12 +42,16 @@
     }
 }
 
+.show-grid {
+	width: 1136px;
+}
+
 .radar-circle {
   background-color: $color_board;
   border: 1px solid $color_hud;
   border-radius: 100%;
   height: 500px;
-  margin: 11px;
+  margin: auto;
   width: 500px;
   position: relative;
 }

@@ -7,7 +7,6 @@ import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';
 
-
 class Welcome extends React.Component {
   constructor(props) {
     super(props);
@@ -19,19 +18,19 @@ class Welcome extends React.Component {
   render() {
     return (
       <Grid id="grid">
-        <Row className="show-grid">
+        <Row>
          <Col xs={12} md={7} className="start-photo">
 
          </Col>
          <Col xs={6} md={5}>
-           <Row className="show-grid">
+           <Row>
              <Col xs={18} md={12} className="start-info">
                <h2 className="welcome-headers">Gentlemens! Attention!</h2>
                <h2 className="welcome-headers">Captain on the bridge!</h2>
                <br/>
                <p className="welcome-text">Welcome Comander!  <br/>
                   We rapidly prepare to battle! <br/>
-                  Just please, write your name below.</p>
+                Just please, write your name below!</p>
              </Col>
              <Col xs={18} md={12}>
                <PlayerData
@@ -47,6 +46,4 @@ class Welcome extends React.Component {
   }
 };
 
-
-
-export {Welcome};
+export {Welcome}

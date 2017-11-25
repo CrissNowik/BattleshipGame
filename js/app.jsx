@@ -1,4 +1,20 @@
-import {bot} from './ai';
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import Grid from 'react-bootstrap/lib/Grid';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+
+import Button from 'react-bootstrap/lib/Button';
+import FormGroup from 'react-bootstrap/lib/FormGroup';
+import ControlLabel from 'react-bootstrap/lib/ControlLabel';
+import FormControl from 'react-bootstrap/lib/FormControl';
+import FormControlFeedback from 'react-bootstrap/lib/FormControlFeedback';
+
+import {ai} from './ai';
+import {Welcome} from './welcome.jsx';
+
+ReactDOM.render(<Welcome />, document.getElementById('app'));
 
 //  Creating gameboard
  $(document).ready(function() {
@@ -60,7 +76,7 @@ import {bot} from './ai';
                         { "name": "patrol-boat", "length": 1 },
                         { "name": "patrol-boat", "length": 1 },
                         { "name": "patrol-boat", "length": 1 },
-                        { "name": "patrol-boat", "length": 1 },];
+                        { "name": "patrol-boat", "length": 1 }];
   	this.numOfShips = this.shipDetails.length;
   	this.ships = [];
   	this.currentShipSize = 0;
@@ -75,7 +91,7 @@ import {bot} from './ai';
   	this.removeShip = function(pos) {
   		this.numOfShips--;
   		$(".text").text(massages.sunk(this.name, this.ships[pos].name));
-  		if (this == playerFleet) bot.sizeOfShipSunk = this.ships[pos].length;
+  		if (this == playerFleet) ai.sizeOfShipSunk = this.ships[pos].length;
   		this.ships.splice(pos, 1);
   		if (this.ships.length == 0) {
   			$(".text").text(massages.lost(this.name));
@@ -153,7 +169,7 @@ import {bot} from './ai';
   				// Check end game
   				if (cpuFleet.ships.length == 0) {
   					$(".enemy").find(".points").off("mouseenter").off("mouseover").off("mouseleave").off("click");
-  				} else setTimeout(bot.select, 800);
+  				} else setTimeout(ai.select, 800);
   			} // end of big if
   		});
   	} // end of method EnemyFleet.highlight
@@ -166,40 +182,40 @@ export let playerBoard = {
       		if (playerFleet.checkIfHit(hit)) {
       			playerBoard.currentHits.push(hit); // put hit into array
 
-      			if (this.currentHits.length > 1) bot.prev_hit = true;
+      			if (this.currentHits.length > 1) ai.prev_hit = true;
       			$(".player").find("." + hit).children().addClass("hit"); // display hit on grid
 
       			if (playerBoard.hasShipBeenSunk()) {
       				// clear flags
-      				bot.hunting = bot.prev_hit = false;
-      				if (bot.sizeOfShipSunk == playerBoard.currentHits.length) {
-      					bot.num_misses = bot.back_count = bot.nextMove.length = playerBoard.currentHits.length = bot.sizeOfShipSunk = bot.currrent = 0;
+      				ai.hunting = ai.prev_hit = false;
+      				if (ai.sizeOfShipSunk == playerBoard.currentHits.length) {
+      					ai.num_misses = ai.back_count = ai.nextMove.length = playerBoard.currentHits.length = ai.sizeOfShipSunk = ai.currrent = 0;
       				} else {
-      					bot.special =  bot.case1 = true;
+      					ai.special =  ai.case1 = true;
       				}
       				// check for special cases
-      				if (bot.specialHits.length > 0) bot.special = true;
+      				if (ai.specialHits.length > 0) ai.special = true;
       				// check for end of game.
       			}
       			return true;
       		} else {
       			$(".player").find("." + hit).children().addClass("miss");
-      			bot.current = playerBoard.currentHits[0];
-      			bot.prev_hit = false;
+      			ai.current = playerBoard.currentHits[0];
+      			ai.prev_hit = false;
       			if (playerBoard.currentHits.length > 1) {
-      				bot.back = true;
-      				bot.num_misses++;
+      				ai.back = true;
+      				ai.num_misses++;
       			}
-      			if (bot.case2) {
-      				bot.special = true;
-      				bot.case2 = false;
+      			if (ai.case2) {
+      				ai.special = true;
+      				ai.case2 = false;
       			}
       			return false;
       		}
       	},
         // check if ship was destroyed
       	hasShipBeenSunk: function() {
-      		if (bot.sizeOfShipSunk > 0) return true;
+      		if (ai.sizeOfShipSunk > 0) return true;
       		else return false;
       	}
       };
@@ -230,7 +246,7 @@ export let playerBoard = {
                  });
                  $(".text").text(massages.start);
                  // Generate all possible hits for Player 1
-                 for (let i = 0; i < 100; i++) bot.randPool[i] = i + 1;
+                 for (let i = 0; i < 100; i++) ai.randPool[i] = i + 1;
                  highlightBoard();
                 }
 
@@ -271,3 +287,119 @@ export let playerBoard = {
   		$(".player ." + i).removeClass("highlight");
   	}
   };
+
+  function setShip(location, ship, orientation, thatFleet, type) {
+  	if (!(checkLay(location, ship.length, orientation, thatFleet))) {
+  		if (orientation == "horz") {
+  			thatFleet.ships[thatFleet.currentShip].populateHorzHits(location);
+  			$(".text").text(massages.placed(thatFleet.ships[thatFleet.currentShip].name + " has"));
+        //ship deployment
+        for (let i = location; i < (location + ship.length); i++) {
+  				$(".player ." + i).addClass(thatFleet.ships[thatFleet.currentShip].name);
+  			}
+        // ship deployment end
+  			if (++thatFleet.currentShip == thatFleet.numOfShips) {
+  				$(".text").text(massages.placed("ships have"));
+  				$(".player").find(".points").off("mouseenter");
+  				setTimeout(createCpuFleet, 100);
+  			} else {
+  				if (type == "random") randomSetup(thatFleet);
+  				else placeShip(thatFleet.ships[thatFleet.currentShip], thatFleet);
+  			}
+  		}
+  	} else {
+  		if (type == "random") randomSetup(thatFleet);
+  		else $(".text").text(massages.overlap);
+  	}
+   } // end of setShip
+
+   function checkLay(location, length, orientation, genFleet) {
+  	let loc = location;
+
+  	if (orientation == "horz") {
+  		let end = location + length;
+  		for (; location < end; location++) {
+  			for (let i = 0; i < genFleet.currentShip; i++) {
+  				if (genFleet.ships[i].checkLocation(location)) {
+  					if (genFleet == cpuFleet) {
+              randomSetup(genFleet);
+            } else {
+              return true;
+            }
+  				}
+  			} // end for
+  		} // end for
+  	 } else {
+  		let end = location + (10 * length);
+  		for (; location < end; location += 10) {
+  			for (let i = 0; i < genFleet.currentShip; i++) {
+  				if (genFleet.ships[i].checkLocation(location)) {
+  					if (genFleet == cpuFleet) randomSetup(genFleet);
+  					else return true;
+  				}
+  			}
+  		}
+    } // if/else end
+
+  	if (genFleet == cpuFleet && genFleet.currentShip < genFleet.numOfShips) {
+  		if (orientation == "horz") {
+        genFleet.ships[genFleet.currentShip++].populateHorzHits(loc);
+      } else {
+        genFleet.ships[genFleet.currentShip++].populateVertHits(loc);
+      }
+
+  		if (genFleet.currentShip == genFleet.numOfShips) {
+  			// clear the call stack
+  			setTimeout(startGame, 500);
+  		} else {
+      randomSetup(genFleet);
+      }
+  	 }
+  	return false;
+   } // end of checkLay
+
+   function randomSetup(fleet) {
+  	// 0 horz, 1 vert
+  	if (fleet.currentShip >= fleet.numOfShips) return; // regard against undefined length
+
+  	let orien = Math.floor((Math.random() * 10) + 1);
+  	let length = fleet.ships[fleet.currentShip].length;
+
+  	if (orien < 6) {
+  		// random 1-6
+  		let shipOffset = 11 - fleet.ships[fleet.currentShip].length;
+  		let horiz = Math.floor((Math.random() * shipOffset) + 1);
+  		let vert = Math.floor(Math.random() * 9);
+  		let randNum = parseInt(String(vert) + String(horiz));
+
+  		if (fleet == cpuFleet) {
+        checkLay(randNum, length, "horz", fleet);
+      } else {
+        setShip(randNum, fleet.ships[fleet.currentShip], "horz", fleet, "random");
+      }
+  	} else { // random 7-10
+  		let shipOffset = 110 - (fleet.ships[fleet.currentShip].length * 10);
+  		let randNum = Math.floor((Math.random() * shipOffset) + 1);
+
+  		if (fleet == cpuFleet) {
+        checkLay(randNum, length, "vert", fleet);
+      } else {
+        setShip(randNum, fleet.ships[fleet.currentShip], "vert", fleet, "random");
+      }
+  	}
+  };
+
+  function highlightBoard() {
+			if (playerFleet.ships.length == 0) {
+				$(".enemy").find(".points").off("mouseenter").off("mouseleave").off("click");
+			} else {
+				$(".enemy").find(".points").off("mouseenter mouseover").on("mouseenter mouseover", function() {
+					// only allow target highlight on none attempts
+					if(!($(this).hasClass("used"))) {
+            EnemyFleet.highlight(this);
+          }
+				});
+			 }
+		 };
+
+  export {highlightBoard, startGame};
