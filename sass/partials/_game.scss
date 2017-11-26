@@ -116,8 +116,8 @@
 }
 
 .miss {
-  background: #fff;
-	border: 1px solid #fff;
+  background: $color_hud;
+	border: 1px solid $color_hud;
   @include Dot;
   @include Anime;
 	@include AnimeWebkit;

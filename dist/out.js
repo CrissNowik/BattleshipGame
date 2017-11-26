@@ -526,6 +526,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 let ai = {
+        num_misses: 0,
+        back_count: 0,
         back: false,
         hunting: false,
         prev_hit: false,
@@ -533,8 +535,6 @@ let ai = {
         special: false,
         case1: false,
         case2: false,
-        num_misses: 0,
-        back_count: 0,
         randPool: [],
         nextMove: [],
         attempted: [],
@@ -554,11 +554,11 @@ let ai = {
           } else if (ai.special) {
             ai.specialCase();
           } else {
-            // grab a random number from the pool and increase attempts
+// random number from the pool and increase attempts
             ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
             ai.attempted.push(ai.current);
             ai.first_hit = true;
-            // remove current guess from the random pool and check if hit
+// remove current guess from the random pool and check if hit
             ai.removeGuess(ai.randPool.indexOf(ai.current));
             ai.hunting = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].checkAttempt(ai.current);
           }
@@ -584,13 +584,13 @@ let ai = {
           } else if (ai.prev_hit) {
             ai.continueHits();
             ai.deployHit(ai.current);
-            console.log(ai.prev_hit);
+            console.log("ai.prev_hit = " + ai.prev_hit);
           } else {
             ai.direction = ai.nextMove.pop();
-            console.log(ai.direction + " " + ai.current);
+            console.log("ai.direction ai.current = " + ai.direction + " " + ai.current);
             ai.getNumericalDirection(ai.direction);
             ai.prev_hit = ai.deployHit(ai.current);
-            console.log(ai.prev_hit);
+            console.log("ai.prev_hit = " + ai.prev_hit);
           }
         },
 
@@ -636,27 +636,27 @@ let ai = {
 
         getRandomMoves: function(possibleMoves) {
           while (possibleMoves.length != 0) {
-            // pick a random direction
+// pick a random direction
             let dir = ai.randomGen(possibleMoves.length);
-            // Go Up
+// Go top
             if (possibleMoves[dir] == "up") {
               if (ai.randPool.some(function(x) { return x == ai.current - 10; })) {
                 ai.nextMove.push("up");
               }
             }
-            // Go right
-            if (possibleMoves[dir] == "right") {
-              if (ai.randPool.some(function(x) { return x == ai.current + 1; })) {
-                ai.nextMove.push("right");
-              }
-            }
-            // Go down
+// Go bottom
             if (possibleMoves[dir] == "down") {
               if (ai.randPool.some(function(x) { return x == ai.current + 10; })) {
                 ai.nextMove.push("down");
               }
             }
-            // Go left
+// Go right
+            if (possibleMoves[dir] == "right") {
+              if (ai.randPool.some(function(x) { return x == ai.current + 1; })) {
+                ai.nextMove.push("right");
+              }
+            }
+// Go left
             if (possibleMoves[dir] == "left") {
               if (ai.randPool.some(function(x) { return x == ai.current - 1; })) {
                 ai.nextMove.push("left");
@@ -668,11 +668,11 @@ let ai = {
 
         getNumericalDirection: function(dir) {
           if (dir == "up") ai.current -= 10;
-          if (dir == "right") ai.current += 1;
           if (dir == "down") ai.current += 10;
+          if (dir == "right") ai.current += 1;
           if (dir == "left") ai.current -= 1;
-          console.log(ai.current + " attempted " + ai.attempted);
-          // check if already used
+          console.log("ai.current = " + ai.current + " attempted = " + ai.attempted);
+// check if already used
           if (ai.attempted.some(function(x) { return x == ai.current; }) && ai.specialHits.length == 0) {
             ai.current = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits[0];
             if (ai.back_count > 1) ai.special = true;
@@ -680,9 +680,9 @@ let ai = {
           }
           return false;
         },
-
+// what to do if hit
         continueHits: function() {
-          console.log("cont " + ai.direction);
+          console.log("cont = " + ai.direction);
           if (ai.direction == "up") {
             if (ai.checkLocation("up")) {
               ai.direction = "down";
@@ -773,7 +773,7 @@ let ai = {
             ai.battleLogic();
           }
         },
-
+// next moves in game after ship destroy
         getNewCurrent: function(direction) {
           let difference = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - ai.sizeOfShipSunk;
           if (ai.direction == "up") {
