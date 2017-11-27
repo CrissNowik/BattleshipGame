@@ -12397,7 +12397,9 @@ var Welcome = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).call(this, props));
 
-    _this.state = {};
+    _this.state = {
+      hideWelcome: "block"
+    };
     return _this;
   }
 
@@ -12406,7 +12408,7 @@ var Welcome = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         _Grid2.default,
-        { id: 'grid' },
+        { id: 'welcome-screen' },
         _react2.default.createElement(
           _Row2.default,
           null,
@@ -12445,7 +12447,7 @@ var Welcome = function (_React$Component) {
                 _Col2.default,
                 { xs: 18, md: 12 },
                 _react2.default.createElement(_playerData.PlayerData, {
-                  hideWelcome: this.props.hideWelcome,
+                  hideWelcome: this.state.hideWelcome,
                   showGame: this.props.showGame
                 })
               )
@@ -24441,7 +24443,7 @@ var PlayerData = function (_React$Component) {
       var length = _this.state.value.length;
       if (length > 2 && length < 20 && _this.state.value !== "Place name Sir!") {
         _this.hideWelcome(e);
-        _this.showGame(e);
+        // this.showGame(e);
       } else {
         _this.setState({
           value: "Place name Sir!"
@@ -24456,13 +24458,6 @@ var PlayerData = function (_React$Component) {
       }
     };
 
-    _this.showGame = function (e) {
-      e.preventDefault();
-      if (typeof _this.props.showGame === 'function') {
-        _this.props.showGame("block");
-      }
-    };
-
     _this.state = {
       value: ""
     };
@@ -24471,6 +24466,15 @@ var PlayerData = function (_React$Component) {
 
   _createClass(PlayerData, [{
     key: 'render',
+
+
+    // showGame = (e) => {
+    //   e.preventDefault();
+    //   if ( typeof this.props.showGame === 'function' ){
+    //       this.props.showGame("block");
+    //   }
+    // }
+
     value: function render() {
       return _react2.default.createElement(
         'form',

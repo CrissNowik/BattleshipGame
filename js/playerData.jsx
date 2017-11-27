@@ -33,7 +33,7 @@ class PlayerData extends React.Component {
     const length = this.state.value.length;
     if (length > 2 && length < 20 && this.state.value !== "Place name Sir!") {
       this.hideWelcome(e);
-      this.showGame(e);
+      // this.showGame(e);
     }
     else {
       this.setState({
@@ -44,17 +44,17 @@ class PlayerData extends React.Component {
 
   hideWelcome = (e) => {
     e.preventDefault();
-    if ( typeof this.props.hideWelcome === 'function' ){
+    if (typeof this.props.hideWelcome === 'function' ){
         this.props.hideWelcome("none");
     }
   }
 
-  showGame = (e) => {
-    e.preventDefault();
-    if ( typeof this.props.showGame === 'function' ){
-        this.props.showGame("block");
-    }
-  }
+  // showGame = (e) => {
+  //   e.preventDefault();
+  //   if ( typeof this.props.showGame === 'function' ){
+  //       this.props.showGame("block");
+  //   }
+  // }
 
   render() {
     return (

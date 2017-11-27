@@ -1,6 +1,10 @@
 @import 'modules/fonts';
 @import 'modules/mixins';
 
+#welcome-screen {
+  margin-bottom: 80px;
+}
+
 .start-photo {
   background-image: url("https://78.media.tumblr.com/c0f7ad6f5915154be41d8550e0d52a44/tumblr_mrsi0hJNnh1sfie3io1_1280.jpg");
   background-position: center;

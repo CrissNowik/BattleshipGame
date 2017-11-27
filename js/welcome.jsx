@@ -11,13 +11,13 @@ class Welcome extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      hideWelcome: "block"
     }
   };
 
   render() {
     return (
-      <Grid id="grid">
+      <Grid id="welcome-screen">
         <Row>
          <Col xs={12} md={7} className="start-photo">
 
@@ -34,7 +34,7 @@ class Welcome extends React.Component {
              </Col>
              <Col xs={18} md={12}>
                <PlayerData
-                 hideWelcome={this.props.hideWelcome}
+                 hideWelcome={this.state.hideWelcome}
                  showGame={this.props.showGame}
                />
              </Col>
