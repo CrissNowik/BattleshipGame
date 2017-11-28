@@ -19,7 +19,7 @@ export  let ai = {
         current: 0,
         numAttemptsAfterHit: 0,
         sizeOfShipSunk: 0,
-
+// random generator
         randomGen: function(size) {
           return Math.floor(Math.random() * size);
         },
@@ -34,7 +34,7 @@ export  let ai = {
             ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
             ai.attempted.push(ai.current);
             ai.first_hit = true;
-// remove current guess from the random pool and check if hit
+// remove guess from the random pool and check if hit
             ai.removeGuess(ai.randPool.indexOf(ai.current));
             ai.hunting = playerBoard.checkAttempt(ai.current);
           }
@@ -81,31 +81,31 @@ export  let ai = {
         },
 
         createMoves: function() {
-          if(ai.current == 1) {
+          if(ai.current == 1) { // left top corner
             ai.getRandomMoves(["right", "down"]);
           }
-          else if(ai.current == 10) {
+          else if(ai.current == 10) { // right top corner
             ai.getRandomMoves(["left", "down"]);
           }
-          else if(ai.current == 91) {
+          else if(ai.current == 91) { // left bottom corner
             ai.getRandomMoves(["up", "right"]);
           }
-          else if(ai.current == 100) {
+          else if(ai.current == 100) { // right bottom corner
             ai.getRandomMoves(["left", "up"]);
           }
-          else if(!(ai.current % 10)){
+          else if(!(ai.current % 10)){ // right column
             ai.getRandomMoves(["up", "down", "left"]);
           }
-          else if(ai.current < 10) {
+          else if(ai.current < 10) { // 2-9 first row
             ai.getRandomMoves(["right", "down", "left"]);
           }
-          else if(ai.current % 10 == 1) {
+          else if(ai.current % 10 == 1) { // left column
             ai.getRandomMoves(["up", "right", "down"]);
           }
-          else if(ai.current > 91) {
+          else if(ai.current > 91) { // 92-99 last row
             ai.getRandomMoves(["up", "right", "left"]);
           }
-          else {
+          else { // center
             ai.getRandomMoves(["up", "right", "down", "left"]);
           }
         },

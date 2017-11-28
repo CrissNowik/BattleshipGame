@@ -11,13 +11,25 @@ class Welcome extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hideWelcome: "block"
+      display: "block",
     }
   };
 
+  hideWelcome = (newdisp) => {
+    this.setState({
+      display: newdisp
+    })
+  };
+
+  showGame = (showIt) => {
+    let main = document.getElementById("main");
+    main.style.display = showIt;
+    }
+
+
   render() {
     return (
-      <Grid id="welcome-screen">
+      <Grid id="welcome-screen" style={{display: this.state.display}}>
         <Row>
          <Col xs={12} md={7} className="start-photo">
 
@@ -33,10 +45,7 @@ class Welcome extends React.Component {
                 Just please, write your name below!</p>
              </Col>
              <Col xs={18} md={12}>
-               <PlayerData
-                 hideWelcome={this.state.hideWelcome}
-                 showGame={this.props.showGame}
-               />
+               <PlayerData hideWelcome={this.hideWelcome} showGame={this.showGame}/>
              </Col>
            </Row>
          </Col>

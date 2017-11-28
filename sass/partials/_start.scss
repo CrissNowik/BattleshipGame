@@ -1,10 +1,6 @@
 @import 'modules/fonts';
 @import 'modules/mixins';
 
-#welcome-screen {
-  margin-bottom: 80px;
-}
-
 .start-photo {
   background-image: url("https://78.media.tumblr.com/c0f7ad6f5915154be41d8550e0d52a44/tumblr_mrsi0hJNnh1sfie3io1_1280.jpg");
   background-position: center;
@@ -15,18 +11,18 @@
 }
 
 .start-info {
-text-align: center;
-padding: 2rem;
+  text-align: center;
+  padding: 2rem 2rem 1rem 2rem;
 }
 
 .welcome-headers {
   @include WelcomeFonts;
-  font-size: 3rem;
+  font-size: 2.5vw;
 }
 
 .welcome-text{
   @include WelcomeFonts;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
 }
 
 .start-label {
@@ -39,7 +35,7 @@ padding: 2rem;
   color: $color_font;
   text-align: center;
   width: 60%;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto 1vw auto;
   @include WelcomeFonts;
 }
 

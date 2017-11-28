@@ -543,7 +543,7 @@ let ai = {
         current: 0,
         numAttemptsAfterHit: 0,
         sizeOfShipSunk: 0,
-
+// random generator
         randomGen: function(size) {
           return Math.floor(Math.random() * size);
         },
@@ -558,7 +558,7 @@ let ai = {
             ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
             ai.attempted.push(ai.current);
             ai.first_hit = true;
-// remove current guess from the random pool and check if hit
+// remove guess from the random pool and check if hit
             ai.removeGuess(ai.randPool.indexOf(ai.current));
             ai.hunting = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].checkAttempt(ai.current);
           }
@@ -605,31 +605,31 @@ let ai = {
         },
 
         createMoves: function() {
-          if(ai.current == 1) {
+          if(ai.current == 1) { // left top corner
             ai.getRandomMoves(["right", "down"]);
           }
-          else if(ai.current == 10) {
+          else if(ai.current == 10) { // right top corner
             ai.getRandomMoves(["left", "down"]);
           }
-          else if(ai.current == 91) {
+          else if(ai.current == 91) { // left bottom corner
             ai.getRandomMoves(["up", "right"]);
           }
-          else if(ai.current == 100) {
+          else if(ai.current == 100) { // right bottom corner
             ai.getRandomMoves(["left", "up"]);
           }
-          else if(!(ai.current % 10)){
+          else if(!(ai.current % 10)){ // right column
             ai.getRandomMoves(["up", "down", "left"]);
           }
-          else if(ai.current < 10) {
+          else if(ai.current < 10) { // 2-9 first row
             ai.getRandomMoves(["right", "down", "left"]);
           }
-          else if(ai.current % 10 == 1) {
+          else if(ai.current % 10 == 1) { // left column
             ai.getRandomMoves(["up", "right", "down"]);
           }
-          else if(ai.current > 91) {
+          else if(ai.current > 91) { // 92-99 last row
             ai.getRandomMoves(["up", "right", "left"]);
           }
-          else {
+          else { // center
             ai.getRandomMoves(["up", "right", "down", "left"]);
           }
         },
@@ -12397,8 +12397,19 @@ var Welcome = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).call(this, props));
 
+    _this.hideWelcome = function (newdisp) {
+      _this.setState({
+        display: newdisp
+      });
+    };
+
+    _this.showGame = function (showIt) {
+      var main = document.getElementById("main");
+      main.style.display = showIt;
+    };
+
     _this.state = {
-      hideWelcome: "block"
+      display: "block"
     };
     return _this;
   }
@@ -12408,7 +12419,7 @@ var Welcome = function (_React$Component) {
     value: function render() {
       return _react2.default.createElement(
         _Grid2.default,
-        { id: 'welcome-screen' },
+        { id: 'welcome-screen', style: { display: this.state.display } },
         _react2.default.createElement(
           _Row2.default,
           null,
@@ -12446,10 +12457,7 @@ var Welcome = function (_React$Component) {
               _react2.default.createElement(
                 _Col2.default,
                 { xs: 18, md: 12 },
-                _react2.default.createElement(_playerData.PlayerData, {
-                  hideWelcome: this.state.hideWelcome,
-                  showGame: this.props.showGame
-                })
+                _react2.default.createElement(_playerData.PlayerData, { hideWelcome: this.hideWelcome, showGame: this.showGame })
               )
             )
           )
@@ -24443,7 +24451,7 @@ var PlayerData = function (_React$Component) {
       var length = _this.state.value.length;
       if (length > 2 && length < 20 && _this.state.value !== "Place name Sir!") {
         _this.hideWelcome(e);
-        // this.showGame(e);
+        _this.showGame(e);
       } else {
         _this.setState({
           value: "Place name Sir!"
@@ -24458,6 +24466,13 @@ var PlayerData = function (_React$Component) {
       }
     };
 
+    _this.showGame = function (e) {
+      e.preventDefault();
+      if (typeof _this.props.showGame === 'function') {
+        _this.props.showGame("block");
+      }
+    };
+
     _this.state = {
       value: ""
     };
@@ -24466,15 +24481,6 @@ var PlayerData = function (_React$Component) {
 
   _createClass(PlayerData, [{
     key: 'render',
-
-
-    // showGame = (e) => {
-    //   e.preventDefault();
-    //   if ( typeof this.props.showGame === 'function' ){
-    //       this.props.showGame("block");
-    //   }
-    // }
-
     value: function render() {
       return _react2.default.createElement(
         'form',

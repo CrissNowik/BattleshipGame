@@ -18,7 +18,7 @@ header {
   margin-top: 20px;
   background-color: $color_board;
   h1 {
-    font-size: 70px;
+    font-size: 3.5vw;
     font-family: 'armalite_rifleregular', $stock;
     color: $color_font;
   }
@@ -29,16 +29,13 @@ footer {
   font-family: 'armalite_rifleregular', $stock;
   text-align: center;
   color: $color_font;
+	font-size: 1vw;
 	.creator-info{
 	  display: block;
 	  margin: 1rem;
 	}
 	.copyright {
-	  font-size: 0.8rem;
 	  margin: 0;
-	  a {
-	    font-size: 0.8rem;
-	  }
 	}
 }
 
@@ -58,7 +55,6 @@ footer {
 }
 
 .panel {
-  height: 150px;
 	width: 100%;
 	margin: 25px auto;
 }
@@ -85,9 +81,8 @@ footer {
 
 .text {
 	display: inline-block;
-	font-size: 24px;
+	font-size: 1.5vw;
 	height: 100%;
-	margin: 12px;
   position: relative;
 	width: 100%;
 }
@@ -96,7 +91,7 @@ footer {
   border: 2px solid $color_hud;
 	border-radius: 5px;
   color: $color_hud;
-	margin: 30px auto;
+	margin: 45px auto;
 	height: 80px;
   font-family: 'courier_prime_coderegular', $stock;
 	font-size: 3rem;
