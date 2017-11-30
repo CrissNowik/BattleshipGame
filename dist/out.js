@@ -609,7 +609,7 @@ let ai = {
             ai.getRandomMoves(["right", "down"]);
           }
           else if(ai.current == 10) { // right top corner
-            ai.getRandomMoves(["left", "down"]);
+            ai.getRandomMoves(["down", "left"]);  // "left", "down"
           }
           else if(ai.current == 91) { // left bottom corner
             ai.getRandomMoves(["up", "right"]);
@@ -624,10 +624,10 @@ let ai = {
             ai.getRandomMoves(["right", "down", "left"]);
           }
           else if(ai.current % 10 == 1) { // left column
-            ai.getRandomMoves(["up", "right", "down"]);
+            ai.getRandomMoves(["down", "right", "up"]); // "up", "right", "down"
           }
           else if(ai.current > 91) { // 92-99 last row
-            ai.getRandomMoves(["up", "right", "left"]);
+            ai.getRandomMoves(["left", "up", "right"]); //  "up", "right", "left"
           }
           else { // center
             ai.getRandomMoves(["up", "right", "down", "left"]);
@@ -666,21 +666,24 @@ let ai = {
           }
         },
 
-        getNumericalDirection: function(dir) {
-          if (dir == "up") ai.current -= 10;
-          if (dir == "down") ai.current += 10;
-          if (dir == "right") ai.current += 1;
-          if (dir == "left") ai.current -= 1;
+        getNumericalDirection: function(directory) {
+          if (directory == "up") ai.current -= 10;
+          if (directory == "down") ai.current += 10;
+          if (directory == "right") ai.current += 1;
+          if (directory == "left") ai.current -= 1;
           console.log("ai.current = " + ai.current + " attempted = " + ai.attempted);
-// check if already used
+// check if used
           if (ai.attempted.some(function(x) { return x == ai.current; }) && ai.specialHits.length == 0) {
             ai.current = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits[0];
-            if (ai.back_count > 1) ai.special = true;
-            else ai.backy();
+            if (ai.back_count > 1) {
+              ai.special = true;
+            } else {
+              ai.backy();
+            }
           }
           return false;
         },
-// what to do if hit
+// do it if hit
         continueHits: function() {
           console.log("cont = " + ai.direction);
           if (ai.direction == "up") {
@@ -773,7 +776,7 @@ let ai = {
             ai.battleLogic();
           }
         },
-// next moves in game after ship destroy
+// after ship destroy
         getNewCurrent: function(direction) {
           let difference = __WEBPACK_IMPORTED_MODULE_0__app_jsx__["playerBoard"].currentHits.length - ai.sizeOfShipSunk;
           if (ai.direction == "up") {

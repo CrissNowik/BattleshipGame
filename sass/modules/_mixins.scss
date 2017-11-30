@@ -150,3 +150,42 @@
   	}
   }
 }
+
+@mixin Header-under-thousand {
+   @media screen and (max-width: 1000px){
+    font-size: 24px;
+  }
+}
+
+@mixin Paragraph-under-thousand {
+   @media screen and (max-width: 1000px){
+    font-size: 16px;
+  }
+}
+
+@mixin Start-photo-under-shoundred {
+   @media screen and (max-width: 767px){
+    height: 40vh;
+  }
+}
+
+@mixin Console-txt-under-thousand {
+  @media screen and (max-width: 1000px){
+   font-size: 20px;
+ }
+}
+
+@mixin Console-header-under-thousand {
+  @media screen and (max-width: 1000px){
+   font-size: 30px;
+ }
+}
+
+@mixin Button-under-shoundred {
+  @media screen and (max-width: 768px){
+    font-size: 40px;
+    height: 60px;
+    width: 250px;
+
+ }
+}

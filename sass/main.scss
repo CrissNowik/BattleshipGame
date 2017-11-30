@@ -25,23 +25,24 @@ header {
 }
 
 footer {
-  background-color: #000;
+  background-color: $color_board;
   font-family: 'armalite_rifleregular', $stock;
   text-align: center;
   color: $color_font;
-	font-size: 1vw;
+	font-size: 16px;
+	height: 64px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	.creator-info{
 	  display: block;
-	  margin: 1rem;
-	}
-	.copyright {
-	  margin: 0;
+	  margin: 16px;
 	}
 }
 
 #main {
 	max-width: 1800px;
-	max-height: 1800px;
+	max-height: 1400px;
 	margin: auto;
 }
 
@@ -74,17 +75,19 @@ footer {
   position: relative;
   padding: 16px;
 	h2 {
-		font-weight: bolder;
 		text-decoration: underline;
+		font-size: 50px;
+		@include Console-header-under-thousand;
 	}
 }
 
 .text {
 	display: inline-block;
-	font-size: 1.5vw;
+	font-size: 25px;
 	height: 100%;
   position: relative;
 	width: 100%;
+	@include Console-txt-under-thousand;
 }
 
 .button {
@@ -94,12 +97,12 @@ footer {
 	margin: 45px auto;
 	height: 80px;
   font-family: 'courier_prime_coderegular', $stock;
-	font-size: 3rem;
-	line-height: 80px;
+	font-size: 50px;
   position: relative;
 	text-align: center;
   width: 400px;
 	cursor:pointer;
+	@include Button-under-shoundred;
   &:hover {
   	background: $color_hud_hover;
   }
