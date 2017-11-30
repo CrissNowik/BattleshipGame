@@ -9,7 +9,7 @@ Final project for CodersLab Front-end Course (Poznań, Poland).
 
 ### Demo:
 
-TBD
+https://crissnowik.github.io/BattleshipGame/
 
 ### Copyright:
 CrissNowik
