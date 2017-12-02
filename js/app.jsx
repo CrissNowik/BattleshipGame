@@ -51,7 +51,7 @@ ReactDOM.render(<Welcome />, document.getElementById('app'));
   hit: function(name) { return " " + name + " ship was hit." },
   miss: function(name) { return " " + name + " missed!" },
   sunk: function(user) { return " " + user + " ship was sunk!" },
-  lost: function(name) { return " " + name + " has lost his fleet!!  Game Over." },
+  lost: function(name) { return " " + name + " fleet is defeated! End of battle." },
  };
 
  // Start the game setup
@@ -189,7 +189,7 @@ export let playerBoard = {
       				// clear flags
       				ai.hunting = ai.prev_hit = false;
       				if (ai.sizeOfShipSunk == playerBoard.currentHits.length) {
-      					ai.num_misses = ai.back_count = ai.nextMove.length = playerBoard.currentHits.length = ai.sizeOfShipSunk = ai.currrent = 0;
+      					ai.num_misses = ai.back_count = ai.nextMove.length = playerBoard.currentHits.length = ai.sizeOfShipSunk = ai.current = 0;
       				} else {
       					ai.special =  ai.case1 = true;
       				}
@@ -234,7 +234,7 @@ export let playerBoard = {
   	$(".self").addClass("horz").removeClass("self").text("Place ships");
 
   	// create new fleet
-  	playerFleet = new Fleet("Our ");
+  	playerFleet = new Fleet("Captain your ");
   	playerFleet.initShips();
   	// light up ships when placing
   	placeShip(playerFleet.ships[playerFleet.currentShip], playerFleet);

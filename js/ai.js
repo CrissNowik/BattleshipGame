@@ -19,6 +19,7 @@ export  let ai = {
         current: 0,
         numAttemptsAfterHit: 0,
         sizeOfShipSunk: 0,
+        resqueArray: ["up", "right", "down", "left"], //resque mode
 // random generator
         randomGen: function(size) {
           return Math.floor(Math.random() * size);
@@ -52,23 +53,52 @@ export  let ai = {
           }
 
           if (ai.num_misses > 1) {
-            ai.specialCase();
+              ai.specialCase();
           } else if (ai.back) {
-            ai.back = false;
-            ai.backy();
-            ai.deployHit(ai.current);
+              ai.back = false;
+              ai.backy();
+              ai.deployHit(ai.current);
           } else if (ai.prev_hit) {
-            ai.continueHits();
-            ai.deployHit(ai.current);
-            console.log("ai.prev_hit = " + ai.prev_hit);
+              ai.continueHits();
+              ai.deployHit(ai.current);
+              console.log("ai.prev_hit = " + ai.prev_hit);
           } else {
-            ai.direction = ai.nextMove.pop();
-            console.log("ai.direction ai.current = " + ai.direction + " " + ai.current);
-            ai.getNumericalDirection(ai.direction);
-            ai.prev_hit = ai.deployHit(ai.current);
-            console.log("ai.prev_hit = " + ai.prev_hit);
+                console.log("TEST 1 - ai.direction ai.current = " + ai.direction + " " + ai.current);
+                ai.direction = ai.nextMove.pop();
+//start resque mode
+                if (isNaN(ai.current) || ai.current <= 0 || ai.current === undefined) {
+                  ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
+                  console.log("Resque mode - current");
+                }
+                if (ai.direction === undefined) {
+                  ai.direction = ai.resqueArray[ai.randomGen(ai.resqueArray.length)];
+                  console.log("Resque mode - direction");
+                }
+//end resque mode
+              console.log("TEST 2 - ai.direction ai.current = " + ai.direction + " " + ai.current);
+              ai.getNumericalDirection(ai.direction);
+              ai.prev_hit = ai.deployHit(ai.current);
+              console.log("ai.prev_hit = " + ai.prev_hit);
           }
         },
+        //*** basic ***
+        // else {
+        //     ai.direction = ai.nextMove.pop();
+        //     console.log("ai.direction ai.current = " + ai.direction + " " + ai.current);
+        //     ai.getNumericalDirection(ai.direction);
+        //     ai.prev_hit = ai.deployHit(ai.current);
+        //     console.log("ai.prev_hit = " + ai.prev_hit);
+        // }
+        //
+        // *** Resque mode v1 ***
+        //   if (isNaN(ai.current)) {
+        //   ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
+        //   console.log("Resque mode - current");
+        // }
+        // if (ai.direction === undefined) {
+        //   ai.direction = ai.resqueArray[ai.randomGen(ai.resqueArray.length)];
+        //   console.log("Resque mode - direction");
+        // }
 
         deployHit: function(hit) {
           if (ai.special) {
@@ -115,25 +145,25 @@ export  let ai = {
 // pick a random direction
             let dir = ai.randomGen(possibleMoves.length);
 // Go top
-            if (possibleMoves[dir] == "up") {
+            if (possibleMoves[dir] === "up") {
               if (ai.randPool.some(function(x) { return x == ai.current - 10; })) {
                 ai.nextMove.push("up");
               }
             }
 // Go bottom
-            if (possibleMoves[dir] == "down") {
+            if (possibleMoves[dir] === "down") {
               if (ai.randPool.some(function(x) { return x == ai.current + 10; })) {
                 ai.nextMove.push("down");
               }
             }
 // Go right
-            if (possibleMoves[dir] == "right") {
+            if (possibleMoves[dir] === "right") {
               if (ai.randPool.some(function(x) { return x == ai.current + 1; })) {
                 ai.nextMove.push("right");
               }
             }
 // Go left
-            if (possibleMoves[dir] == "left") {
+            if (possibleMoves[dir] === "left") {
               if (ai.randPool.some(function(x) { return x == ai.current - 1; })) {
                 ai.nextMove.push("left");
               }
@@ -143,10 +173,16 @@ export  let ai = {
         },
 
         getNumericalDirection: function(directory) {
-          if (directory == "up") ai.current -= 10;
-          if (directory == "down") ai.current += 10;
-          if (directory == "right") ai.current += 1;
-          if (directory == "left") ai.current -= 1;
+          if (directory === "up") ai.current -= 10;
+          if (directory === "down") ai.current += 10;
+          if (directory === "right") ai.current += 1;
+          if (directory === "left") ai.current -= 1;
+//start resque mode
+          if (directory === undefined) {
+            ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
+            console.log("Resque mode - getNumericalDirection " + ai.current);
+          }
+//end resque mode
           console.log("ai.current = " + ai.current + " attempted = " + ai.attempted);
 // check if used
           if (ai.attempted.some(function(x) { return x == ai.current; }) && ai.specialHits.length == 0) {
@@ -187,7 +223,7 @@ export  let ai = {
             } else return ai.getNumericalDirection(ai.direction);
           }
         },
-
+// revert hits direction
         backy: function() {
           ai.back_count++;
           if (ai.direction == "up") {
@@ -239,7 +275,7 @@ export  let ai = {
             ai.sizeOfShipSunk = 0;
             ai.battleLogic();
           } else {
-            if (ai.specialHits.length == 0) {
+            if (ai.specialHits.length === 0) {
               for(let i = 0; i < playerBoard.currentHits.length; i++) {
                 ai.specialHits.push(playerBoard.currentHits[i]);
               }

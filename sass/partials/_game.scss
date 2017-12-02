@@ -110,7 +110,7 @@
 .hit {
   background: $color_hit;
 	border: 1px solid  $color_hit;
-	@include Dot;
+	@include Square-hit;
 	@include Anime;
 	@include AnimeWebkit;
   @include AnimeMozilla;
