@@ -26613,7 +26613,7 @@ let ai = {
                   ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
                   console.log("Resque mode - current");
                 }
-                if (ai.direction === undefined) {
+                if (ai.direction === undefined || ai.direction === null) {
                   ai.direction = ai.resqueArray[ai.randomGen(ai.resqueArray.length)];
                   console.log("Resque mode - direction");
                 }
@@ -26715,16 +26715,16 @@ let ai = {
           }
         },
 
-        getNumericalDirection: function(directory) {
-          if (directory === "up") ai.current -= 10;
-          if (directory === "down") ai.current += 10;
-          if (directory === "right") ai.current += 1;
-          if (directory === "left") ai.current -= 1;
+        getNumericalDirection: function(directory) { //Math.abs() resque mode
+          if (directory === "up") Math.abs(ai.current -= 10);
+          if (directory === "down") Math.abs(ai.current += 10);
+          if (directory === "right") Math.abs(ai.current += 1);
+          if (directory === "left") Math.abs(ai.current -= 1);
 //start resque mode
-          if (directory === undefined) {
-            ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
-            console.log("Resque mode - getNumericalDirection " + ai.current);
-          }
+          // if (directory === undefined) {
+          //   ai.current = ai.randPool[ai.randomGen(ai.randPool.length)];
+          //   console.log("Resque mode - getNumericalDirection " + ai.current);
+          // }
 //end resque mode
           console.log("ai.current = " + ai.current + " attempted = " + ai.attempted);
 // check if used
